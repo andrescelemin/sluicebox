@@ -5,7 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sluice Box Perú | Oro limpio sin mercurio</title>
   <meta name="description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú. Inversión recuperada en 2 semanas." />
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://wa.me">
+  <link rel="preconnect" href="https://img.icons8.com" crossorigin>
+
+  <!-- Critical above-the-fold CSS -->
+  <style>
+    /* critical.css */
+    :root {
+      --verde: #0b7243;
+      --amarillo: #ffd100;
+      --gris: #f4f4f4;
+      --negro: #222;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--negro);
+      background: var(--gris);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--verde);
+      color: #fff;
+      padding: 48px 20px;
+      text-align: center;
+    }
+    .hero {
+      text-align: center;
+      margin: 24px 0;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+
+  <!-- Preload full stylesheet -->
+  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="styles.css">
+  </noscript>
+
+  <!-- JSON-LD estructurado para producto -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Sluice Box Perú",
+    "image": "https://tu-dominio.com/assets/sluicebox.png",
+    "description": "Herramienta portátil para extraer oro sin mercurio. Recupera hasta 95 % del oro fino sin químicos.",
+    "brand": {
+      "@type": "Organization",
+      "name": "Impulso Verde"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://tu-dominio.com",
+      "priceCurrency": "PEN",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -16,7 +79,14 @@
 
   <!-- Imagen principal centrada bajo el header -->
   <div class="hero">
-    <img src="sluicebox.png" alt="Sluice Box Perú en acción" class="hero-img" style="display: block; margin: 0 auto;" />
+    <img
+      src="sluicebox.png"
+      alt="Sluice Box Perú en acción"
+      class="hero-img"
+      loading="lazy"
+      width="1200"
+      height="600"
+    />
   </div>
 
   <div class="container">
@@ -56,7 +126,6 @@
           <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Andina XL</a>
         </article>
 
-
         <!-- Selva Compact -->
         <article class="kit">
           <h3>Selva Compact</h3>
@@ -84,10 +153,17 @@
       </ul>
     </section>
 
-      <!-- Imagen centro centrada bajo el header -->
-  <div class="hero">
-    <img src="SLUICEBOX CENTER.png" alt="Sluice Box Perú en acción" class="hero-img" style="display: block; margin: 0 auto;" />
-  </div>
+    <!-- Imagen centro centrada bajo el header -->
+    <div class="hero">
+      <img
+        src="SLUICEBOX CENTER.png"
+        alt="Sluice Box Perú en acción"
+        class="hero-img"
+        loading="lazy"
+        width="1200"
+        height="600"
+      />
+    </div>
 
     <!-- CTA general -->
     <div class="cta">
@@ -117,7 +193,7 @@
 
   <!-- Botón flotante -->
   <a class="whatsapp-float" href="https://wa.me/51935108877" target="_blank" aria-label="WhatsApp">
-    <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp"/>
+    <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" loading="lazy" width="56" height="56"/>
   </a>
 </body>
 </html>
