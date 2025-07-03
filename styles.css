@@ -1,0 +1,148 @@
+:root {
+  --verde: #0b7243;
+  --amarillo: #ffd100;
+  --gris: #f4f4f4;
+  --negro: #222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--negro);
+  background: var(--gris);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--verde);
+  color: #fff;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 1.25rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 24px;
+}
+
+h2 {
+  color: var(--verde);
+  margin-bottom: 12px;
+  font-size: 1.75rem;
+}
+
+section {
+  margin: 40px 0;
+}
+
+/* CTA */
+.cta {
+  background: var(--amarillo);
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 12px;
+  background: var(--verde);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Kits */
+.kits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.kit {
+  background: #fff;
+  border: 2px solid var(--verde);
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  text-align: center;
+  position: relative;
+}
+
+.kit h3 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: var(--verde);
+}
+
+.kit ul {
+  text-align: left;
+  margin: 12px 0 20px;
+}
+
+.kit ul li {
+  margin-bottom: 6px;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--verde);
+}
+
+.kit .btn-kit {
+  display: inline-block;
+  margin-top: 14px;
+  background: var(--amarillo);
+  color: var(--negro);
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* FAQ */
+.faq h3 {
+  margin-top: 20px;
+  color: var(--verde);
+}
+
+footer {
+  background: var(--negro);
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Botón flotante WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 56px;
+  height: 56px;
+}
