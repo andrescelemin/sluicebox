@@ -12,98 +12,40 @@
 
   <!-- Critical above-the-fold CSS -->
   <style>
-    :root {
-      --verde: #0b7243;
-      --amarillo: #ffd100;
-      --gris: #f4f4f4;
-      --negro: #222;
+    :root{
+      --verde:#0b7243;
+      --gris:#f4f4f4;
+      --negro:#222
     }
-    body {
-      font-family: Arial, sans-serif;
-      color: var(--negro);
-      background: var(--gris);
-      line-height: 1.6;
-    }
-    header {
-      background: var(--verde);
-      color: #fff;
-      padding: 48px 20px;
-      text-align: center;
-      position: relative;
-    }
-    .hero { text-align: center; margin: 24px 0; }
-    img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    body{font-family:Arial,sans-serif;color:var(--negro);background:var(--gris);line-height:1.6}
+    header{background:var(--verde);color:#fff;padding:48px 20px;text-align:center;position:relative}
+    .hero{text-align:center;margin:24px 0}
+    img{display:block;margin:0 auto;max-width:100%;height:auto}
   </style>
 
   <!-- Preload full stylesheet -->
   <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  { "@context":"https://schema.org","@type":"Product","name":"Sluice Box Perú",
-    "image":"https://andrescelemin.github.io/sluicebox/assets/sluicebox.png",
-    "description":"Herramienta portátil para extraer oro sin mercurio. Recupera hasta 95 % del oro fino sin químicos.",
-    "brand":{"@type":"Organization","name":"Impulso Verde"},
-    "offers":{"@type":"Offer","url":"https://andrescelemin.github.io/sluicebox/","priceCurrency":"PEN","availability":"https://schema.org/InStock"} }
-  </script>
 </head>
 <body>
 
   <header>
-    <!-- LOGO, parte superior-izquierda -->
-    <picture style="position:absolute; left:20px; top:50%; transform:translateY(-50%); z-index:1000;">
-      <source
-        type="image/webp"
-        srcset="
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-100x100.webp 100w,
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-200x200.webp 200w,
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-400x400.webp 400w"
-        sizes="(max-width:400px)100px,(max-width:800px)200px,400px">
-      <source
-        type="image/jpeg"
-        srcset="
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-100x100.jpg 100w,
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-200x200.jpg 200w,
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-400x400.jpg 400w"
-        sizes="(max-width:400px)100px,(max-width:800px)200px,400px">
-      <img
-        src="https://andrescelemin.github.io/sluicebox/assets/logo-sb-200x200.jpg"
-        alt="Logo Sluice Box"
-        width="160"
-        height="160"
-        style="height:100px; width:auto; object-fit:contain;" />
-    </picture>
-
+    <!-- LOGO -->
+    <img src="assets/logo-sb-200x200.webp"
+         alt="Logo Sluice Box"
+         style="position:absolute;left:20px;top:50%;transform:translateY(-50%);height:100px;width:auto;object-fit:contain;z-index:1000;"
+         width="160" height="160" />
     <h1>Sluice Box Perú</h1>
     <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
   </header>
 
-  <!-- Imagen Sluice Box Up -->
+  <!-- HERO horizontal -->
   <div class="hero">
-    <picture>
-      <source
-        type="image/webp"
-        srcset="
-          https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-480x320.webp   480w,
-          https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1024x640.webp 1024w,
-          https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp 1920w"
-        sizes="(max-width:480px)480px,(max-width:1024px)1024px,1920px">
-      <source
-        type="image/jpeg"
-        srcset="
-          https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-480x320.jpg   480w,
-          https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1024x640.jpg 1024w,
-          https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.jpg 1920w"
-        sizes="(max-width:480px)480px,(max-width:1024px)1024px,1920px">
-      <img
-        src="https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1024x640.jpg"
-        alt="Sluice Box Perú en Acción"
-        class="hero-img"
-        loading="lazy"
-        width="1200"
-        height="600" />
-    </picture>
+    <img src="assets/sluicebox-h-1920x1080.webp"
+         alt="Sluice Box Perú en acción"
+         class="hero-img"
+         loading="lazy"
+         width="1200" height="600" />
   </div>
 
   <div class="container">
@@ -156,31 +98,13 @@
         </article>
       </div>
 
-      <!-- Imagen Sluice Box KIT -->
+      <!-- KIT cuadrado -->
       <div class="hero">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="
-              https://andrescelemin.github.io/sluicebox/assets/sluicebox-sq-400x400.webp   400w,
-              https://andrescelemin.github.io/sluicebox/assets/sluicebox-sq-800x800.webp   800w,
-              https://andrescelemin.github.io/sluicebox/assets/sluicebox-sq-1600x1600.webp 1600w"
-            sizes="(max-width:400px)400px,(max-width:800px)800px,1600px">
-          <source
-            type="image/jpeg"
-            srcset="
-              https://andrescelemin.github.io/sluicebox/assets/sluicebox-sq-400x400.jpg   400w,
-              https://andrescelemin.github.io/sluicebox/assets/sluicebox-sq-800x800.jpg   800w,
-              https://andrescelemin.github.io/sluicebox/assets/sluicebox-sq-1600x1600.jpg 1600w"
-            sizes="(max-width:400px)400px,(max-width:800px)800px,1600px">
-          <img
-            src="https://andrescelemin.github.io/sluicebox/assets/sluicebox-sq-800x800.jpg"
-            alt="Sluice Box Perú kit"
-            class="hero-img"
-            loading="lazy"
-            width="1200"
-            height="600" />
-        </picture>
+        <img src="assets/sluicebox-sq-800x800.webp"
+             alt="Sluice Box Perú kit"
+             class="hero-img"
+             loading="lazy"
+             width="800" height="800" />
       </div>
 
       <p style="margin-top:20px;"><strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.</p>
@@ -197,31 +121,13 @@
       </ul>
     </section>
 
-    <!-- Imagen centro -->
+    <!-- HERO centro -->
     <div class="hero">
-      <picture>
-        <source
-          type="image/webp"
-          srcset="
-            https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-480x320.webp   480w,
-            https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1024x640.webp 1024w,
-            https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp 1920w"
-          sizes="(max-width:480px)480px,(max-width:1024px)1024px,1920px">
-        <source
-          type="image/jpeg"
-          srcset="
-            https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-480x320.jpg   480w,
-            https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1024x640.jpg 1024w,
-            https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.jpg 1920w"
-          sizes="(max-width:480px)480px,(max-width:1024px)1024px,1920px">
-        <img
-          src="https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1024x640.jpg"
-          alt="Sluice Box Perú en acción"
-          class="hero-img"
-          loading="lazy"
-          width="1200"
-          height="600" />
-      </picture>
+      <img src="assets/sluicebox-h-1024x640.webp"
+           alt="Sluice Box Perú demostración"
+           class="hero-img"
+           loading="lazy"
+           width="1200" height="600" />
     </div>
 
     <!-- CTA -->
@@ -246,39 +152,16 @@
   </div>
 
   <footer>
-    <picture style="position:absolute; top:20px; left:20px; z-index:1000;">
-      <source
-        type="image/webp"
-        srcset="
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-100x100.webp 100w,
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-200x200.webp 200w,
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-400x400.webp 400w"
-        sizes="(max-width:400px)100px,(max-width:800px)200px,400px">
-      <source
-        type="image/jpeg"
-        srcset="
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-100x100.jpg 100w,
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-200x200.jpg 200w,
-          https://andrescelemin.github.io/sluicebox/assets/logo-sb-400x400.jpg 400w"
-        sizes="(max-width:400px)100px,(max-width:800px)200px,400px">
-      <img
-        src="https://andrescelemin.github.io/sluicebox/assets/logo-sb-200x200.jpg"
-        alt="Logo Sluice Box"
-        width="60"
-        height="60"
-        style="object-fit:contain;" />
-    </picture>
-
+    <img src="assets/logo-sb-100x100.webp"
+         alt="Logo Sluice Box"
+         style="position:absolute;top:20px;left:20px;width:60px;height:60px;object-fit:contain;z-index:1000;" />
     Sluice Box – Tecnología limpia para mineros artesanales<br>
     Contacto WhatsApp: +51 935 108 877 · impulsoverde@gmail.com
   </footer>
 
   <!-- Botón flotante -->
   <a class="whatsapp-float" href="https://wa.me/51935108877" target="_blank" aria-label="WhatsApp">
-    <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png"
-         alt="WhatsApp"
-         loading="lazy"
-         width="56" height="56" />
+    <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy" width="56" height="56" />
   </a>
 </body>
 </html>
