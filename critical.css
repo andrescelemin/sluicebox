@@ -1,0 +1,15 @@
+/* critical.css */
+:root {
+  --verde:#0b7243;
+  --gris:#f4f4f4;
+  --negro:#222;
+  --blanco:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:var(--negro);background:var(--gris);line-height:1.6}
+header{position:relative;background:var(--verde);color:var(--blanco);text-align:center;padding:48px 20px}
+.logo-header{position:absolute;top:50%;left:20px;transform:translateY(-50%);width:120px;height:auto;object-fit:contain;z-index:1000}
+h1{font-size:2.5rem;margin-bottom:8px}
+p{font-size:1.25rem;margin:0}
+.hero-img{width:100%;height:auto;max-width:1920px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.container{max-width:1024px;margin:0 auto;padding:0 20px}
