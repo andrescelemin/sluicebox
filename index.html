@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sluice Box Perú | Oro Limpio Sin Mercurio</title>
   <meta name="description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú. Inversión recuperada en 2 semanas." />
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://andrescelemin.github.io/sluicebox/">
 
   <!-- Open Graph -->
@@ -27,17 +29,17 @@
   <link rel="preconnect" href="https://wa.me" />
   <link rel="preconnect" href="https://img.icons8.com" crossorigin />
 
-  <!-- Critical CSS (preload y aplicación inmediata) -->
+  <!-- Critical CSS (inline / preload) -->
   <link rel="preload" href="critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="critical.css"></noscript>
 
-  <!-- Stylesheet completo (deferred) -->
+  <!-- Full stylesheet (deferred) -->
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
 </head>
-
 <body>
+
   <header>
-    <!-- Solo un logo, controlado por CSS -->
+    <!-- LOGO -->
     <img
       class="logo-header"
       src="assets/logo-sb-200x200.webp"
@@ -51,8 +53,7 @@
 
   <!-- HERO horizontal -->
   <div class="hero">
-    <!-- Preload de la imagen grande -->
-    <link rel="preload" as="image" href="assets/sluicebox-h-1920x1080.webp">
+    <link rel="preload" as="image" href="assets/sluicebox-h-1024x640.webp">
     <img
       class="hero-img"
       src="assets/sluicebox-h-480x320.webp"
@@ -64,7 +65,7 @@
       sizes="(max-width:768px) 480px, (max-width:1200px) 1024px, 1920px"
       alt="Sluice Box Perú en acción"
       loading="lazy"
-      width="1920" height="1080"
+      width="1024" height="640"
     />
   </div>
 
@@ -72,16 +73,13 @@
     <!-- Qué es -->
     <section>
       <h2>💡 ¿Qué es Sluice Box?</h2>
-      <p>
-        Es una herramienta portátil que te permite extraer oro aluvial sin químicos, usando solo agua y gravedad.
-        Ideal para mineros artesanales que quieren trabajar <strong>limpio</strong>, legal y rentable.
-      </p>
+      <p>Es una herramienta portátil que te permite extraer oro aluvial sin químicos, usando solo agua y gravedad. Ideal para mineros artesanales que quieren trabajar <strong>limpio</strong>, legal y rentable.</p>
     </section>
 
     <!-- Beneficios -->
     <section>
       <h2>✅ Beneficios para ti</h2>
-      <ul>
+      <ul class="benefits-list">
         <li>No necesitas <strong>mercurio</strong> ni motores</li>
         <li>Portátil, resistente y fácil de usar</li>
         <li>Legal en zonas de amortiguamiento y REINFO</li>
@@ -97,7 +95,7 @@
         <!-- Andina XL -->
         <article class="kit">
           <h3>Andina XL</h3>
-          <p>Dimensiones: 1.10 m × 30 cm</p>
+          <p class="dimensions">Dimensiones: 1.10 m × 30 cm</p>
           <ul>
             <li>Capacidad: 2 m³/hora</li>
             <li>Acero galvanizado + tapetes verdes premium</li>
@@ -110,7 +108,7 @@
         <!-- Selva Compact -->
         <article class="kit">
           <h3>Selva Compact</h3>
-          <p>Dimensiones: 70 cm × 20 cm</p>
+          <p class="dimensions">Dimensiones: 70 cm × 20 cm</p>
           <ul>
             <li>Capacidad: 1 m³/hora</li>
             <li>Ultraliviana y plegable</li>
@@ -131,9 +129,9 @@
           width="800" height="800"
         />
       </div>
+
       <p style="margin-top:20px;">
-        <strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro,
-        imán separador de arenilla y batea profesional.
+        <strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.
       </p>
     </section>
 
@@ -163,28 +161,24 @@
     <div class="cta">
       <h2>🎯 Reserva Tu SLUICE BOX Hoy Mismo</h2>
       <p>Paga con Mercado Pago, BCP, Yape o Contraentrega. Stock limitado por lote.</p>
-      <a href="https://wa.me/51935108877" target="_blank">¡Cotizar en WhatsApp!</a>
+      <a href="https://wa.me/51935108877" class="btn-primary" target="_blank">¡Cotizar en WhatsApp!</a>
     </div>
 
     <!-- FAQ -->
     <section class="faq">
       <h2>❓ Preguntas frecuentes</h2>
-      <h3>¿Envían a mi región?</h3>
-      <p>
-        Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucallpa, Madre de Dios,
-        Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.
-      </p>
-
-      <h3>¿Puedo ver cómo funciona?</h3>
-      <p>
-        Claro, te enviamos videos y también capacitamos por WhatsApp o presencial según disponibilidad.
-      </p>
-
-      <h3>¿Sirve para formalizarme?</h3>
-      <p>
-        Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o
-        con apoyo de ONGs.
-      </p>
+      <div class="faq-item">
+        <h3>¿Envían a mi región?</h3>
+        <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucallpa, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo ver cómo funciona?</h3>
+        <p>Claro, te enviamos videos y también capacitamos por WhatsApp o presencial según disponibilidad.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Sirve para formalizarme?</h3>
+        <p>Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o con apoyo de ONGs.</p>
+      </div>
     </section>
   </div>
 
@@ -200,7 +194,7 @@
     Contacto WhatsApp: +51 935 108 877 · impulsoverde@gmail.com
   </footer>
 
-  <!-- Botón flotante -->
+  <!-- Botón flotante WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/51935108877" target="_blank" aria-label="WhatsApp">
     <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy" width="56" height="56" />
   </a>
