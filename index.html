@@ -12,37 +12,60 @@
 
   <!-- Critical above-the-fold CSS -->
   <style>
-    :root{
-      --verde:#0b7243;
-      --gris:#f4f4f4;
-      --negro:#222
+    :root {
+      --verde: #0b7243;
+      --amarillo: #ffd100;
+      --gris: #f4f4f4;
+      --negro: #222;
     }
-    body{font-family:Arial,sans-serif;color:var(--negro);background:var(--gris);line-height:1.6}
-    header{background:var(--verde);color:#fff;padding:48px 20px;text-align:center;position:relative}
-    .hero{text-align:center;margin:24px 0}
-    img{display:block;margin:0 auto;max-width:100%;height:auto}
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--negro);
+      background: var(--gris);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--verde);
+      color: #fff;
+      padding: 48px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .hero { text-align: center; margin: 24px 0; }
+    img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
   </style>
 
   <!-- Preload full stylesheet -->
   <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  { "@context":"https://schema.org","@type":"Product","name":"Sluice Box Perú",
+    "image":"https://tu-dominio.com/assets/sluicebox.png",
+    "description":"Herramienta portátil para extraer oro sin mercurio. Recupera hasta 95 % del oro fino sin químicos.",
+    "brand":{"@type":"Organization","name":"Impulso Verde"},
+    "offers":{"@type":"Offer","url":"https://tu-dominio.com","priceCurrency":"PEN","availability":"https://schema.org/InStock"} }
+  </script>
 </head>
 <body>
 
   <header>
-    <!-- LOGO -->
-    <img src="assets/logo-sb-200x200.webp"
-         alt="Logo Sluice Box"
-         style="position:absolute;left:20px;top:50%;transform:translateY(-50%);height:100px;width:auto;object-fit:contain;z-index:1000;"
-         width="160" height="160" />
+    <!-- LOGO, parte superior-izquierda -->
+   <img src="assets/LOGOS SLUICE BOX PERU.png"
+     alt="Logo Sluice Box"
+     style="position:absolute; left:20px; top:50%; transform:translateY(-50%);
+            height:100px; width:auto; object-fit:contain; z-index:1000;" />
+         width="160"
+         height="160" />
     <h1>Sluice Box Perú</h1>
     <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
   </header>
 
-  <!-- HERO horizontal -->
+  <!-- Imagen Sluice Box Up -->
   <div class="hero">
-    <img src="assets/sluicebox-h-1920x1080.webp"
-         alt="Sluice Box Perú en acción"
+    <img src="assets/Sluice Box Up Asset.png"
+         alt="Sluice Box Perú en Acción"
          class="hero-img"
          loading="lazy"
          width="1200" height="600" />
@@ -98,13 +121,13 @@
         </article>
       </div>
 
-      <!-- KIT cuadrado -->
+      <!-- Imagen Sluice Box KIT -->
       <div class="hero">
-        <img src="assets/sluicebox-sq-800x800.webp"
+        <img src="assets/Sluice Box Kit Asset.png"
              alt="Sluice Box Perú kit"
              class="hero-img"
              loading="lazy"
-             width="800" height="800" />
+             width="1200" height="600" />
       </div>
 
       <p style="margin-top:20px;"><strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.</p>
@@ -121,10 +144,10 @@
       </ul>
     </section>
 
-    <!-- HERO centro -->
+    <!-- Imagen centro -->
     <div class="hero">
-      <img src="assets/sluicebox-h-1024x640.webp"
-           alt="Sluice Box Perú demostración"
+      <img src="assets/Sluice Box Center Asset.png"
+           alt="Sluice Box Perú en acción"
            class="hero-img"
            loading="lazy"
            width="1200" height="600" />
@@ -152,16 +175,16 @@
   </div>
 
   <footer>
-    <img src="assets/logo-sb-100x100.webp"
-         alt="Logo Sluice Box"
-         style="position:absolute;top:20px;left:20px;width:60px;height:60px;object-fit:contain;z-index:1000;" />
     Sluice Box – Tecnología limpia para mineros artesanales<br>
     Contacto WhatsApp: +51 935 108 877 · impulsoverde@gmail.com
   </footer>
 
   <!-- Botón flotante -->
   <a class="whatsapp-float" href="https://wa.me/51935108877" target="_blank" aria-label="WhatsApp">
-    <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy" width="56" height="56" />
+    <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png"
+         alt="WhatsApp"
+         loading="lazy"
+         width="56" height="56" />
   </a>
 </body>
 </html>
