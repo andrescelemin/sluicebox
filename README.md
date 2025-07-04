@@ -13,4 +13,3 @@ Este repositorio contiene los archivos necesarios para desplegar la landing page
 - **FAQ**: preguntas frecuentes para resolver dudas.
 - **Estilos variables**: uso de variables CSS (colores de marca).
 
-## 📂 Estructura de carpetas
