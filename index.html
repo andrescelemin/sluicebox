@@ -52,23 +52,65 @@
 
   <header>
     <!-- LOGO, parte superior-izquierda -->
-   <img src="assets/LOGOS SLUICE BOX PERU.png"
-     alt="Logo Sluice Box"
-     style="position:absolute; left:20px; top:50%; transform:translateY(-50%);
-            height:100px; width:auto; object-fit:contain; z-index:1000;" />
-         width="160"
-         height="160" />
+    <picture style="position:absolute; left:20px; top:50%; transform:translateY(-50%); z-index:1000;">
+      <source
+        type="image/webp"
+        srcset="
+          /img/logo-sb-100x100.webp   100w,
+          /img/logo-sb-200x200.webp   200w,
+          /img/logo-sb-400x400.webp   400w"
+        sizes="(max-width: 400px) 100px,
+               (max-width: 800px) 200px,
+               400px">
+      <source
+        type="image/jpeg"
+        srcset="
+          /img/logo-sb-100x100.jpg   100w,
+          /img/logo-sb-200x200.jpg   200w,
+          /img/logo-sb-400x400.jpg   400w"
+        sizes="(max-width: 400px) 100px,
+               (max-width: 800px) 200px,
+               400px">
+      <img
+        src="/img/logo-sb-200x200.jpg"
+        alt="Logo Sluice Box"
+        width="160"
+        height="160"
+        style="height:100px; width:auto; object-fit:contain;" />
+    </picture>
     <h1>Sluice Box Perú</h1>
     <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
   </header>
 
   <!-- Imagen Sluice Box Up -->
   <div class="hero">
-    <img src="assets/Sluice Box Up Asset.png"
-         alt="Sluice Box Perú en Acción"
-         class="hero-img"
-         loading="lazy"
-         width="1200" height="600" />
+    <picture>
+      <source
+        type="image/webp"
+        srcset="
+          /img/sluicebox-h-480x320.webp   480w,
+          /img/sluicebox-h-1024x640.webp 1024w,
+          /img/sluicebox-h-1920x1080.webp 1920w"
+        sizes="(max-width: 480px) 480px,
+               (max-width: 1024px) 1024px,
+               1920px">
+      <source
+        type="image/jpeg"
+        srcset="
+          /img/sluicebox-h-480x320.jpg   480w,
+          /img/sluicebox-h-1024x640.jpg 1024w,
+          /img/sluicebox-h-1920x1080.jpg 1920w"
+        sizes="(max-width: 480px) 480px,
+               (max-width: 1024px) 1024px,
+               1920px">
+      <img
+        src="/img/sluicebox-h-1024x640.jpg"
+        alt="Sluice Box Perú en Acción"
+        class="hero-img"
+        loading="lazy"
+        width="1024"
+        height="640" />
+    </picture>
   </div>
 
   <div class="container">
@@ -123,11 +165,33 @@
 
       <!-- Imagen Sluice Box KIT -->
       <div class="hero">
-        <img src="assets/Sluice Box Kit Asset.png"
-             alt="Sluice Box Perú kit"
-             class="hero-img"
-             loading="lazy"
-             width="1200" height="600" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              /img/sluicebox-h-480x320.webp   480w,
+              /img/sluicebox-h-1024x640.webp 1024w,
+              /img/sluicebox-h-1920x1080.webp 1920w"
+            sizes="(max-width: 480px) 480px,
+                   (max-width: 1024px) 1024px,
+                   1920px">
+          <source
+            type="image/jpeg"
+            srcset="
+              /img/sluicebox-h-480x320.jpg   480w,
+              /img/sluicebox-h-1024x640.jpg 1024w,
+              /img/sluicebox-h-1920x1080.jpg 1920w"
+            sizes="(max-width: 480px) 480px,
+                   (max-width: 1024px) 1024px,
+                   1920px">
+          <img
+            src="/img/sluicebox-h-1024x640.jpg"
+            alt="Sluice Box Perú kit"
+            class="hero-img"
+            loading="lazy"
+            width="1024"
+            height="640" />
+        </picture>
       </div>
 
       <p style="margin-top:20px;"><strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.</p>
@@ -146,11 +210,33 @@
 
     <!-- Imagen centro -->
     <div class="hero">
-      <img src="assets/Sluice Box Center Asset.png"
-           alt="Sluice Box Perú en acción"
-           class="hero-img"
-           loading="lazy"
-           width="1200" height="600" />
+      <picture>
+        <source
+          type="image/webp"
+          srcset="
+            /img/sluicebox-h-480x320.webp   480w,
+            /img/sluicebox-h-1024x640.webp 1024w,
+            /img/sluicebox-h-1920x1080.webp 1920w"
+          sizes="(max-width: 480px) 480px,
+                 (max-width: 1024px) 1024px,
+                 1920px">
+        <source
+          type="image/jpeg"
+          srcset="
+            /img/sluicebox-h-480x320.jpg   480w,
+            /img/sluicebox-h-1024x640.jpg 1024w,
+            /img/sluicebox-h-1920x1080.jpg 1920w"
+          sizes="(max-width: 480px) 480px,
+                 (max-width: 1024px) 1024px,
+                 1920px">
+        <img
+          src="/img/sluicebox-h-1024x640.jpg"
+          alt="Sluice Box Perú en acción"
+          class="hero-img"
+          loading="lazy"
+          width="1024"
+          height="640" />
+      </picture>
     </div>
 
     <!-- CTA -->
@@ -175,9 +261,32 @@
   </div>
 
   <footer>
-    <img src="assets/4Logo%20Sluice%20Box.png"
-     alt="Logo Sluice Box"
-     style="position:absolute; top:20px; left:20px; width:60px; height:60px; object-fit:contain; z-index:1000;" />
+    <picture style="position:absolute; top:20px; left:20px; z-index:1000;">
+      <source
+        type="image/webp"
+        srcset="
+          /img/logo-sb-100x100.webp   100w,
+          /img/logo-sb-200x200.webp   200w,
+          /img/logo-sb-400x400.webp   400w"
+        sizes="(max-width: 400px) 100px,
+               (max-width: 800px) 200px,
+               400px">
+      <source
+        type="image/jpeg"
+        srcset="
+          /img/logo-sb-100x100.jpg   100w,
+          /img/logo-sb-200x200.jpg   200w,
+          /img/logo-sb-400x400.jpg   400w"
+        sizes="(max-width: 400px) 100px,
+               (max-width: 800px) 200px,
+               400px">
+      <img
+        src="/img/logo-sb-200x200.jpg"
+        alt="Logo Sluice Box"
+        width="60"
+        height="60"
+        style="object-fit:contain;" />
+    </picture>
 
     Sluice Box – Tecnología limpia para mineros artesanales<br>
     Contacto WhatsApp: +51 935 108 877 · impulsoverde@gmail.com
