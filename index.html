@@ -31,55 +31,188 @@
 
   <!-- Critical above-the-fold CSS -->
   <style>
-    :root{
+    :root {
       --verde:#0b7243;
-      --gris:#f4f4f4;
-      --negro:#222
+      --grav:#f4f4f4;
+      --negro:#222;
+      --blanco:#fff;
+      --amarillo:#ffd100;
+      --gris-oscuro:#444;
     }
-    body{font-family:Arial,sans-serif;color:var(--negro);background:var(--gris);line-height:1.6}
-    header{background:var(--verde);color:#fff;padding:48px 20px;text-align:center;position:relative}
-    .hero{text-align:center;margin:24px 0}
-    img{display:block;margin:0 auto;max-width:100%;height:auto}
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
+      font-family:Arial,sans-serif;
+      color:var(--negro);
+      background:var(--grav);
+      line-height:1.6;
+    }
+    header {
+      position:relative;
+      background:var(--verde);
+      color:var(--blanco);
+      text-align:center;
+      padding:48px 20px;
+    }
+    header h1 {
+      font-size:2.5rem;
+      margin-bottom:8px;
+    }
+    header p {
+      font-size:1.25rem;
+    }
+    .logo-header {
+      position:absolute;
+      top:50%;
+      left:20px;
+      transform:translateY(-50%);
+      width:120px;
+      height:auto;
+      object-fit:contain;
+      z-index:1000;
+    }
+    .hero {
+      margin:24px 0;
+      text-align:center;
+    }
+    .hero-img {
+      width:100%;
+      max-width:1920px;
+      height:auto;
+      border-radius:8px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    .container {
+      max-width:1024px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+    section { margin-bottom:32px; }
+    section h2 {
+      font-size:1.75rem;
+      margin-bottom:16px;
+      color:var(--verde);
+    }
+    section p {
+      margin-bottom:16px;
+      text-align:justify;
+    }
+    section ul li {
+      margin-bottom:8px;
+      padding-left:1.2em;
+      text-indent:-1.2em;
+    }
+    .kits {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:24px;
+      margin-top:16px;
+    }
+    @media (min-width:768px) {
+      .kits { grid-template-columns:repeat(2,1fr); }
+    }
+    .kit {
+      background:var(--blanco);
+      padding:24px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .kit h3 { margin-bottom:8px; color:var(--gris-oscuro); }
+    .kit p,
+    .kit ul,
+    .kit .price { margin-bottom:12px; }
+    .kit .price {
+      font-size:1.25rem;
+      font-weight:bold;
+      color:var(--amarillo);
+    }
+    .btn-kit {
+      display:inline-block;
+      background:var(--verde);
+      color:var(--blanco);
+      padding:12px 24px;
+      border-radius:4px;
+      transition:background .2s ease;
+    }
+    .btn-kit:hover { background:#095c35; }
+    .cta {
+      background:var(--verde);
+      color:var(--blanco);
+      text-align:center;
+      padding:32px 20px;
+      border-radius:8px;
+      margin:32px 0;
+    }
+    .cta h2 { font-size:2rem; margin-bottom:12px; }
+    .cta p { font-size:1.1rem; margin-bottom:16px; }
+    .cta a {
+      background:var(--amarillo);
+      color:var(--negro);
+      padding:12px 28px;
+      border-radius:4px;
+      font-weight:bold;
+      transition:opacity .2s ease;
+    }
+    .cta a:hover { opacity:.9; }
+    .faq h3 {
+      margin-top:16px;
+      margin-bottom:8px;
+      color:var(--gris-oscuro);
+    }
+    footer {
+      position:relative;
+      background:var(--gris-oscuro);
+      color:var(--blanco);
+      text-align:center;
+      padding:48px 20px;
+      margin-top:40px;
+    }
+    footer img {
+      position:absolute;
+      top:20px;
+      left:20px;
+      width:60px;
+      height:60px;
+    }
+    .whatsapp-float {
+      position:fixed;
+      bottom:24px;
+      right:24px;
+      z-index:1000;
+    }
+    .whatsapp-float img {
+      width:56px;
+      height:56px;
+    }
   </style>
 
   <!-- Preload full stylesheet -->
   <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
 
-  <!-- Json-LD ampliado para producto y breadcrumb -->
+  <!-- Json-LD ampliado -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
+    "@context":"https://schema.org",
+    "@graph":[
       {
-        "@type": "Product",
-        "@id": "https://andrescelemin.github.io/sluicebox/#product",
-        "name": "Sluice Box Perú",
-        "description": "Herramienta portátil para extraer oro sin mercurio. Recupera hasta 95 % del oro fino sin químicos.",
-        "image": [
+        "@type":"Product",
+        "@id":"https://andrescelemin.github.io/sluicebox/#product",
+        "name":"Sluice Box Perú",
+        "description":"Herramienta portátil para extraer oro sin mercurio. Recupera hasta 95 % del oro fino sin químicos.",
+        "image":[
           "https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp",
           "https://andrescelemin.github.io/sluicebox/assets/sluicebox-sq-800x800.webp"
         ],
-        "brand": {
-          "@type": "Organization",
-          "name": "Impulso Verde"
-        },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://andrescelemin.github.io/sluicebox/",
-          "priceCurrency": "PEN",
-          "availability": "https://schema.org/InStock"
-        }
+        "brand":{"@type":"Organization","name":"Impulso Verde"},
+        "offers":{"@type":"Offer","url":"https://andrescelemin.github.io/sluicebox/","priceCurrency":"PEN","availability":"https://schema.org/InStock"}
       },
       {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Inicio",
-            "item": "https://andrescelemin.github.io/sluicebox/"
-          }
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Inicio","item":"https://andrescelemin.github.io/sluicebox/"}
         ]
       }
     ]
@@ -89,20 +222,19 @@
 <body>
 
   <header>
-    <!-- LOGO -->
-    <img src="assets/logo-sb-200x200.webp"
-         alt="Logo Sluice Box"
-         style="position:absolute;left:20px;top:50%;transform:translateY(-50%);height:100px;width:auto;object-fit:contain;z-index:1000;"
-         width="160" height="160" />
+    <!-- LOGO: solo uno -->
+    <img class="logo-header"
+         src="assets/logo-sb-200x200.webp"
+         alt="Logo Sluice Box" />
     <h1>Sluice Box Perú</h1>
     <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
   </header>
 
   <!-- HERO horizontal -->
   <div class="hero">
-    <img src="assets/sluicebox-h-1920x1080.webp"
+    <img class="hero-img"
+         src="assets/sluicebox-h-1920x1080.webp"
          alt="Sluice Box Perú en acción"
-         class="hero-img"
          loading="lazy"
          width="1200" height="600" />
   </div>
@@ -111,14 +243,14 @@
     <!-- Qué es -->
     <section>
       <h2>💡 ¿Qué es Sluice Box?</h2>
-      <p>Es una herramienta portátil que te permite extraer oro aluvial sin químicos, usando solo agua y gravedad. Ideal para mineros artesanales que quieren trabajar limpio, legal y rentable.</p>
+      <p>Es una herramienta portátil que te permite extraer oro aluvial sin químicos, usando solo agua y gravedad. Ideal para mineros artesanales que quieren trabajar <span class="highlight">limpio</span>, legal y rentable.</p>
     </section>
 
     <!-- Beneficios -->
     <section>
       <h2>✅ Beneficios para ti</h2>
       <ul>
-        <li>No necesitas mercurio ni motores</li>
+        <li>No necesitas <strong>mercurio</strong> ni motores</li>
         <li>Portátil, resistente y fácil de usar</li>
         <li>Legal en zonas de amortiguamiento y REINFO</li>
         <li>Compatible con oro fino y grueso</li>
@@ -142,7 +274,6 @@
           <p class="price">Desde S/ 1 190</p>
           <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Andina XL</a>
         </article>
-
         <!-- Selva Compact -->
         <article class="kit">
           <h3>Selva Compact</h3>
@@ -156,17 +287,15 @@
           <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Selva Compact</a>
         </article>
       </div>
-
       <!-- KIT cuadrado -->
       <div class="hero">
-        <img src="assets/sluicebox-sq-800x800.webp"
+        <img class="hero-img"
+             src="assets/sluicebox-sq-800x800.webp"
              alt="Sluice Box Perú kit"
-             class="hero-img"
              loading="lazy"
              width="800" height="800" />
       </div>
-
-      <p style="margin-top:20px;"><strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.</p>
+      <p style="margin-top:20px;"><strong>Todos los kits incluyen:</strong> aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.</p>
     </section>
 
     <!-- Especificaciones técnicas -->
@@ -182,9 +311,9 @@
 
     <!-- HERO centro -->
     <div class="hero">
-      <img src="assets/sluicebox-h-1024x640.webp"
+      <img class="hero-img"
+           src="assets/sluicebox-h-1024x640.webp"
            alt="Sluice Box Perú demostración"
-           class="hero-img"
            loading="lazy"
            width="1200" height="600" />
     </div>
@@ -201,10 +330,8 @@
       <h2>❓ Preguntas frecuentes</h2>
       <h3>¿Envían a mi región?</h3>
       <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucallpa, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
-
       <h3>¿Puedo ver cómo funciona?</h3>
       <p>Claro, te enviamos videos y también capacitamos por WhatsApp o presencial según disponibilidad.</p>
-
       <h3>¿Sirve para formalizarme?</h3>
       <p>Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o con apoyo de ONGs.</p>
     </section>
