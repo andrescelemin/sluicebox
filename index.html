@@ -12,7 +12,6 @@
 
   <!-- Critical above-the-fold CSS -->
   <style>
-    /* critical.css */
     :root {
       --verde: #0b7243;
       --amarillo: #ffd100;
@@ -32,63 +31,43 @@
       text-align: center;
       position: relative;
     }
-    .hero {
-      text-align: center;
-      margin: 24px 0;
-    }
-    img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-    }
+    .hero { text-align: center; margin: 24px 0; }
+    img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
   </style>
 
   <!-- Preload full stylesheet -->
   <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="styles.css">
-  </noscript>
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
 
-  <!-- JSON-LD estructurado para producto -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Sluice Box Perú",
-    "image": "https://tu-dominio.com/assets/sluicebox.png",
-    "description": "Herramienta portátil para extraer oro sin mercurio. Recupera hasta 95 % del oro fino sin químicos.",
-    "brand": {
-      "@type": "Organization",
-      "name": "Impulso Verde"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://tu-dominio.com",
-      "priceCurrency": "PEN",
-      "availability": "https://schema.org/InStock"
-    }
-  }
+  { "@context":"https://schema.org","@type":"Product","name":"Sluice Box Perú",
+    "image":"https://tu-dominio.com/assets/sluicebox.png",
+    "description":"Herramienta portátil para extraer oro sin mercurio. Recupera hasta 95 % del oro fino sin químicos.",
+    "brand":{"@type":"Organization","name":"Impulso Verde"},
+    "offers":{"@type":"Offer","url":"https://tu-dominio.com","priceCurrency":"PEN","availability":"https://schema.org/InStock"} }
   </script>
 </head>
 <body>
 
   <header>
-    <img src="assets/4Logo Sluice Box.png" alt="Logo Sluice Box" style="position:absolute; top:20px; left:20px; max-height:60px;" />
+    <!-- LOGO, parte superior-izquierda -->
+    <img src="assets/4Logo%20Sluice%20Box.png"
+         alt="Logo Sluice Box"
+         style="position:absolute;top:20px;left:20px;max-height:60px;z-index:1000"
+         width="160"
+         height="60" />
     <h1>Sluice Box Perú</h1>
     <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
   </header>
 
-  <!-- Imagen Sluice Box Up-->
+  <!-- Imagen Sluice Box Up -->
   <div class="hero">
-    <img
-      src="assets/Sluice Box Up Asset.png"
-      alt="Sluice Box Perú en Acción"
-      class="hero-img"
-      loading="lazy"
-      width="1200"
-      height="600"
-    />
+    <img src="assets/Sluice Box Up Asset.png"
+         alt="Sluice Box Perú en Acción"
+         class="hero-img"
+         loading="lazy"
+         width="1200" height="600" />
   </div>
 
   <div class="container">
@@ -114,17 +93,16 @@
     <section id="kits">
       <h2>🎒 Elige tu Sluice Box</h2>
       <div class="kits">
-        
         <!-- Andina XL -->
         <article class="kit">
           <h3>Andina XL</h3>
           <p>Dimensiones: 1.10 m × 30 cm</p>
           <ul>
             <li>Capacidad: 2 m³/hora</li>
-            <li>Acero Galvanizado + tapetes verdes premium</li>
+            <li>Acero galvanizado + tapetes verdes premium</li>
             <li>Ideal para brigadas o cooperativas</li>
           </ul>
-          <p class="price">Desde S/ 1,190</p>
+          <p class="price">Desde S/ 1 190</p>
           <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Andina XL</a>
         </article>
 
@@ -142,23 +120,19 @@
         </article>
       </div>
 
-       <!-- Imagen Sluice Box KIT -->
-    <div class="hero">
-      <img
-        src="assets/Sluice Box Kit Asset.png"
-        alt="Sluice Box Perú en acción"
-        class="hero-img"
-        loading="lazy"
-        width="1200"
-        height="600"
-      />
-    </div>
+      <!-- Imagen Sluice Box KIT -->
+      <div class="hero">
+        <img src="assets/Sluice Box Kit Asset.png"
+             alt="Sluice Box Perú kit"
+             class="hero-img"
+             loading="lazy"
+             width="1200" height="600" />
+      </div>
 
-      <p style="margin-top:20px;"><strong>Todos Los Kits Incluyen:</strong> Aspersor Manual, Pala, Frasquito Recolector de Oro, Imán Separador de Arenilla y Batea Profesional.</p>
+      <p style="margin-top:20px;"><strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.</p>
     </section>
 
-    
-    <!-- Especificaciones técnicas (común) -->
+    <!-- Especificaciones técnicas -->
     <section>
       <h2>🔧 Especificaciones Técnicas</h2>
       <ul>
@@ -169,19 +143,16 @@
       </ul>
     </section>
 
-    <!-- Imagen centro centrada bajo el header -->
+    <!-- Imagen centro -->
     <div class="hero">
-      <img
-        src="assets/Sluice Box Center Asset.png"
-        alt="Sluice Box Perú en acción"
-        class="hero-img"
-        loading="lazy"
-        width="1200"
-        height="600"
-      />
+      <img src="assets/Sluice Box Center Asset.png"
+           alt="Sluice Box Perú en acción"
+           class="hero-img"
+           loading="lazy"
+           width="1200" height="600" />
     </div>
 
-    <!-- CTA general -->
+    <!-- CTA -->
     <div class="cta">
       <h2>🎯 Reserva Tu SLUICE BOX Hoy Mismo</h2>
       <p>Paga con Mercado Pago, BCP, Yape o Contraentrega. Stock limitado por lote.</p>
@@ -204,12 +175,15 @@
 
   <footer>
     Sluice Box – Tecnología limpia para mineros artesanales<br>
-    Contacto WhatsApp: +51 935 108 877 · impulsoverde@gmail.com.com
+    Contacto WhatsApp: +51 935 108 877 · impulsoverde@gmail.com
   </footer>
 
   <!-- Botón flotante -->
   <a class="whatsapp-float" href="https://wa.me/51935108877" target="_blank" aria-label="WhatsApp">
-    <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" loading="lazy" width="56" height="56"/>
+    <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png"
+         alt="WhatsApp"
+         loading="lazy"
+         width="56" height="56" />
   </a>
 </body>
 </html>
