@@ -1,206 +1,192 @@
-/* ——— Centrados globales ——— */
-img {
-  display: block;
-  margin: 0 auto;
-}
-.kit, .cta {
-  text-align: center;
-}
-.cta a {
-  display: inline-block;
-}
-/* —————————————————————— */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sluice Box Perú | Oro Limpio Sin Mercurio</title>
+  <meta name="description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú. Inversión recuperada en 2 semanas." />
+  <link rel="canonical" href="https://andrescelemin.github.io/sluicebox/">
 
-/* Variables de color */
-:root {
-  --verde: #0b7243;
-  --amarillo: #ffd100;
-  --gris: #f4f4f4;
-  --negro: #222;
-  --blanco: #fff;
-  --gris-oscuro: #444;
-}
+  <!-- Open Graph -->
+  <meta property="og:type"        content="product" />
+  <meta property="og:title"       content="Sluice Box Perú | Oro Limpio Sin Mercurio" />
+  <meta property="og:description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú." />
+  <meta property="og:url"         content="https://andrescelemin.github.io/sluicebox/" />
+  <meta property="og:image"       content="https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp" />
+  <meta property="og:site_name"   content="Impulso Verde" />
+  <meta property="og:locale"      content="es_PE" />
 
-/* Reset ligero */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@TuCuentaTwitter" />
+  <meta name="twitter:title"       content="Sluice Box Perú | Oro Limpio Sin Mercurio" />
+  <meta name="twitter:description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú." />
+  <meta name="twitter:image"       content="https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp" />
 
-/* Base */
-body {
-  font-family: Arial, sans-serif;
-  color: var(--negro);
-  background: var(--gris);
-  line-height: 1.6;
-}
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://wa.me" />
+  <link rel="preconnect" href="https://img.icons8.com" crossorigin />
 
-/* Logo en header */
-.logo-header {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  width: 120px;
-  height: auto;
-  z-index: 1000;
-}
+  <!-- Critical CSS (inline / preload) -->
+  <link rel="preload" href="critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="critical.css"></noscript>
 
-/* Encabezado */
-header {
-  position: relative;
-  background: var(--verde);
-  color: var(--blanco);
-  text-align: center;
-  padding: 48px 20px;
-}
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 8px;
-}
-header p {
-  font-size: 1.25rem;
-}
+  <!-- Full stylesheet (deferred) -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+</head>
+<body>
+  <header>
+    <!-- LOGO ÚNICO -->
+    <img
+      class="logo-header"
+      src="assets/logo-sb-200x200.webp"
+      alt="Logo Sluice Box"
+      loading="lazy"
+      width="200" height="200"
+    />
+    <h1>Sluice Box Perú</h1>
+    <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
+  </header>
 
-/* Contenedor principal */
-.container {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 24px 20px;
-}
+  <!-- HERO horizontal -->
+  <div class="hero">
+    <link rel="preload" as="image" href="assets/sluicebox-h-1024x640.webp">
+    <img
+      class="hero-img"
+      src="assets/sluicebox-h-480x320.webp"
+      srcset="
+        assets/sluicebox-h-480x320.webp  480w,
+        assets/sluicebox-h-1024x640.webp 1024w,
+        assets/sluicebox-h-1920x1080.webp 1920w
+      "
+      sizes="(max-width:768px) 480px, (max-width:1200px) 1024px, 1920px"
+      alt="Sluice Box Perú en acción"
+      loading="lazy"
+      width="1024" height="640"
+    />
+  </div>
 
-/* Hero sections */
-.hero {
-  margin: 24px 0;
-  text-align: center;
-}
-.hero-img {
-  width: 100%;
-  height: auto;
-  max-width: 1920px;
-}
+  <div class="container">
+    <!-- Qué es -->
+    <section>
+      <h2>💡 ¿Qué es Sluice Box?</h2>
+      <p>Es una herramienta portátil que te permite extraer oro aluvial sin químicos, usando solo agua y gravedad. Ideal para mineros artesanales que quieren trabajar <strong>limpio</strong>, legal y rentable.</p>
+    </section>
 
-/* Secciones */
-section {
-  margin-bottom: 32px;
-}
-section h2 {
-  font-size: 1.75rem;
-  margin-bottom: 16px;
-  color: var(--verde);
-}
-section p {
-  margin-bottom: 16px;
-  text-align: justify;
-}
-section ul li {
-  margin-bottom: 8px;
-  padding-left: 1.2em;
-  text-indent: -1.2em;
-}
+    <!-- Beneficios -->
+    <section>
+      <h2>✅ Beneficios para ti</h2>
+      <ul class="benefits-list">
+        <li>No necesitas <strong>mercurio</strong> ni motores</li>
+        <li>Portátil, resistente y fácil de usar</li>
+        <li>Legal en zonas de amortiguamiento y REINFO</li>
+        <li>Compatible con oro fino y grueso</li>
+        <li>Recuperas tu inversión en 1 a 2 semanas</li>
+      </ul>
+    </section>
 
-/* Kits comparativa */
-.kits {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin-top: 16px;
-}
-@media (min-width: 768px) {
-  .kits {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-.kit {
-  background: var(--blanco);
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.kit h3 {
-  margin-bottom: 8px;
-  color: var(--gris-oscuro);
-}
-.kit .dimensions {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-.kit ul {
-  margin-bottom: 12px;
-  text-align: left;
-}
-.kit ul li {
-  margin-bottom: 6px;
-}
-.price {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: var(--amarillo);
-}
+    <!-- Comparativa de Kits -->
+    <section id="kits">
+      <h2>🎒 Elige tu Sluice Box</h2>
+      <div class="kits">
+        <!-- Andina XL -->
+        <article class="kit">
+          <h3>Andina XL</h3>
+          <p class="dimensions">Dimensiones: 1.10 m × 30 cm</p>
+          <ul>
+            <li>Capacidad: 2 m³/hora</li>
+            <li>Acero galvanizado + tapetes verdes premium</li>
+            <li>Ideal para brigadas o cooperativas</li>
+          </ul>
+          <p class="price">Desde S/ 1 190</p>
+          <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Andina XL</a>
+        </article>
 
-/* Botones con relieve */
-.btn-kit, .btn-primary {
-  display: inline-block;
-  margin-top: 14px;
-  background: var(--amarillo);
-  color: var(--negro);
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 700;
-  box-shadow: inset 0 -4px 6px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-.btn-kit:hover, .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: inset 0 -6px 8px rgba(0,0,0,0.3), 0 6px 8px rgba(0,0,0,0.3);
-}
+        <!-- Selva Compact -->
+        <article class="kit">
+          <h3>Selva Compact</h3>
+          <p class="dimensions">Dimensiones: 70 cm × 20 cm</p>
+          <ul>
+            <li>Capacidad: 1 m³/hora</li>
+            <li>Ultraliviana y plegable</li>
+            <li>Perfecta para trabajo individual o exploración</li>
+          </ul>
+          <p class="price">Desde S/ 890</p>
+          <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Selva Compact</a>
+        </article>
+      </div>
 
-/* CTA con relieve */
-.cta {
-  background: var(--amarillo);
-  padding: 32px 20px;
-  border-radius: 12px;
-  box-shadow: inset 0 -4px 6px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
-  margin: 32px 0;
-}
-.cta h2 {
-  font-size: 2rem;
-  margin-bottom: 12px;
-}
-.cta p {
-  font-size: 1.1rem;
-  margin-bottom: 16px;
-}
+      <!-- KIT cuadrado -->
+      <div class="hero">
+        <img
+          class="hero-img"
+          src="assets/sluicebox-sq-800x800.webp"
+          alt="Sluice Box Perú kit"
+          loading="lazy"
+          width="800" height="800"
+        />
+      </div>
 
-/* FAQ */
-.faq h3 {
-  margin-top: 20px;
-  color: var(--verde);
-}
+      <p style="margin-top:20px;">
+        <strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.
+      </p>
+    </section>
 
-/* Footer */
-footer {
-  background: var(--gris-oscuro);
-  color: var(--blanco);
-  text-align: center;
-  padding: 48px 20px;
-  margin-top: 40px;
-  position: relative;
-}
+    <!-- Especificaciones técnicas -->
+    <section>
+      <h2>🔧 Especificaciones Técnicas</h2>
+      <ul>
+        <li>Construcción en acero galvanizado anticorrosión</li>
+        <li>Tapetes tipo rifle + miners moss</li>
+        <li>Armado rápido con una sola llave</li>
+        <li>Incluye manual en PDF y soporte técnico por WhatsApp</li>
+      </ul>
+    </section>
 
-/* Botón flotante de WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 1000;
-}
-.whatsapp-float img {
-  width: 56px;
-  height: 56px;
-}
+    <!-- HERO centro -->
+    <div class="hero">
+      <img
+        class="hero-img"
+        src="assets/sluicebox-h-1024x640.webp"
+        alt="Sluice Box Perú demostración"
+        loading="lazy"
+        width="1024" height="640"
+      />
+    </div>
+
+    <!-- CTA con alto relieve -->
+    <div class="cta">
+      <h2>🎯 Reserva Tu SLUICE BOX Hoy Mismo</h2>
+      <p>Paga con Mercado Pago, BCP, Yape o Contraentrega. Stock limitado por lote.</p>
+      <a href="https://wa.me/51935108877" class="btn-primary" target="_blank">¡Cotizar en WhatsApp!</a>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>❓ Preguntas frecuentes</h2>
+      <div class="faq-item">
+        <h3>¿Envían a mi región?</h3>
+        <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucallpa, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo ver cómo funciona?</h3>
+        <p>Claro, te enviamos videos y también capacitamos por WhatsApp o presencial según disponibilidad.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Sirve para formalizarme?</h3>
+        <p>Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o con apoyo de ONGs.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Sluice Box – Tecnología limpia para mineros artesanales<br>
+    Contacto WhatsApp: +51 935 108 877 · impulsoverde@gmail.com
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/51935108877" target="_blank" aria-label="WhatsApp">
+    <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy" width="56" height="56" />
+  </a>
+</body>
+</html>
