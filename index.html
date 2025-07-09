@@ -31,6 +31,25 @@
   <meta name="twitter:description"   content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú." />
   <meta name="twitter:image"         content="https://andrescelemin.github.io/sluicebox/assets/sluicebox-og-1200x630.png" />
 
+   <!-- JSON-LD: Producto -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Sluice Box Perú",
+    "image": "https://andrescelemin.github.io/sluicebox/assets/sluicebox-og-1200x630.png",
+    "description": "Esclusas portátiles para recuperar oro fino sin químicos. Tecnología peruana para mineros artesanales.",
+    "brand": { "@type": "Brand", "name": "Impulso Verde" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "PEN",
+      "price": "890",
+      "availability": "https://schema.org/InStock",
+      "url": "https://wa.me/51935108877"
+    }
+  }
+  </script>
+  
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -50,13 +69,17 @@
   </noscript>
   <!-- End Meta Pixel Code -->
 
-  <!-- Preconnects -->
-  <link rel="preconnect" href="https://wa.me" />
-  <link rel="preconnect" href="https://img.icons8.com" crossorigin />
+   <!-- Preconnects -->
+  <link rel="preconnect" href="https://wa.me">
+  <link rel="preconnect" href="https://img.icons8.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Critical CSS (inline / preload) -->
+  <!-- CSS -->
   <link rel="preload" href="critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="critical.css"></noscript>
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+</head>
 
   <!-- Full stylesheet (deferred) -->
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
