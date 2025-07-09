@@ -154,6 +154,45 @@
       />
     </div>
 
+    <!-- PRE-ORDER -->
+<section id="preorder" class="preorder">
+  <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
+  <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
+
+  <form action="https://formspree.io/f/mwpbdjqk" method="POST" class="preorder-form">
+    <!-- Nombre -->
+    <label>Nombre completo
+      <input type="text" name="name" required>
+    </label>
+
+    <!-- WhatsApp -->
+    <label>Número de WhatsApp
+      <input type="tel" name="phone" pattern="\d{9,15}" required>
+    </label>
+
+    <!-- Email -->
+    <label>Correo electrónico
+      <input type="email" name="email" required>
+    </label>
+
+    <!-- Kit -->
+    <label>Selecciona tu kit
+      <select name="kit" required>
+        <option value="Andina XL">Andina XL</option>
+        <option value="Selva Compact">Selva Compact</option>
+      </select>
+    </label>
+
+    <!-- Hidden fields -->
+    <input type="hidden" name="descuento" value="20%">
+    <input type="hidden" name="asesoria" value="120dias">
+
+    <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
+  </form>
+
+  <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
+</section>
+
     <!-- CTA con alto relieve -->
     <div class="cta">
       <h2>🎯 Reserva Tu SLUICE BOX Hoy Mismo</h2>
