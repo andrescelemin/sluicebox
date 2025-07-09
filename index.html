@@ -207,7 +207,614 @@ function updateTimer(){
   <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
   <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
 
+  <form action="<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sluice Box Perú | Oro Limpio Sin Mercurio</title>
+  <meta name="description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú. Inversión recuperada en 2 semanas." />
+  <link rel="canonical" href="https://andrescelemin.github.io/sluicebox/">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '837991474710202');    // ← tu Pixel ID
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=837991474710202&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="product" />
+  <meta property="og:title"       content="Sluice Box Perú | Oro Limpio Sin Mercurio" />
+  <meta property="og:description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú." />
+  <meta property="og:url"         content="https://andrescelemin.github.io/sluicebox/" />
+  <meta property="og:image"       content="https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp" />
+  <meta property="og:site_name"   content="Impulso Verde" />
+  <meta property="og:locale"      content="es_PE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@TuCuentaTwitter" />
+  <meta name="twitter:title"       content="Sluice Box Perú | Oro Limpio Sin Mercurio" />
+  <meta name="twitter:description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú." />
+  <meta name="twitter:image"       content="https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp" />
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://wa.me" />
+  <link rel="preconnect" href="https://img.icons8.com" crossorigin />
+
+  <!-- Critical CSS (inline / preload) -->
+  <link rel="preload" href="critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="critical.css"></noscript>
+
+  <!-- Full stylesheet (deferred) -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+</head>
+  <script>
+/* ---------- PROGRESO ---------- */
+const total   = 100;      // cambia si subes el límite
+const current = 38;       // actualízalo manualmente o vía API
+const fill    = document.getElementById('progress-fill');
+const taken   = document.getElementById('taken');
+fill.style.width = (current/total*100) + '%';
+taken.textContent = current;
+
+/* ---------- COUNTDOWN ---------- */
+const endDate    = new Date('2025-07-23T23:59:59-05:00'); // fin de promo
+const timerEl    = document.getElementById('timer');
+updateTimer(); // run once
+setInterval(updateTimer, 1000);
+
+function updateTimer(){
+  const diff = endDate - new Date();
+  if(diff <= 0){
+    timerEl.textContent = '¡Promoción finalizada!';
+    return;
+  }
+  const d = Math.floor(diff/864e5),
+        h = Math.floor(diff%864e5/36e5),
+        m = Math.floor(diff%36e5/6e4),
+        s = Math.floor(diff%6e4/1e3);
+  timerEl.textContent = `Termina en ${d}d ${h}h ${m}m ${s}s`;
+}
+</script>
+
+<body>
+  <header>
+    <!-- LOGO ÚNICO -->
+    <img
+      class="logo-header"
+      src="assets/logo-sb-200x200.webp"
+      alt="Logo Sluice Box"
+      loading="lazy"
+      width="200" height="200"
+    />
+    <h1>Sluice Box Perú</h1>
+    <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
+  </header>
+
+  <!-- HERO horizontal -->
+  <div class="hero">
+    <link rel="preload" as="image" href="assets/sluicebox-h-1024x640.webp">
+    <img
+      class="hero-img"
+      src="assets/sluicebox-h-480x320.webp"
+      srcset="
+        assets/sluicebox-h-480x320.webp  480w,
+        assets/sluicebox-h-1024x640.webp 1024w,
+        assets/sluicebox-h-1920x1080.webp 1920w
+      "
+      sizes="(max-width:768px) 480px, (max-width:1200px) 1024px, 1920px"
+      alt="Sluice Box Perú en acción"
+      loading="lazy"
+      width="1024" height="640"
+    />
+  </div>
+
+  <div class="container">
+    <!-- Qué es -->
+    <section>
+      <h2>💡 ¿Qué es Sluice Box?</h2>
+      <p>Es una herramienta portátil que te permite extraer oro aluvial sin químicos, usando solo agua y gravedad. Ideal para mineros artesanales que quieren trabajar <strong>limpio</strong>, legal y rentable.</p>
+    </section>
+
+    <!-- Beneficios -->
+    <section>
+      <h2>✅ Beneficios para ti</h2>
+      <ul class="benefits-list">
+        <li>No necesitas <strong>mercurio</strong> ni motores</li>
+        <li>Portátil, resistente y fácil de usar</li>
+        <li>Legal en zonas de amortiguamiento y REINFO</li>
+        <li>Compatible con oro fino y grueso</li>
+        <li>Recuperas tu inversión en 1 a 2 semanas</li>
+      </ul>
+    </section>
+
+    <!-- Comparativa de Kits -->
+    <section id="kits">
+      <h2>🎒 Elige tu Sluice Box</h2>
+      <div class="kits">
+        <!-- Andina XL -->
+        <article class="kit">
+          <h3>Andina XL</h3>
+          <p class="dimensions">Dimensiones: 1.10 m × 30 cm</p>
+          <ul>
+            <li>Capacidad: 2 m³/hora</li>
+            <li>Acero galvanizado + tapetes verdes premium</li>
+            <li>Ideal para brigadas o cooperativas</li>
+          </ul>
+          <p class="price">Desde S/ 1 190</p>
+          <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Andina XL</a>
+        </article>
+
+        <!-- Selva Compact -->
+        <article class="kit">
+          <h3>Selva Compact</h3>
+          <p class="dimensions">Dimensiones: 70 cm × 20 cm</p>
+          <ul>
+            <li>Capacidad: 1 m³/hora</li>
+            <li>Ultraliviana y plegable</li>
+            <li>Perfecta para trabajo individual o exploración</li>
+          </ul>
+          <p class="price">Desde S/ 890</p>
+          <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Selva Compact</a>
+        </article>
+      </div>
+
+      <!-- KIT cuadrado -->
+      <div class="hero">
+        <img
+          class="hero-img"
+          src="assets/sluicebox-sq-800x800.webp"
+          alt="Sluice Box Perú kit"
+          loading="lazy"
+          width="800" height="800"
+        />
+      </div>
+
+      <p style="margin-top:20px;">
+        <strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.
+      </p>
+    </section>
+
+    <!-- Especificaciones técnicas -->
+    <section>
+      <h2>🔧 Especificaciones Técnicas</h2>
+      <ul>
+        <li>Construcción en acero galvanizado anticorrosión</li>
+        <li>Tapetes tipo rifle + miners moss</li>
+        <li>Armado rápido con una sola llave</li>
+        <li>Incluye manual en PDF y soporte técnico por WhatsApp</li>
+      </ul>
+    </section>
+
+    <!-- HERO centro -->
+    <div class="hero">
+      <img
+        class="hero-img"
+        src="assets/sluicebox-h-1024x640.webp"
+        alt="Sluice Box Perú demostración"
+        loading="lazy"
+        width="1024" height="640"
+      />
+    </div>
+
+    <!-- PRE-ORDER FORMSPREE -->
+<section id="preorder" class="preorder">
+  <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
+  <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
+
+  <form id="preorder-form" action="https://formspree.io/f/mrbkwwrd" method="POST" class="preorder-form">
+    <!-- Nombre completo -->
+    <label>
+      Nombre completo:
+      <input type="text" name="name" required>
+    </label>
+
+    <!-- Número de WhatsApp -->
+    <label>
+      Número de WhatsApp:
+      <input type="tel" name="phone" pattern="\d{9,15}" required>
+    </label>
+
+    <!-- Correo electrónico -->
+    <label>
+      Correo electrónico:
+      <input type="email" name="email" required>
+    </label>
+
+    <!-- Selección de kit -->
+    <label>
+      Selecciona tu kit:
+      <select name="kit" required>
+        <option value="">— Elige un kit —</option>
+        <option value="Andina XL">Andina XL</option>
+        <option value="Selva Compact">Selva Compact</option>
+      </select>
+    </label>
+
+    <!-- Campos ocultos para la hoja -->
+    <input type="hidden" name="descuento" value="20%">
+    <input type="hidden" name="asesoria" value="120dias">
+
+    <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
+  </form>
+</section>
+
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '837991474710202');    // ← tu Pixel ID
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=837991474710202&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="product" />
+  <meta property="og:title"       content="Sluice Box Perú | Oro Limpio Sin Mercurio" />
+  <meta property="og:description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú." />
+  <meta property="og:url"         content="https://andrescelemin.github.io/sluicebox/" />
+  <meta property="og:image"       content="https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp" />
+  <meta property="og:site_name"   content="Impulso Verde" />
+  <meta property="og:locale"      content="es_PE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@TuCuentaTwitter" />
+  <meta name="twitter:title"       content="Sluice Box Perú | Oro Limpio Sin Mercurio" />
+  <meta name="twitter:description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú." />
+  <meta name="twitter:image"       content="https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp" />
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://wa.me" />
+  <link rel="preconnect" href="https://img.icons8.com" crossorigin />
+
+  <!-- Critical CSS (inline / preload) -->
+  <link rel="preload" href="critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="critical.css"></noscript>
+
+  <!-- Full stylesheet (deferred) -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+</head>
+  <script>
+/* ---------- PROGRESO ---------- */
+const total   = 100;      // cambia si subes el límite
+const current = 38;       // actualízalo manualmente o vía API
+const fill    = document.getElementById('progress-fill');
+const taken   = document.getElementById('taken');
+fill.style.width = (current/total*100) + '%';
+taken.textContent = current;
+
+/* ---------- COUNTDOWN ---------- */
+const endDate    = new Date('2025-07-23T23:59:59-05:00'); // fin de promo
+const timerEl    = document.getElementById('timer');
+updateTimer(); // run once
+setInterval(updateTimer, 1000);
+
+function updateTimer(){
+  const diff = endDate - new Date();
+  if(diff <= 0){
+    timerEl.textContent = '¡Promoción finalizada!';
+    return;
+  }
+  const d = Math.floor(diff/864e5),
+        h = Math.floor(diff%864e5/36e5),
+        m = Math.floor(diff%36e5/6e4),
+        s = Math.floor(diff%6e4/1e3);
+  timerEl.textContent = `Termina en ${d}d ${h}h ${m}m ${s}s`;
+}
+</script>
+
+<body>
+  <header>
+    <!-- LOGO ÚNICO -->
+    <img
+      class="logo-header"
+      src="assets/logo-sb-200x200.webp"
+      alt="Logo Sluice Box"
+      loading="lazy"
+      width="200" height="200"
+    />
+    <h1>Sluice Box Perú</h1>
+    <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
+  </header>
+
+  <!-- HERO horizontal -->
+  <div class="hero">
+    <link rel="preload" as="image" href="assets/sluicebox-h-1024x640.webp">
+    <img
+      class="hero-img"
+      src="assets/sluicebox-h-480x320.webp"
+      srcset="
+        assets/sluicebox-h-480x320.webp  480w,
+        assets/sluicebox-h-1024x640.webp 1024w,
+        assets/sluicebox-h-1920x1080.webp 1920w
+      "
+      sizes="(max-width:768px) 480px, (max-width:1200px) 1024px, 1920px"
+      alt="Sluice Box Perú en acción"
+      loading="lazy"
+      width="1024" height="640"
+    />
+  </div>
+
+  <div class="container">
+    <!-- Qué es -->
+    <section>
+      <h2>💡 ¿Qué es Sluice Box?</h2>
+      <p>Es una herramienta portátil que te permite extraer oro aluvial sin químicos, usando solo agua y gravedad. Ideal para mineros artesanales que quieren trabajar <strong>limpio</strong>, legal y rentable.</p>
+    </section>
+
+    <!-- Beneficios -->
+    <section>
+      <h2>✅ Beneficios para ti</h2>
+      <ul class="benefits-list">
+        <li>No necesitas <strong>mercurio</strong> ni motores</li>
+        <li>Portátil, resistente y fácil de usar</li>
+        <li>Legal en zonas de amortiguamiento y REINFO</li>
+        <li>Compatible con oro fino y grueso</li>
+        <li>Recuperas tu inversión en 1 a 2 semanas</li>
+      </ul>
+    </section>
+
+    <!-- Comparativa de Kits -->
+    <section id="kits">
+      <h2>🎒 Elige tu Sluice Box</h2>
+      <div class="kits">
+        <!-- Andina XL -->
+        <article class="kit">
+          <h3>Andina XL</h3>
+          <p class="dimensions">Dimensiones: 1.10 m × 30 cm</p>
+          <ul>
+            <li>Capacidad: 2 m³/hora</li>
+            <li>Acero galvanizado + tapetes verdes premium</li>
+            <li>Ideal para brigadas o cooperativas</li>
+          </ul>
+          <p class="price">Desde S/ 1 190</p>
+          <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Andina XL</a>
+        </article>
+
+        <!-- Selva Compact -->
+        <article class="kit">
+          <h3>Selva Compact</h3>
+          <p class="dimensions">Dimensiones: 70 cm × 20 cm</p>
+          <ul>
+            <li>Capacidad: 1 m³/hora</li>
+            <li>Ultraliviana y plegable</li>
+            <li>Perfecta para trabajo individual o exploración</li>
+          </ul>
+          <p class="price">Desde S/ 890</p>
+          <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Selva Compact</a>
+        </article>
+      </div>
+
+      <!-- KIT cuadrado -->
+      <div class="hero">
+        <img
+          class="hero-img"
+          src="assets/sluicebox-sq-800x800.webp"
+          alt="Sluice Box Perú kit"
+          loading="lazy"
+          width="800" height="800"
+        />
+      </div>
+
+      <p style="margin-top:20px;">
+        <strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.
+      </p>
+    </section>
+
+    <!-- Especificaciones técnicas -->
+    <section>
+      <h2>🔧 Especificaciones Técnicas</h2>
+      <ul>
+        <li>Construcción en acero galvanizado anticorrosión</li>
+        <li>Tapetes tipo rifle + miners moss</li>
+        <li>Armado rápido con una sola llave</li>
+        <li>Incluye manual en PDF y soporte técnico por WhatsApp</li>
+      </ul>
+    </section>
+
+    <!-- HERO centro -->
+    <div class="hero">
+      <img
+        class="hero-img"
+        src="assets/sluicebox-h-1024x640.webp"
+        alt="Sluice Box Perú demostración"
+        loading="lazy"
+        width="1024" height="640"
+      />
+    </div>
+
+    <!-- PRE-ORDER -->
+<section id="preorder" class="preorder">
+  <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
+  <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
+
   <form action="https://formspree.io/f/mwpbdjqk" method="POST" class="preorder-form">
+    <!-- Nombre -->
+    <label>Nombre completo
+      <input type="text" name="name" required>
+    </label>
+
+    <!-- WhatsApp -->
+    <label>Número de WhatsApp
+      <input type="tel" name="phone" pattern="\d{9,15}" required>
+    </label>
+
+    <!-- Email -->
+    <label>Correo electrónico
+      <input type="email" name="email" required>
+    </label>
+
+    <!-- Kit -->
+    <label>Selecciona tu kit
+      <select name="kit" required>
+        <option value="Andina XL">Andina XL</option>
+        <option value="Selva Compact">Selva Compact</option>
+      </select>
+    </label>
+
+    <!-- Hidden fields -->
+    <input type="hidden" name="descuento" value="20%">
+    <input type="hidden" name="asesoria" value="120dias">
+
+    <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
+  </form>
+
+  <!-- PROGRESS + COUNTDOWN -->
+<div class="progress-wrap">
+  <div class="progress-label">
+    <span id="taken">38</span> / 100 pre-órdenes tomadas
+  </div>
+  <div class="progress-bar">
+    <div id="progress-fill"></div>
+  </div>
+  <p id="timer" class="timer"></p>
+</div>
+
+  <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
+</section>
+
+    <!-- CTA con alto relieve -->
+    <div class="cta">
+      <h2>🎯 Reserva Tu SLUICE BOX Hoy Mismo</h2>
+      <p>Paga con Mercado Pago, BCP, Yape o Contraentrega. Stock limitado por lote.</p>
+      <a href="https://wa.me/51935108877" class="btn-primary" target="_blank">¡Cotizar en WhatsApp!</a>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>❓ Preguntas frecuentes</h2>
+      <div class="faq-item">
+        <h3>¿Envían a mi región?</h3>
+        <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucallpa, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo ver cómo funciona?</h3>
+        <p>Claro, te enviamos videos y también capacitamos por WhatsApp o presencial según disponibilidad.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Sirve para formalizarme?</h3>
+        <p>Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o con apoyo de ONGs.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Sluice Box – Tecnología limpia para mineros artesanales<br>
+    Contacto WhatsApp: +51 935 108 877 · impulsoverde@gmail.com
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/51935108877" target="_blank" aria-label="WhatsApp">
+    <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy" width="56" height="56" />
+  </a>
+</body>
+</html>" method="POST" class="preorder-form">
+    <!-- Nombre -->
+    <label>Nombre completo
+      <input type="text" name="name" required>
+    </label>
+
+    <!-- WhatsApp -->
+    <label>Número de WhatsApp
+      <input type="tel" name="phone" pattern="\d{9,15}" required>
+    </label>
+
+    <!-- Email -->
+    <label>Correo electrónico
+      <input type="email" name="email" required>
+    </label>
+
+    <!-- Kit -->
+    <label>Selecciona tu kit
+      <select name="kit" required>
+        <option value="Andina XL">Andina XL</option>
+        <option value="Selva Compact">Selva Compact</option>
+      </select>
+    </label>
+
+    <!-- Hidden fields -->
+    <input type="hidden" name="descuento" value="20%">
+    <input type="hidden" name="asesoria" value="120dias">
+
+    <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
+  </form>
+
+  <!-- PROGRESS + COUNTDOWN -->
+<div class="progress-wrap">
+  <div class="progress-label">
+    <span id="taken">38</span> / 100 pre-órdenes tomadas
+  </div>
+  <div class="progress-bar">
+    <div id="progress-fill"></div>
+  </div>
+  <p id="timer" class="timer"></p>
+</div>
+
+  <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
+</section>
+
+    <!-- CTA con alto relieve -->
+    <div class="cta">
+      <h2>🎯 Reserva Tu SLUICE BOX Hoy Mismo</h2>
+      <p>Paga con Mercado Pago, BCP, Yape o Contraentrega. Stock limitado por lote.</p>
+      <a href="https://wa.me/51935108877" class="btn-primary" target="_blank">¡Cotizar en WhatsApp!</a>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>❓ Preguntas frecuentes</h2>
+      <div class="faq-item">
+        <h3>¿Envían a mi región?</h3>
+        <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucallpa, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo ver cómo funciona?</h3>
+        <p>Claro, te enviamos videos y también capacitamos por WhatsApp o presencial según disponibilidad.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Sirve para formalizarme?</h3>
+        <p>Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o con apoyo de ONGs.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Sluice Box – Tecnología limpia para mineros artesanales<br>
+    Contacto WhatsApp: +51 935 108 877 · impulsoverde@gmail.com
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/51935108877" target="_blank" aria-label="WhatsApp">
+    <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy" width="56" height="56" />
+  </a>
+</body>
+</html>" method="POST" class="preorder-form">
     <!-- Nombre -->
     <label>Nombre completo
       <input type="text" name="name" required>
