@@ -17,7 +17,7 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '837991474710202');    // ← tu Pixel ID
+  fbq('init', '837991474710202');
   fbq('track', 'PageView');
   </script>
   <noscript>
@@ -53,13 +53,15 @@
   <!-- Full stylesheet (deferred) -->
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
 </head>
-  <script>
+
+<script>
 /* ---------- PROGRESO ---------- */
-const total   = 100;      // cambia si subes el límite
-const current = 38;       // actualízalo manualmente o vía API
-const fill    = document.getElementById('progress-fill');
-const taken   = document.getElementById('taken');
-fill.style.width = (current/total*100) + '%';
+const preorder = document.getElementById('preorder');           // sección con los datos
+const total    = parseInt(preorder.dataset.total, 10);
+const current  = parseInt(preorder.dataset.current, 10);
+const fill     = document.getElementById('progress-fill');
+const taken    = document.getElementById('taken');
+fill.style.width = (current / total * 100) + '%';
 taken.textContent = current;
 
 /* ---------- COUNTDOWN ---------- */
@@ -191,66 +193,66 @@ function updateTimer(){
       </ul>
     </section>
 
-    <!-- HERO centro -->
+    <!-- HERO centro (IMAGEN VERTICAL) -->
     <div class="hero">
       <img
         class="hero-img"
-        src="assets/sluicebox-h-1024x640.webp"
-        alt="Sluice Box Perú demostración"
+        src="assets/sluicebox-v-640x1024.webp"
+        alt="Sluice Box Perú producto vertical"
         loading="lazy"
-        width="1024" height="640"
+        width="640" height="1024"
       />
     </div>
 
     <!-- PRE-ORDER -->
-<section id="preorder" class="preorder">
-  <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
-  <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
+    <section id="preorder" class="preorder" data-current="38" data-total="100">
+      <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
+      <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
 
-  <form action="https://formspree.io/f/mwpbdjqk" method="POST" class="preorder-form">
-    <!-- Nombre -->
-    <label>Nombre completo
-      <input type="text" name="name" required>
-    </label>
+      <form action="https://formspree.io/f/mwpbdjqk" method="POST" class="preorder-form">
+        <!-- Nombre -->
+        <label>Nombre completo
+          <input type="text" name="name" required>
+        </label>
 
-    <!-- WhatsApp -->
-    <label>Número de WhatsApp
-      <input type="tel" name="phone" pattern="\d{9,15}" required>
-    </label>
+        <!-- WhatsApp -->
+        <label>Número de WhatsApp
+          <input type="tel" name="phone" pattern="\d{9,15}" required>
+        </label>
 
-    <!-- Email -->
-    <label>Correo electrónico
-      <input type="email" name="email" required>
-    </label>
+        <!-- Email -->
+        <label>Correo electrónico
+          <input type="email" name="email" required>
+        </label>
 
-    <!-- Kit -->
-    <label>Selecciona tu kit
-      <select name="kit" required>
-        <option value="Andina XL">Andina XL</option>
-        <option value="Selva Compact">Selva Compact</option>
-      </select>
-    </label>
+        <!-- Kit -->
+        <label>Selecciona tu kit
+          <select name="kit" required>
+            <option value="Andina XL">Andina XL</option>
+            <option value="Selva Compact">Selva Compact</option>
+          </select>
+        </label>
 
-    <!-- Hidden fields -->
-    <input type="hidden" name="descuento" value="20%">
-    <input type="hidden" name="asesoria" value="120dias">
+        <!-- Hidden fields -->
+        <input type="hidden" name="descuento" value="20%">
+        <input type="hidden" name="asesoria" value="120dias">
 
-    <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
-  </form>
+        <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
+      </form>
 
-  <!-- PROGRESS + COUNTDOWN -->
-<div class="progress-wrap">
-  <div class="progress-label">
-    <span id="taken">38</span> / 100 pre-órdenes tomadas
-  </div>
-  <div class="progress-bar">
-    <div id="progress-fill"></div>
-  </div>
-  <p id="timer" class="timer"></p>
-</div>
+      <!-- PROGRESS + COUNTDOWN -->
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span id="taken">38</span> / 100 pre-órdenes tomadas
+        </div>
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+        <p id="timer" class="timer"></p>
+      </div>
 
-  <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
-</section>
+      <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
+    </section>
 
     <!-- CTA con alto relieve -->
     <div class="cta">
