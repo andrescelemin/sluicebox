@@ -207,49 +207,36 @@ function updateTimer(){
   <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
   <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
 
-  <!-- FORMULARIO GOOGLE EMBED -->
-  <div class="form-embed" style="max-width:640px; margin:0 auto;">
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLScvKWIV9rH4ji_RzFegfnAST-DUDIskkay1DZcbwGUgsLrXFA/viewform?embedded=true"
-      width="100%" height="1094" frameborder="0"
-      marginheight="0" marginwidth="0">
-      Cargando…
-    </iframe>
-  </div>
+  <form action="https://formspree.io/f/mwpbdjqk" method="POST" class="preorder-form">
+    <!-- Nombre -->
+    <label>Nombre completo
+      <input type="text" name="name" required>
+    </label>
 
-  <!-- Barra de progreso + temporizador -->
-  <div class="progress-wrap">
-    <div class="progress-label">
-      <span id="taken">38</span> / 100 pre-órdenes tomadas
-    </div>
-    <div class="progress-bar">
-      <div id="progress-fill"></div>
-    </div>
-    <p id="timer" class="timer"></p>
-  </div>
+    <!-- WhatsApp -->
+    <label>Número de WhatsApp
+      <input type="tel" name="phone" pattern="\d{9,15}" required>
+    </label>
 
-  <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
-</section>
+    <!-- Email -->
+    <label>Correo electrónico
+      <input type="email" name="email" required>
+    </label>
 
-
-    <!-- Selección de kit -->
-    <label>
-      Selecciona tu kit:
+    <!-- Kit -->
+    <label>Selecciona tu kit
       <select name="kit" required>
-        <option value="">— Elige un kit —</option>
         <option value="Andina XL">Andina XL</option>
         <option value="Selva Compact">Selva Compact</option>
       </select>
     </label>
 
-    <!-- Campos ocultos para la hoja -->
+    <!-- Hidden fields -->
     <input type="hidden" name="descuento" value="20%">
     <input type="hidden" name="asesoria" value="120dias">
 
     <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
   </form>
-</section>
-
 
   <!-- PROGRESS + COUNTDOWN -->
 <div class="progress-wrap">
