@@ -202,41 +202,48 @@ function updateTimer(){
       />
     </div>
 
-    <!-- PRE-ORDER -->
+    <!-- PRE-ORDER FORMSPREE -->
 <section id="preorder" class="preorder">
   <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
   <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
 
-  <form action="https://formspree.io/f/mwpbdjqk" method="POST" class="preorder-form">
-    <!-- Nombre -->
-    <label>Nombre completo
+  <form id="preorder-form" action="https://formspree.io/f/mrbkwwrd" method="POST" class="preorder-form">
+    <!-- Nombre completo -->
+    <label>
+      Nombre completo:
       <input type="text" name="name" required>
     </label>
 
-    <!-- WhatsApp -->
-    <label>Número de WhatsApp
+    <!-- Número de WhatsApp -->
+    <label>
+      Número de WhatsApp:
       <input type="tel" name="phone" pattern="\d{9,15}" required>
     </label>
 
-    <!-- Email -->
-    <label>Correo electrónico
+    <!-- Correo electrónico -->
+    <label>
+      Correo electrónico:
       <input type="email" name="email" required>
     </label>
 
-    <!-- Kit -->
-    <label>Selecciona tu kit
+    <!-- Selección de kit -->
+    <label>
+      Selecciona tu kit:
       <select name="kit" required>
+        <option value="">— Elige un kit —</option>
         <option value="Andina XL">Andina XL</option>
         <option value="Selva Compact">Selva Compact</option>
       </select>
     </label>
 
-    <!-- Hidden fields -->
+    <!-- Campos ocultos para la hoja -->
     <input type="hidden" name="descuento" value="20%">
     <input type="hidden" name="asesoria" value="120dias">
 
     <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
   </form>
+</section>
+
 
   <!-- PROGRESS + COUNTDOWN -->
 <div class="progress-wrap">
