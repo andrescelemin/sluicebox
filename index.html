@@ -54,35 +54,43 @@
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
 </head>
 
-<script defer>
-/* ---------- PROGRESO ---------- */
-const preorder = document.getElementById('preorder');           // sección con los datos
-const total    = parseInt(preorder.dataset.total, 10);
-const current  = parseInt(preorder.dataset.current, 10);
-const fill     = document.getElementById('progress-fill');
-const taken    = document.getElementById('taken');
-fill.style.width = (current / total * 100) + '%';
-taken.textContent = current;
-
-/* ---------- COUNTDOWN ---------- */
-const endDate    = new Date('2025-07-23T23:59:59-05:00'); // fin de promo
-const timerEl    = document.getElementById('timer');
-updateTimer(); // run once
-setInterval(updateTimer, 1000);
-
-function updateTimer(){
-  const diff = endDate - new Date();
-  if(diff <= 0){
-    timerEl.textContent = '¡Promoción finalizada!';
-    return;
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  /* ---------- PROGRESO ---------- */
+  const preorder = document.getElementById('preorder');
+  if (preorder) {
+    const total   = parseInt(preorder.dataset.total, 10) || 0;
+    const current = parseInt(preorder.dataset.current, 10) || 0;
+    const fill    = document.getElementById('progress-fill');
+    const taken   = document.getElementById('taken');
+    if (fill && total) {
+      fill.style.width = (current / total * 100) + '%';
+    }
+    if (taken) taken.textContent = current;
   }
-  const d = Math.floor(diff/864e5),
-        h = Math.floor(diff%864e5/36e5),
-        m = Math.floor(diff%36e5/6e4),
-        s = Math.floor(diff%6e4/1e3);
-  timerEl.textContent = `Termina en ${d}d ${h}h ${m}m ${s}s`;
-}
+
+  /* ---------- COUNTDOWN ---------- */
+  const endDate = new Date('2025-07-23T23:59:59-05:00'); // fin de promo
+  const timerEl = document.getElementById('timer');
+
+  function updateTimer(){
+    const diff = endDate - new Date();
+    if (diff <= 0){
+      timerEl.textContent = '¡Promoción finalizada!';
+      return;
+    }
+    const d = Math.floor(diff/864e5),
+          h = Math.floor(diff%864e5/36e5),
+          m = Math.floor(diff%36e5/6e4),
+          s = Math.floor(diff%6e4/1e3);
+    timerEl.textContent = `Termina en ${d}d ${h}h ${m}m ${s}s`;
+  }
+
+  updateTimer();                  // primera llamada
+  setInterval(updateTimer, 1000); // luego cada segundo
+});
 </script>
+
 
 <body>
   <header>
