@@ -34,6 +34,35 @@
   <!-- Full stylesheet (deferred) -->
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
 </head>
+  <script>
+/* ---------- PROGRESO ---------- */
+const total   = 100;      // cambia si subes el límite
+const current = 38;       // actualízalo manualmente o vía API
+const fill    = document.getElementById('progress-fill');
+const taken   = document.getElementById('taken');
+fill.style.width = (current/total*100) + '%';
+taken.textContent = current;
+
+/* ---------- COUNTDOWN ---------- */
+const endDate    = new Date('2025-07-23T23:59:59-05:00'); // fin de promo
+const timerEl    = document.getElementById('timer');
+updateTimer(); // run once
+setInterval(updateTimer, 1000);
+
+function updateTimer(){
+  const diff = endDate - new Date();
+  if(diff <= 0){
+    timerEl.textContent = '¡Promoción finalizada!';
+    return;
+  }
+  const d = Math.floor(diff/864e5),
+        h = Math.floor(diff%864e5/36e5),
+        m = Math.floor(diff%36e5/6e4),
+        s = Math.floor(diff%6e4/1e3);
+  timerEl.textContent = `Termina en ${d}d ${h}h ${m}m ${s}s`;
+}
+</script>
+
 <body>
   <header>
     <!-- LOGO ÚNICO -->
@@ -189,6 +218,17 @@
 
     <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
   </form>
+
+  <!-- PROGRESS + COUNTDOWN -->
+<div class="progress-wrap">
+  <div class="progress-label">
+    <span id="taken">38</span> / 100 pre-órdenes tomadas
+  </div>
+  <div class="progress-bar">
+    <div id="progress-fill"></div>
+  </div>
+  <p id="timer" class="timer"></p>
+</div>
 
   <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
 </section>
