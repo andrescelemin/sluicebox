@@ -248,36 +248,32 @@ document.addEventListener('DOMContentLoaded', () => {
   <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
   <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
 
-  <form action="https://smartpromptsolutions.app.n8n.cloud/form/78b5dbdc-ee8c-4c8c-8dbc-e9b850ddb72c" method="POST" class="preorder-form">
-    <!-- Nombre -->
-    <label>Nombre completo
-      <input type="text" name="name" required>
-    </label>
+ <form action="https://smartpromptsolutions.app.n8n.cloud/form/78b5dbdc-ee8c-4c8c-8dbc-e9b850ddb72c" method="POST" class="preorder-form">
+  <label>Nombre completo
+    <input type="text" name="name" required>
+  </label>
 
-    <!-- WhatsApp -->
-    <label>Número de WhatsApp
-      <input type="tel" name="phone" pattern="\d{9,15}" required>
-    </label>
+  <label>Número de WhatsApp
+    <input type="tel" name="phone" required>
+  </label>
 
-    <!-- Email -->
-    <label>Correo electrónico
-      <input type="email" name="email" required>
-    </label>
+  <label>Correo electrónico
+    <input type="email" name="email" required>
+  </label>
 
-    <!-- Kit -->
-    <label>Selecciona tu kit
-      <select name="kit" required>
-        <option value="Andina XL">Andina XL</option>
-        <option value="Selva Compact">Selva Compact</option>
-      </select>
-    </label>
+  <label>Selecciona tu kit
+    <select name="kit" required>
+      <option value="Andina XL">Andina XL</option>
+      <option value="Selva Compact">Selva Compact</option>
+    </select>
+  </label>
 
-    <!-- Hidden fields -->
-    <input type="hidden" name="descuento" value="20%">
-    <input type="hidden" name="asesoria" value="120dias">
+  <input type="hidden" name="descuento" value="20%">
+  <input type="hidden" name="asesoria" value="120dias">
 
-    <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
-  </form>
+  <button type="submit">Apartar con 20 % OFF</button>
+</form>
+  
 </section>
 
 
