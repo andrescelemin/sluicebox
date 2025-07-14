@@ -3,298 +3,208 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sluice Box Perú | Oro Limpio Sin Mercurio</title>
-  <meta name="description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú. Inversión recuperada en 2 semanas." />
-  <link rel="canonical" href="https://andrescelemin.github.io/sluicebox/">
+  <title>Stupendastic Films | Vídeo Marketing para Arquitectura, Construcción y Real Estate</title>
+  <meta name="description" content="Productora audiovisual especialista en vídeo marketing de arquitectura, construcción y real-estate. Seguimiento de obra 4K, drones legales en ciudad y plataforma Connect en tiempo real." />
 
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '837991474710202');
-  fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=837991474710202&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
+  <!-- Perf Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Open Graph -->
-  <meta property="og:type"        content="product" />
-  <meta property="og:title"       content="Sluice Box Perú | Oro Limpio Sin Mercurio" />
-  <meta property="og:description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú." />
-  <meta property="og:url"         content="https://andrescelemin.github.io/sluicebox/" />
-  <meta property="og:image"       content="https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp" />
-  <meta property="og:site_name"   content="Impulso Verde" />
-  <meta property="og:locale"      content="es_PE" />
+  <!-- Critical CSS -->
+  <style>
+    :root{--primary:#1e3a8a;--accent:#f97316;--gray:#6b7280;--light:#f9fafb}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Poppins',sans-serif;line-height:1.55;color:#333;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:site"        content="@TuCuentaTwitter" />
-  <meta name="twitter:title"       content="Sluice Box Perú | Oro Limpio Sin Mercurio" />
-  <meta name="twitter:description" content="Recupera hasta 95 % del oro fino sin químicos con nuestras esclusas portátiles hechas en Perú." />
-  <meta name="twitter:image"       content="https://andrescelemin.github.io/sluicebox/assets/sluicebox-h-1920x1080.webp" />
+    /* Utilities */
+    .container{padding:4rem 1.25rem;max-width:960px;margin:0 auto}
+    .text-center{text-align:center}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:1rem 2.5rem;font-size:1.125rem;font-weight:600;border:none;border-radius:.5rem;cursor:pointer;box-shadow:0 6px 15px rgba(0,0,0,.2);transition:.2s}
+    .btn:hover{transform:translateY(-3px);opacity:.9}
 
-  <!-- Preconnects -->
-  <link rel="preconnect" href="https://wa.me" />
-  <link rel="preconnect" href="https://img.icons8.com" crossorigin />
+    /* Hero */
+    .hero{background:linear-gradient(135deg,var(--primary),#0f172a);color:#fff;padding:6rem 1.25rem 5rem;text-align:center}
+    .hero h1{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;margin:0 auto 1rem;max-width:820px}
+    .hero p{font-size:1.25rem;margin:0 auto 2.2rem;max-width:740px}
 
-  <!-- Critical CSS (inline / preload) -->
-  <link rel="preload" href="critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="critical.css"></noscript>
+    /* Grid & Bullets */
+    .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;align-items:center}
+    .bullets{list-style:none}
+    .bullets li{position:relative;padding-left:2rem;margin-bottom:.9rem;font-size:1.05rem;line-height:1.5}
+    .bullets li::before{content:'✔';position:absolute;left:0;top:0;color:var(--accent);font-weight:700}
 
-  <!-- Full stylesheet (deferred) -->
-  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    .video-wrapper{position:relative;padding-top:56.25%;border-radius:.75rem;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.15)}
+    .video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%}
+
+    /* Sections */
+    .bg-light{background:var(--light)}
+    .bg-gray{background:#f3f4f6}
+
+    /* FAQ */
+    details{border:1px solid #e5e7eb;border-radius:.5rem;margin-bottom:.75rem;padding:1rem;background:#fff}
+    summary{cursor:pointer;font-weight:600}
+
+    /* Form */
+    #contacto{background:var(--light)}
+    form{display:grid;gap:1rem;max-width:600px;margin:1.5rem auto}
+    form label{display:flex;flex-direction:column;font-weight:600;color:#4b5563}
+    form input,form textarea{padding:.6rem;border:1px solid #d1d5db;border-radius:.375rem;font-family:inherit;font-size:1rem}
+
+    /* Footer */
+    .footer{background:#111827;color:#9ca3af;text-align:center;font-size:.875rem;padding:3rem 1.25rem}
+
+    /* WhatsApp Float Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      background: none;
+    }
+    .whatsapp-float img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  /* ---------- PROGRESO ---------- */
-  const preorder = document.getElementById('preorder');
-  if (preorder) {
-    const total   = parseInt(preorder.dataset.total, 10) || 0;
-    const current = parseInt(preorder.dataset.current, 10) || 0;
-    const fill    = document.getElementById('progress-fill');
-    const taken   = document.getElementById('taken');
-    if (fill && total) {
-      fill.style.width = (current / total * 100) + '%';
-    }
-    if (taken) taken.textContent = current;
-  }
-
-  /* ---------- COUNTDOWN ---------- */
-  const endDate = new Date('2025-07-23T23:59:59-05:00'); // fin de promo
-  const timerEl = document.getElementById('timer');
-
-  function updateTimer(){
-    const diff = endDate - new Date();
-    if (diff <= 0){
-      timerEl.textContent = '¡Promoción finalizada!';
-      return;
-    }
-    const d = Math.floor(diff/864e5),
-          h = Math.floor(diff%864e5/36e5),
-          m = Math.floor(diff%36e5/6e4),
-          s = Math.floor(diff%6e4/1e3);
-    timerEl.textContent = `Termina en ${d}d ${h}h ${m}m ${s}s`;
-  }
-
-  updateTimer();                  // primera llamada
-  setInterval(updateTimer, 1000); // luego cada segundo
-});
-</script>
-
-
 <body>
-  <header>
-    <!-- LOGO ÚNICO -->
-    <img
-      class="logo-header"
-      src="assets/logo-sb-200x200.webp"
-      alt="Logo Sluice Box"
-      loading="lazy"
-      width="200" height="200"
-    />
-    <h1>Sluice Box Perú</h1>
-    <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
+
+  <!-- HERO -->
+  <header class="hero">
+    <p style="font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem">Cada estructura cuenta una historia</p>
+    <h1>Transformamos <span style="color:var(--accent)">Proyectos Arquitectónicos y de Construcción</span> en Narrativas Visuales Irresistibles</h1>
+    <p>Capta inversores, acelera ventas y supervisa tu obra en tiempo real con vídeos 4K, tomas aéreas legales en ciudad y la plataforma <strong>Connect</strong>.</p>
+    <a href="#contacto" class="btn">Solicita tu demo personalizada</a>
   </header>
 
-  <!-- HERO horizontal -->
-  <div class="hero">
-    <link rel="preload" as="image" href="assets/sluicebox-h-1024x640.webp">
-    <img
-      class="hero-img"
-      src="assets/sluicebox-h-480x320.webp"
-      srcset="
-        assets/sluicebox-h-480x320.webp  480w,
-        assets/sluicebox-h-1024x640.webp 1024w,
-        assets/sluicebox-h-1920x1080.webp 1920w
-      "
-      sizes="(max-width:768px) 480px, (max-width:1200px) 1024px, 1920px"
-      alt="Sluice Box Perú en acción"
-      loading="lazy"
-      width="1024" height="640"
-    />
-  </div>
-
-  <div class="container">
-    <!-- Qué es -->
-    <section>
-      <h2>💡 ¿Qué es Sluice Box?</h2>
-      <p>Es una herramienta portátil que te permite extraer oro aluvial sin químicos, usando solo agua y gravedad. Ideal para mineros artesanales que quieren trabajar <strong>limpio</strong>, legal y rentable.</p>
-    </section>
-
-    <!-- Beneficios -->
-    <section>
-      <h2>✅ Beneficios para ti</h2>
-      <ul class="benefits-list">
-        <li>No necesitas <strong>mercurio</strong> ni motores</li>
-        <li>Portátil, resistente y fácil de usar</li>
-        <li>Legal en zonas de amortiguamiento y REINFO</li>
-        <li>Compatible con oro fino y grueso</li>
-        <li>Recuperas tu inversión en 1 a 2 semanas</li>
+  <!-- PROBLEMA → SOLUCIÓN -->
+  <section class="container">
+    <div class="grid-2">
+      <ul class="bullets">
+        <li><strong>Connect en tiempo real:</strong> más de 120 obras documentadas el último año con streaming 4K y timelapse inteligente.</li>
+        <li><strong>Licencias al día:</strong> drones certificados para volar en ciudad y campo, sin dolores de cabeza legales.</li>
+        <li><strong>Equipo híbrido:</strong> filmmakers + arquitectos que hablan tu lenguaje técnico y entienden el ROI de cada metro cuadrado.</li>
+        <li><strong>Cero-stress:</strong> gestión 360 ° — permisos, rodaje y edición; tú solo disfrutas del resultado.</li>
       </ul>
-    </section>
-
-    <!-- Comparativa de Kits -->
-    <section id="kits">
-      <h2>🎒 Elige tu Sluice Box</h2>
-      <div class="kits">
-        <!-- Andina XL -->
-        <article class="kit">
-          <h3>Andina XL</h3>
-          <p class="dimensions">Dimensiones: 1.10 m × 30 cm</p>
-          <ul>
-            <li>Capacidad: 2 m³/hora</li>
-            <li>Acero galvanizado + tapetes verdes premium</li>
-            <li>Ideal para brigadas o cooperativas</li>
-          </ul>
-          <p class="price">Desde S/ 1 190</p>
-          <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Andina XL</a>
-        </article>
-
-        <!-- Selva Compact -->
-        <article class="kit">
-          <h3>Selva Compact</h3>
-          <p class="dimensions">Dimensiones: 70 cm × 20 cm</p>
-          <ul>
-            <li>Capacidad: 1 m³/hora</li>
-            <li>Ultraliviana y plegable</li>
-            <li>Perfecta para trabajo individual o exploración</li>
-          </ul>
-          <p class="price">Desde S/ 890</p>
-          <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Selva Compact</a>
-        </article>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/cb1Y4vPj3jM" title="Showreel Stupendastic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" referrerpolicy="no-referrer" allowfullscreen></iframe>
       </div>
-
-      <!-- KIT cuadrado -->
-      <div class="hero">
-        <img
-          class="hero-img"
-          src="assets/sluicebox-sq-800x800.webp"
-          alt="Sluice Box Perú kit"
-          loading="lazy"
-          width="800" height="800"
-        />
-      </div>
-
-      <p style="margin-top:20px;">
-        <strong>Todos los kits incluyen:</strong> Aspersor manual, pala, frasquito recolector de oro, imán separador de arenilla y batea profesional.
-      </p>
-    </section>
-
-    <!-- Especificaciones técnicas -->
-    <section>
-      <h2>🔧 Especificaciones Técnicas</h2>
-      <ul>
-        <li>Construcción en acero galvanizado anticorrosión</li>
-        <li>Tapetes tipo rifle + miners moss</li>
-        <li>Armado rápido con una sola llave</li>
-        <li>Incluye manual en PDF y soporte técnico por WhatsApp</li>
-      </ul>
-    </section>
-
-    <!-- HERO centro (IMAGEN VERTICAL) -->
-    <div class="hero">
-      <img
-        class="hero-img"
-        src="assets/sluicebox-v-640x1024.webp"
-        alt="Sluice Box Perú producto vertical"
-        loading="lazy"
-        width="640" height="1024"
-      />
     </div>
+  </section>
 
-    <!-- PRE-ORDER -->
-    <section id="preorder" class="preorder" data-current="38" data-total="100">
-      <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
-      <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
+  <!-- PORTFOLIO HOOK -->
+  <section class="container text-center bg-light">
+    <h2 style="font-size:2rem;margin-bottom:1rem">Destaca por tu Portfolio</h2>
+    <p style="font-size:1.125rem;color:var(--gray);max-width:760px;margin:0 auto 1.5rem">Un vídeo detallado convierte planos y renders en una experiencia emocional que vende tu proyecto antes de la primera piedra.</p>
+    <a href="#contacto" class="btn">Mira ejemplos reales</a>
+  </section>
 
-      <form action="https://formspree.io/f/mwpbdjqk" method="POST" class="preorder-form">
-        <!-- Nombre -->
-        <label>Nombre completo
-          <input type="text" name="name" required>
-        </label>
+  <!-- VÍDEOS PARA ARQUITECTURA -->
+  <section class="container">
+    <h2 style="color:var(--primary);font-size:1.9rem;margin-bottom:1.5rem">Vídeos para Arquitectura &amp; Urbanismo</h2>
+    <p style="max-width:780px;font-size:1.05rem;margin-bottom:1.25rem">Cada obra requiere un guion a medida. Combinamos <strong>timelapse extendido</strong>, <strong>macro-detalles de texturas</strong> y <strong>tomas aéreas 6K</strong> para narrar la esencia de tu espacio.</p>
+    <ul class="bullets">
+      <li>Estrategia creativa personalizada según tipología (residencial, corporativa, infraestructuras).</li>
+      <li>Edición cinematográfica con gráficos de datos (aforo, eficiencia energética, ROI del proyecto).</li>
+      <li>Entrega multiformato optimizada para marketing inmobiliario, redes sociales y licitaciones.</li>
+    </ul>
+  </section>
 
-        <!-- WhatsApp -->
-        <label>Número de WhatsApp
-          <input type="tel" name="phone" pattern="\d{9,15}" required>
-        </label>
+  <!-- DRONES PARA ARQUITECTURA -->
+  <section class="container bg-light">
+    <h2 style="color:var(--primary);font-size:1.9rem;margin-bottom:1.5rem">Drones Certificados en Ciudad</h2>
+    <p style="max-width:780px;font-size:1.05rem;margin-bottom:1.25rem">Muestra la integración urbana de tu proyecto con planos imposibles de lograr desde tierra.</p>
+    <ul class="bullets">
+      <li>Operamos bajo normativa AESA/EASA: vuelos seguros y 100 % legales.</li>
+      <li>Rutas de vuelo y altura optimizadas para resaltar decisiones urbanísticas y constructivas.</li>
+    </ul>
+  </section>
 
-        <!-- Email -->
-        <label>Correo electrónico
-          <input type="email" name="email" required>
-        </label>
-
-        <!-- Kit -->
-        <label>Selecciona tu kit
-          <select name="kit" required>
-            <option value="Andina XL">Andina XL</option>
-            <option value="Selva Compact">Selva Compact</option>
-          </select>
-        </label>
-
-        <!-- Hidden fields -->
-        <input type="hidden" name="descuento" value="20%">
-        <input type="hidden" name="asesoria" value="120dias">
-
-        <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
-      </form>
-
-      <!-- PROGRESS + COUNTDOWN -->
-      <div class="progress-wrap">
-        <div class="progress-label">
-          <span id="taken">38</span> / 100 pre-órdenes tomadas
-        </div>
-        <div class="progress-bar">
-          <div id="progress-fill"></div>
-        </div>
-        <p id="timer" class="timer"></p>
+  <!-- CASOS DE ÉXITO -->
+  <section class="container text-center">
+    <h2 style="font-size:2rem;margin-bottom:.5rem">Casos de Éxito</h2>
+    <p style="color:var(--gray);margin-bottom:2rem">Más de <strong>8,5 millones</strong> de visualizaciones generadas y un <strong>25 %</strong> de aceleración en preventa.</p>
+    <div class="grid-2" style="gap:1.5rem">
+      <div style="background:#fff;padding:1.5rem;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 4px 12px rgba(0,0,0,.05)">
+        <h3 style="color:var(--accent);margin-bottom:.5rem;font-size:1.2rem">Torre Skyline</h3>
+        <p style="font-size:.95rem;color:var(--gray)">+1 M de reproducciones en redes sociales y preventa del 60 % de unidades en 3 meses.</p>
       </div>
-
-      <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
-    </section>
-
-    <!-- CTA con alto relieve -->
-    <div class="cta">
-      <h2>🎯 Reserva Tu SLUICE BOX Hoy Mismo</h2>
-      <p>Paga con Mercado Pago, BCP, Yape o Contraentrega. Stock limitado por lote.</p>
-      <a href="https://wa.me/51935108877" class="btn-primary" target="_blank">¡Cotizar en WhatsApp!</a>
+      <div style="background:#fff;padding:1.5rem;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 4px 12px rgba(0,0,0,.05)">
+        <h3 style="color:var(--accent);margin-bottom:.5rem;font-size:1.2rem">Campus GreenTech</h3>
+        <p style="font-size:.95rem;color:var(--gray)">Vídeo timelapse de 18 meses que atrajo inversión Series B de 14 M €.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- FAQ -->
-    <section class="faq">
-      <h2>❓ Preguntas frecuentes</h2>
-      <div class="faq-item">
-        <h3>¿Envían a mi región?</h3>
-        <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucallpa, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo ver cómo funciona?</h3>
-        <p>Claro, te enviamos videos y también capacitamos por WhatsApp o presencial según disponibilidad.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Sirve para formalizarme?</h3>
-        <p>Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o con apoyo de ONGs.</p>
-      </div>
-    </section>
-  </div>
+  <!-- EQUIPO -->
+  <section class="container bg-light">
+    <h2 class="text-center" style="font-size:1.9rem;margin-bottom:1rem">Tu Equipo de 25 + Especialistas</h2>
+    <p style="font-size:1.05rem;max-width:820px;margin:0 auto 1.5rem;text-align:center">Filmmakers, arquitectos, pilotos de dron y motion-graphers unidos para que cada ángulo, luz y textura transmita el valor de tu obra.</p>
+  </section>
 
-  <footer>
-    Sluice Box – Tecnología limpia para mineros artesanales<br>
-    Contacto WhatsApp: +51 935 108 877 · impulsoverde@gmail.com
+  <!-- FAQ -->
+  <section class="container" id="faq">
+    <h2 style="font-size:1.9rem;margin-bottom:1rem">Preguntas Frecuentes</h2>
+    <details>
+      <summary>¿Es legal volar drones en zonas urbanas de España?</summary>
+      <p>Sí. Contamos con operador certificado por AESA y gestionamos los permisos municipales y de espacio aéreo para que tu grabación sea 100 % legal y segura.</p>
+    </details>
+    <details>
+      <summary>¿Cómo funciona la plataforma Connect?</summary>
+      <p>Instalamos cámaras 4K con conexión LTE en obra. Accede a streaming en directo, genera timelapses automáticos y descarga clips para tus redes.</p>
+    </details>
+    <details>
+      <summary>¿Cuál es el plazo medio de entrega de un vídeo?</summary>
+      <p>Entre 7 y 21 días, según complejidad. Los timelapse de larga duración se entregan por fases para mantener tu marketing siempre activo.</p>
+    </details>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="container text-center bg-gray">
+    <h2 style="font-size:2rem;margin-bottom:1rem">¿Listo para ver tu obra en acción?</h2>
+    <p style="font-size:1.125rem;margin-bottom:2rem;color:var(--gray)">Solicita ahora una demo personalizada y descubre cómo Stupendastic puede elevar tu próxima construcción.</p>
+    <a href="#contacto" class="btn">Quiero mi demo ahora</a>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="container text-center">
+    <h2 style="font-size:1.9rem;margin-bottom:.75rem">🎬 Solicita tu Demo Gratis</h2>
+    <p style="font-size:1.05rem;color:var(--gray);max-width:760px;margin:0 auto 1.5rem">Beneficios al reservar: <strong>Consultoría audiovisual 1-a-1 sin costo</strong> + <strong>Demo en vivo de la plataforma Connect</strong>.</p>
+
+    <!-- FORMULARIO -->
+    <form action="https://formspree.io/f/mwpbdjqk" method="POST">
+      <label>Nombre completo
+        <input type="text" name="name" required />
+      </label>
+      <label>Email
+        <input type="email" name="email" required />
+      </label>
+      <label>Número de WhatsApp
+        <input type="tel" name="phone" pattern="\d{9,15}" required />
+      </label>
+      <label>Mensaje (opcional)
+        <textarea name="message" rows="4" placeholder="Cuéntanos brevemente tu proyecto…"></textarea>
+      </label>
+      <button type="submit" class="btn">Solicitar demo</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Carrer Pamplona 88, 4-1 · 08018 Barcelona · +34 690 12 18 87 · info@stupendastic.com</p>
+    <p>© <span id="year"></span> Stupendastic Films. Todos los derechos reservados.</p>
   </footer>
 
   <!-- Botón flotante WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/51935108877" target="_blank" aria-label="WhatsApp">
     <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy" width="56" height="56" />
   </a>
+
+  <!-- JS para año automático -->
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
