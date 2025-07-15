@@ -74,20 +74,24 @@
          loading="lazy" width="1024" height="640" />
   </div>
 
-  <!-- SECCIÓN DE VÍDEO RESPONSIVO (¡NUEVA!) -->
-  <section class="video-section">
-    <div class="video-wrapper">
-      <iframe
-        src="assets/Video SluiceBox Horizontal.mp4"
-        title="Showreel Sluice Box Perú"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        loading="lazy" referrerpolicy="no-referrer" allowfullscreen>
-      </iframe>
-    </div>
-    <div class="video-cta">
-      <a href="#preorder" class="btn-primary">¡Descubre más!</a>
-    </div>
-  </section>
+<!-- SECCIÓN DE VÍDEO RESPONSIVO -->
+<section class="video-section">
+  <div class="video-wrapper">
+    <video
+      src="assets/Video SluiceBox Horizontal.mp4"
+      class="video-embed"
+      autoplay
+      muted
+      playsinline
+      controls   <!-- quita este atributo si no quieres la barra -->
+    ></video>
+  </div>
+
+  <div class="video-cta">
+    <a href="#preorder" class="btn-primary">¡Descubre más!</a>
+  </div>
+</section>
+
 
   <!-- CONTENIDO PRINCIPAL -->
   <div class="container">
