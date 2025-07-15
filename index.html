@@ -140,7 +140,6 @@
         </article>
       </div>
 
-      <!-- IMAGEN DEL KIT CUADRADO -->
       <div class="hero">
         <img class="hero-img" src="assets/sluicebox-sq-800x800.webp"
              alt="Sluice Box Perú kit" loading="lazy"
@@ -197,35 +196,6 @@
         <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
       </form>
 
-      <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const form = document.getElementById('preorderForm');
-
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-
-          const data = Object.fromEntries(new FormData(form));
-
-          try {
-            await fetch(
-              'https://smartpromptsolutions.app.n8n.cloud/webhook/ThVfomU8Uw97J4SN',
-              {
-                method: 'POST',
-                mode: 'no-cors', // retirar cuando el webhook soporte CORS
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
-              }
-            );
-
-            window.location.href = './gracias.html';
-          } catch (err) {
-            console.error('Error al enviar:', err);
-            alert('⚠️ Hubo un problema de conexión. Intenta de nuevo o contáctanos por WhatsApp.');
-          }
-        });
-      });
-      </script>
-
       <!-- PROGRESO + COUNTDOWN -->
       <div class="progress-wrap">
         <div class="progress-label">
@@ -250,17 +220,14 @@
     <!-- FAQ -->
     <section class="faq">
       <h2>❓ Preguntas frecuentes</h2>
-
       <div class="faq-item">
         <h3>¿Envían a mi región?</h3>
-        <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucay┬acepala, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
+        <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucaypalpa, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
       </div>
-
       <div class="faq-item">
         <h3>¿Puedo ver cómo funciona?</h3>
         <p>Claro, te enviamos videos y también capacitamos por WhatsApp o presencial según disponibilidad.</p>
       </div>
-
       <div class="faq-item">
         <h3>¿Sirve para formalizarme?</h3>
         <p>Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o con apoyo de ONGs.</p>
@@ -279,40 +246,41 @@
     <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy" width="56" height="56" />
   </a>
 
-  <!-- SCRIPT PROGRESO + COUNTDOWN -->
+  <!-- SCRIPTS -->
+  <script src="form.js" defer></script>
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    /* PROGRESO */
-    const preorder = document.getElementById('preorder');
-    if (preorder){
-      const total   = +preorder.dataset.total   || 0;
-      const current = +preorder.dataset.current || 0;
-      const fill    = document.getElementById('progress-fill');
-      const taken   = document.getElementById('taken');
-      if (fill && total) fill.style.width = (current/total*100)+'%';
-      if (taken) taken.textContent = current;
-    }
-
-    /* COUNTDOWN */
-    const endDate = new Date('2025-07-23T23:59:59-05:00');
-    const timerEl = document.getElementById('timer');
-
-    function updateTimer(){
-      const diff = endDate - new Date();
-      if (diff <= 0){
-        timerEl.textContent = '¡Promoción finalizada!';
-        return;
+    document.addEventListener('DOMContentLoaded', () => {
+      // PROGRESO
+      const preorder = document.getElementById('preorder');
+      if (preorder) {
+        const total   = +preorder.dataset.total   || 0;
+        const current = +preorder.dataset.current || 0;
+        const fill    = document.getElementById('progress-fill');
+        const taken   = document.getElementById('taken');
+        if (fill && total) fill.style.width = (current/total*100)+'%';
+        if (taken) taken.textContent = current;
       }
-      const d = Math.floor(diff/864e5),
-            h = Math.floor(diff%864e5/36e5),
-            m = Math.floor(diff%36e5/6e4),
-            s = Math.floor(diff%6e4/1e3);
-      timerEl.textContent = `Termina en ${d}d ${h}h ${m}m ${s}s`;
-    }
 
-    updateTimer();
-    setInterval(updateTimer, 1000);
-  });
+      // COUNTDOWN
+      const endDate = new Date('2025-07-23T23:59:59-05:00');
+      const timerEl = document.getElementById('timer');
+
+      function updateTimer() {
+        const diff = endDate - new Date();
+        if (diff <= 0) {
+          timerEl.textContent = '¡Promoción finalizada!';
+          return;
+        }
+        const d = Math.floor(diff/864e5),
+              h = Math.floor(diff%864e5/36e5),
+              m = Math.floor(diff%36e5/6e4),
+              s = Math.floor(diff%6e4/1e3);
+        timerEl.textContent = `Termina en ${d}d ${h}h ${m}m ${s}s`;
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    });
   </script>
 </body>
 </html>
