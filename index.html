@@ -122,20 +122,20 @@
             <li>Acero galvanizado + tapetes verdes premium</li>
             <li>Ideal para brigadas o cooperativas</li>
           </ul>
-          <p class="price">Desde S/ 1 190</p>
+          <p class="price">Desde S/ 1 190</p>
           <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Andina XL</a>
         </article>
 
         <!-- Selva Compact -->
         <article class="kit">
           <h3>Selva Compact</h3>
-          <p class="dimensions">Dimensiones: 70 cm × 20 cm</p>
+          <p class="dimensions">Dimensiones: 70 cm × 20 cm</p>
           <ul>
-            <li>Capacidad: 1 m³/hora</li>
+            <li>Capacidad: 1 m³/hora</li>
             <li>Ultraliviana y plegable</li>
             <li>Perfecta para trabajo individual o exploración</li>
           </ul>
-          <p class="price">Desde S/ 890</p>
+          <p class="price">Desde S/ 890</p>
           <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Selva Compact</a>
         </article>
       </div>
@@ -172,7 +172,7 @@
 
     <!-- PRE-ORDER -->
     <section id="preorder" class="preorder" data-current="38" data-total="100">
-      <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
+      <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
       <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
 
       <form id="preorderForm" method="POST" class="preorder-form">
@@ -180,7 +180,7 @@
           <input type="text" name="name" required>
         </label>
         <label>Número de WhatsApp
-          <input type="tel" name="phone" pattern="\d{9,15}" required>
+          <input type="tel" name="phone" pattern="[0-9]{9,15}" required>
         </label>
         <label>Correo electrónico
           <input type="email" name="email" required>
@@ -194,8 +194,37 @@
 
         <input type="hidden" name="descuento" value="20%">
         <input type="hidden" name="asesoria" value="120dias">
-        <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
+        <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
       </form>
+
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('preorderForm');
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const data = Object.fromEntries(new FormData(form));
+
+          try {
+            await fetch(
+              'https://smartpromptsolutions.app.n8n.cloud/webhook/ThVfomU8Uw97J4SN',
+              {
+                method: 'POST',
+                mode: 'no-cors', // retirar cuando el webhook soporte CORS
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+              }
+            );
+
+            window.location.href = './gracias.html';
+          } catch (err) {
+            console.error('Error al enviar:', err);
+            alert('⚠️ Hubo un problema de conexión. Intenta de nuevo o contáctanos por WhatsApp.');
+          }
+        });
+      });
+      </script>
 
       <!-- PROGRESO + COUNTDOWN -->
       <div class="progress-wrap">
@@ -211,50 +240,6 @@
       <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
     </section>
 
-    <script>
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('✅ Script de formulario cargado');
-
-  const form = document.getElementById('preorderForm');
-  if (!form) {
-    console.error('❌ No se encontró el formulario con id="preorderForm"');
-    return;
-  }
-  console.log('✅ Formulario localizado:', form);
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    console.log('✍️ Submit interceptado');
-
-    const data = Object.fromEntries(new FormData(form));
-    console.log('📤 Datos a enviar:', data);
-
-    try {
-      const res = await fetch('https://smartpromptsolutions.app.n8n.cloud/webhook/ThVfomU8Uw97J4SN', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-      console.log('📥 Respuesta status:', res.status);
-      const text = await res.text();
-      console.log('📥 Respuesta body:', text);
-
-      if (res.ok) {
-        console.log('✅ Éxito, redirigiendo...');
-        window.location.href = '/gracias.html';
-      } else {
-        console.warn('⚠️ Error de servidor');
-        alert('⚠️ Hubo un problema. Intenta de nuevo o contáctanos por WhatsApp.');
-      }
-    } catch (err) {
-      console.error('🔥 Error en fetch():', err);
-      alert('⚠️ Hubo un problema de conexión. Verifica la consola.');
-    }
-  });
-});
-</script>
-
-
     <!-- CTA DE ALTO RELIEVE -->
     <div class="cta">
       <h2>🎯 Reserva Tu SLUICE BOX Hoy Mismo</h2>
@@ -268,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <div class="faq-item">
         <h3>¿Envían a mi región?</h3>
-        <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucallpa, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
+        <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucay┬acepala, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
       </div>
 
       <div class="faq-item">
@@ -328,30 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateTimer();
     setInterval(updateTimer, 1000);
   });
-  </script>
-
-  <!-- SCRIPT DE ENVÍO AL WEBHOOK n8n -->
-  <script>
-  (async () => {
-    const form = document.getElementById('preorderForm');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(form));
-
-      const res = await fetch('https://smartpromptsolutions.app.n8n.cloud/webhook/ThVfomU8Uw97J4SN', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-
-      if (res.ok) {
-        window.location.href = '/gracias.html';
-      } else {
-        alert('⚠️ Hubo un problema. Intenta de nuevo o contáctanos por WhatsApp.');
-      }
-    });
-  })();
   </script>
 </body>
 </html>
