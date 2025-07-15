@@ -170,32 +170,65 @@
            width="640" height="1024" />
     </div>
 
-    <!-- PRE-ORDER -->
-    <section id="preorder" class="preorder" data-current="38" data-total="100">
-      <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
-      <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
+   <!-- PRE-ORDER -->
+<section id="preorder" class="preorder" data-current="38" data-total="100">
+  <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
+  <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
 
-      <form action="https://formspree.io/f/mwpbdjqk" method="POST" class="preorder-form">
-        <label>Nombre completo
-          <input type="text" name="name" required>
-        </label>
-        <label>Número de WhatsApp
-          <input type="tel" name="phone" pattern="\d{9,15}" required>
-        </label>
-        <label>Correo electrónico
-          <input type="email" name="email" required>
-        </label>
-        <label>Selecciona tu kit
-          <select name="kit" required>
-            <option value="Andina XL">Andina XL</option>
-            <option value="Selva Compact">Selva Compact</option>
-          </select>
-        </label>
+  <!-- 1️⃣  Eliminamos “action” de Formspree y dejamos method="POST" -->
+  <form id="preorderForm" method="POST" class="preorder-form">
+    <label>Nombre completo
+      <input type="text" name="name" required>
+    </label>
+    <label>Número de WhatsApp
+      <input type="tel" name="phone" pattern="\d{9,15}" required>
+    </label>
+    <label>Correo electrónico
+      <input type="email" name="email" required>
+    </label>
+    <label>Selecciona tu kit
+      <select name="kit" required>
+        <option value="Andina XL">Andina XL</option>
+        <option value="Selva Compact">Selva Compact</option>
+      </select>
+    </label>
 
-        <input type="hidden" name="descuento" value="20%">
-        <input type="hidden" name="asesoria" value="120dias">
-        <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
-      </form>
+    <input type="hidden" name="descuento" value="20%">
+    <input type="hidden" name="asesoria" value="120dias">
+    <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
+  </form>
+</section>
+
+<!-- 2️⃣  Script ultraligero que intercepta el envío y llama a la  función serverless -->
+<script>
+(async () => {
+  const form = document.getElementById('preorderForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();                         // Evita el envío clásico
+    const data = Object.fromEntries(new FormData(form));
+
+    /*  Llama a tu función serverless:
+        - /.netlify/functions/createIssue  (Netlify)
+        - /api/createIssue                 (Vercel)
+        - https://tu-worker.dom/create     (Cloudflare Workers)
+        Sustituye la ruta por la que uses. */
+    const res = await fetch('/.netlify/functions/createIssue', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      // Redirige a una página de gracias o muestra confirmación
+      window.location.href = '/gracias.html';
+    } else {
+      alert('⚠️ Hubo un problema. Intenta de nuevo o contáctanos por WhatsApp.');
+    }
+  });
+})();
+</script>
+
 
       <!-- PROGRESO + COUNTDOWN -->
       <div class="progress-wrap">
