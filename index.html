@@ -318,5 +318,30 @@
     setInterval(updateTimer, 1000);
   });
   </script>
+  <script>
+(async () => {
+  const form = document.getElementById('preorderForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();                         
+    const data = Object.fromEntries(new FormData(form));
+
+    // 👉 URL de tu webhook n8n (Execute Node → On webhook call)
+    const res = await fetch('https://smartpromptsolutions.app.n8n.cloud/webhook/ThVfomU8Uw97J4SN', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      // Redirige o muestra una confirmación
+      window.location.href = '/gracias.html';
+    } else {
+      alert('⚠️ Hubo un problema. Intenta de nuevo o contáctanos por WhatsApp.');
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
