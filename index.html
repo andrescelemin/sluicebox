@@ -211,6 +211,50 @@
       <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
     </section>
 
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('✅ Script de formulario cargado');
+
+  const form = document.getElementById('preorderForm');
+  if (!form) {
+    console.error('❌ No se encontró el formulario con id="preorderForm"');
+    return;
+  }
+  console.log('✅ Formulario localizado:', form);
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    console.log('✍️ Submit interceptado');
+
+    const data = Object.fromEntries(new FormData(form));
+    console.log('📤 Datos a enviar:', data);
+
+    try {
+      const res = await fetch('https://smartpromptsolutions.app.n8n.cloud/webhook/ThVfomU8Uw97J4SN', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      console.log('📥 Respuesta status:', res.status);
+      const text = await res.text();
+      console.log('📥 Respuesta body:', text);
+
+      if (res.ok) {
+        console.log('✅ Éxito, redirigiendo...');
+        window.location.href = '/gracias.html';
+      } else {
+        console.warn('⚠️ Error de servidor');
+        alert('⚠️ Hubo un problema. Intenta de nuevo o contáctanos por WhatsApp.');
+      }
+    } catch (err) {
+      console.error('🔥 Error en fetch():', err);
+      alert('⚠️ Hubo un problema de conexión. Verifica la consola.');
+    }
+  });
+});
+</script>
+
+
     <!-- CTA DE ALTO RELIEVE -->
     <div class="cta">
       <h2>🎯 Reserva Tu SLUICE BOX Hoy Mismo</h2>
