@@ -235,8 +235,26 @@ footer {
   border-radius: 8px;
   width: 100%;
 }
+/* Botón estilo “relieve” para el formulario de pre‑orden */
 .preorder-form button {
   width: 100%;
+  background: var(--amarillo);
+  color: var(--negro);
+  padding: 12px;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow:
+    inset 0 -4px 6px rgba(0,0,0,0.2),
+    0 4px 6px rgba(0,0,0,0.2);
+  transition: transform .1s ease, box-shadow .1s ease;
+}
+.preorder-form button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 -6px 8px rgba(0,0,0,0.3),
+    0 6px 8px rgba(0,0,0,0.3);
 }
 
 /* — Progress & Countdown — */
@@ -281,7 +299,6 @@ footer {
   padding: 2rem 1rem;
   background: var(--gris);
 }
-
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -290,7 +307,6 @@ footer {
   margin-bottom: 1.5rem;
   overflow: hidden;     /* recorta bordes */
 }
-
 .video-embed {
   position: absolute;
   top: 0;
@@ -298,4 +314,9 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;    /* rellena y elimina bandas negras */
+}
+/* Ajuste para espacio bajo el CTA de vídeo */
+.video-cta {
+  text-align: center;
+  margin-bottom: 2rem;
 }
