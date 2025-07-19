@@ -129,6 +129,7 @@
           <p class="price">Desde S/ 1 190</p>
           <a class="btn-kit" href="https://wa.me/51935108877" target="_blank">Quiero Andina XL</a>
         </article>
+        
         <!-- Selva Compact -->
         <article class="kit">
           <h3>Selva Compact</h3>
@@ -175,36 +176,71 @@
     </div>
 
     <!-- PRE-ORDER -->
-    <section id="preorder" class="preorder" data-current="38" data-total="100">
-      <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
-      <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
-      <form id="preorderForm" method="POST" class="preorder-form">
-        <label>Nombre completo
-          <input type="text" name="name" required>
-        </label>
-        <label>Número de WhatsApp
-          <input type="tel" name="phone" pattern="[0-9]{9,15}" required>
-        </label>
-        <label>Correo electrónico
-          <input type="email" name="email" required>
-        </label>
-        <label>Selecciona tu kit
-          <select name="kit" required>
-            <option value="Andina XL">Andina XL</option>
-            <option value="Selva Compact">Selva Compact</option>
-          </select>
-        </label>
-        <input type="hidden" name="descuento" value="20%">
-        <input type="hidden" name="asesoria" value="120dias">
-        <button type="submit" class="btn-primary">Apartar con 20 % OFF</button>
-      </form>
-      <div class="progress-wrap">
-        <div class="progress-label"><span id="taken">38</span> / 100 pre‑órdenes tomadas</div>
-        <div class="progress-bar"><div id="progress-fill"></div></div>
-        <p id="timer" class="timer"></p>
-      </div>
-      <small>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</small>
-    </section>
+<form
+  action="https://formspree.io/f/mrbkwwrd"
+  method="POST"
+  accept-charset="UTF-8"
+>
+  <!-- Nombre completo -->
+  <label for="full-name">Nombre completo</label>
+  <input
+    type="text"
+    id="full-name"
+    name="name"
+    placeholder="Tu nombre completo"
+    required
+  />
+
+  <!-- Número de WhatsApp -->
+  <label for="whatsapp">Número de WhatsApp</label>
+  <input
+    type="tel"
+    id="whatsapp"
+    name="whatsapp"
+    placeholder="+51 9XXXXXXXX"
+    required
+  />
+
+  <!-- Correo electrónico -->
+  <label for="email">Correo electrónico</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="correo@ejemplo.com"
+    required
+  />
+
+  <!-- Selección de kit -->
+  <label for="kit">Selecciona tu kit</label>
+  <select id="kit" name="kit" required>
+    <option value="" disabled selected>Elige una opción</option>
+    <option value="Andina S">Andina S</option>
+    <option value="Andina M">Andina M</option>
+    <option value="Andina XL">Andina XL</option>
+    <!-- Añade más <option> aquí según tus kits disponibles -->
+  </select>
+
+  <!-- Hidden fields de Formspree -->
+  <!-- Personaliza el asunto del correo que recibirás -->
+  <input
+    type="hidden"
+    name="_subject"
+    value="🌐 Nueva pre-orden de Sluice Box"
+  />
+  <!-- Página de gracias tras enviar -->
+  <input
+    type="hidden"
+    name="_next"
+    value="https://andrescelemin.github.io/sluicebox/gracias.html"
+  />
+  <!-- Campo honeypot anti-spam -->
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <!-- Botón de envío -->
+  <button type="submit">Apartar con 20 % OFF</button>
+</form>
+
 
     <!-- CTA -->
     <div class="cta">
