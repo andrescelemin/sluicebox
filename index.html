@@ -173,69 +173,72 @@
     </div>
 
     <!-- PRE-ORDER -->
-    <section class="preorder" id="preorder" data-total="100" data-current="38">
-      <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
-      <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
+   <section class="preorder" id="preorder" data-total="100" data-current="38">
+  <h2>🚀 Aparta tu SLUICE BOX con 20 % OFF</h2>
+  <p>Reserva hoy y recibe <strong>120 días de asesoría gratuita</strong> + envío prioritario del primer lote.</p>
 
-      <form
-        class="preorder-form"
-        action="https://formspree.io/f/mrbkwwrd"
-        method="POST"
-        accept-charset="UTF-8"
-      >
-        <label>
-          Nombre completo
-          <input
-            type="text"
-            name="name"
-            placeholder="Tu nombre completo"
-            required
-          />
-        </label>
-        <label>
-          Número de WhatsApp
-          <input
-            type="tel"
-            name="whatsapp"
-            placeholder="+51 9XXXXXXXX"
-            required
-          />
-        </label>
-        <label>
-          Correo electrónico
-          <input
-            type="email"
-            name="email"
-            placeholder="correo@ejemplo.com"
-            required
-          />
-        </label>
-        <label>
-          Selecciona tu kit
-          <select name="kit" required>
-            <option value="" disabled selected>Elige una opción</option>
-            <option value="Andina S">Andina S</option>
-            <option value="Andina M">Andina M</option>
-            <option value="Andina XL">Andina XL</option>
-          </select>
-        </label>
-        <input type="hidden" name="_subject" value="🌐 Nueva pre-orden de Sluice Box" />
-        <input type="hidden" name="_next" value="https://andrescelemin.github.io/sluicebox/gracias.html" />
-        <input type="text" name="_gotcha" style="display:none" />
-        <button type="submit">Apartar con 20 % OFF</button>
-      </form>
+  <form
+    id="preorderForm"
+    class="preorder-form"
+    action="https://smartpromptsolutions.app.n8n.cloud/webhook/preorder"
+    method="POST"
+    accept-charset="UTF-8"
+  >
+    <label>
+      Nombre completo
+      <input
+        type="text"
+        name="name"
+        placeholder="Tu nombre completo"
+        required
+      />
+    </label>
+    <label>
+      Número de WhatsApp
+      <input
+        type="tel"
+        name="whatsapp"
+        placeholder="+51 9XXXXXXXX"
+        required
+      />
+    </label>
+    <label>
+      Correo electrónico
+      <input
+        type="email"
+        name="email"
+        placeholder="correo@ejemplo.com"
+        required
+      />
+    </label>
+    <label>
+      Selecciona tu kit
+      <select name="kit" required>
+        <option value="" disabled selected>Elige una opción</option>
+        <option value="Andina S">Andina S</option>
+        <option value="Andina M">Andina M</option>
+        <option value="Andina XL">Andina XL</option>
+      </select>
+    </label>
 
-      <div class="progress-wrap">
-        <div class="progress-label">
-          <span id="taken">0</span> / 100 pre-órdenes tomadas
-        </div>
-        <div class="progress-bar">
-          <div id="progress-fill"></div>
-        </div>
-      </div>
-      <div class="timer" id="timer"></div>
-      <p>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</p>
-    </section>
+    <input type="hidden" name="_subject" value="🌐 Nueva pre-orden de Sluice Box" />
+    <input type="hidden" name="_next" value="https://andrescelemin.github.io/sluicebox/gracias.html" />
+    <input type="text" name="_gotcha" style="display:none" />
+
+    <button type="submit">Apartar con 20 % OFF</button>
+  </form>
+
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span id="taken">0</span> / 100 pre-órdenes tomadas
+    </div>
+    <div class="progress-bar">
+      <div id="progress-fill"></div>
+    </div>
+  </div>
+  <div class="timer" id="timer"></div>
+  <p>Promoción válida para las primeras 100 reservas o hasta el 23 de julio de 2025, lo que ocurra primero.</p>
+</section>
 
     <!-- CTA -->
     <div class="cta">
