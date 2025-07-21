@@ -219,7 +219,7 @@ section ul li {
   color: var(--negro);
   padding: 12px;
   font-weight: 700;
-  border: none;
+  border: none;  
   border-radius: 6px;
   cursor: pointer;
   box-shadow:
@@ -349,20 +349,6 @@ section ul li {
   text-decoration: underline;
 }
 
-.social-icons {
-  margin-top: 1rem;
-}
-
-.social-icons a {
-  margin-right: 0.75rem;
-  display: inline-block;
-}
-
-.social-icons img {
-  width: 24px;
-  filter: brightness(0) invert(1);
-}
-
 .footer-bottom {
   text-align: center;
   border-top: 1px solid rgba(255,255,255,0.2);
@@ -373,4 +359,14 @@ section ul li {
 
 .footer-bottom p {
   margin: 0.3rem 0;
+}
+
+/* — Ocultar el footer duplicado (blanco) — */
+footer:not(.site-footer) {
+  display: none;
+}
+
+/* — Quitar íconos sociales del footer verde — */
+.site-footer .social-icons {
+  display: none;
 }
