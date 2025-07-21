@@ -320,3 +320,81 @@ footer {
   text-align: center;
   margin-bottom: 2rem;
 }
+
+<style>
+.site-footer {
+  background: linear-gradient(135deg, #006837, #004d1a);
+  color: #fff;
+  padding: 4rem 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.footer-col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a,
+.footer-col a {
+  color: #e0f2e9;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover,
+.footer-col a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.footer-bottom p {
+  margin: 0.3rem 0;
+}
+</style>
