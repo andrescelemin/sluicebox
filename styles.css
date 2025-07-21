@@ -188,28 +188,6 @@ section ul li {
   color: var(--verde);
 }
 
-/* — Footer — */
-footer {
-  background: var(--gris-oscuro);
-  color: var(--blanco);
-  text-align: center;
-  padding: 48px 20px;
-  margin-top: 40px;
-  position: relative;
-}
-
-/* — Botón flotante de WhatsApp — */
-.whatsapp-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 1000;
-}
-.whatsapp-float img {
-  width: 56px;
-  height: 56px;
-}
-
 /* — Pre-Order Styles — */
 .preorder {
   padding: 2rem 1rem;
@@ -235,7 +213,6 @@ footer {
   border-radius: 8px;
   width: 100%;
 }
-/* Botón estilo “relieve” para el formulario de pre‑orden */
 .preorder-form button {
   width: 100%;
   background: var(--amarillo);
@@ -305,7 +282,7 @@ footer {
   max-width: 960px;
   padding-top: 56.25%; /* 16:9 */
   margin-bottom: 1.5rem;
-  overflow: hidden;     /* recorta bordes */
+  overflow: hidden;
 }
 .video-embed {
   position: absolute;
@@ -313,20 +290,18 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;    /* rellena y elimina bandas negras */
+  object-fit: cover;
 }
-/* Ajuste para espacio bajo el CTA de vídeo */
 .video-cta {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-<style>
+/* ——— Footer: estilo “Amazonía” ——— */
 .site-footer {
-  background: linear-gradient(135deg, #006837, #004d1a);
-  color: #fff;
+  background: linear-gradient(135deg, var(--verde), #004d1a);
+  color: var(--blanco);
   padding: 4rem 1rem 2rem;
-  font-size: 0.9rem;
 }
 
 .footer-container {
@@ -339,6 +314,7 @@ footer {
 
 .footer-col {
   flex: 1 1 200px;
+  text-align: left;
 }
 
 .footer-logo {
@@ -349,6 +325,7 @@ footer {
 .footer-col h4 {
   margin-bottom: 1rem;
   font-size: 1.1rem;
+  color: var(--blanco);
 }
 
 .footer-col ul {
@@ -362,14 +339,14 @@ footer {
 
 .footer-col ul li a,
 .footer-col a {
-  color: #e0f2e9;
+  color: rgba(255,255,255,0.9);
   text-decoration: none;
 }
 
 .footer-col ul li a:hover,
 .footer-col a:hover {
+  color: var(--amarillo);
   text-decoration: underline;
-  color: #fff;
 }
 
 .social-icons {
@@ -377,7 +354,7 @@ footer {
 }
 
 .social-icons a {
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
   display: inline-block;
 }
 
@@ -391,10 +368,9 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.2);
   padding-top: 1rem;
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.7);
 }
 
 .footer-bottom p {
   margin: 0.3rem 0;
 }
-</style>
