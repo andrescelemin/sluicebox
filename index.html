@@ -86,7 +86,16 @@
 </head>
 
 <body>
-  <!-- HEADER -->
+  <!-- HERO AMAZONAS -->
+  <header class="hero" id="top">
+    <div class="hero__content">
+      <h1>Kit Completo de Prospección de Oro</h1>
+      <p>Recupera hasta 95 % del oro fino sin químicos.</p>
+      <a href="#preorder" class="btn-primary">¡Compra ahora!</a>
+    </div>
+  </header>
+
+  <!-- HEADER ORIGINAL -->
   <header>
     <img class="logo-header"
          src="assets/logo-sb-200x200.webp"
@@ -135,7 +144,6 @@
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="container">
-
     <!-- ¿QUÉ ES? -->
     <section>
       <h2>💡 ¿Qué incluye el Kit Completo?</h2>
@@ -209,7 +217,6 @@
           <h3 style="font-size:2rem; color:#00C851; margin:0.5rem 0;">95%</h3>
           <p>Recuperación de oro sin mercurio</p>
         </div>
-        
         <!-- Familias -->
         <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
           <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
@@ -220,7 +227,6 @@
           <h3 style="font-size:2rem; color:#00C851; margin:0.5rem 0;">500+</h3>
           <p>Familias que ahora minan limpio</p>
         </div>
-        
         <!-- Comunidades -->
         <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
           <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
@@ -231,7 +237,6 @@
           <h3 style="font-size:2rem; color:#00C851; margin:0.5rem 0;">50+</h3>
           <p>Cooperativas que adoptaron el Sluice Box</p>
         </div>
-        
         <!-- Clientes -->
         <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
           <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
@@ -246,9 +251,8 @@
     <!-- HISTORIAS QUE INSPIRAN -->
     <div class="historias-inspiran" style="text-align:center; margin:4rem 0;">
       <h2>Historias que Inspiran</h2>
-      <p class="subtitulo">Testimonios reales de quienes usan el Sluice Box</p>
+      <p class="subtitulo">Testimonios reales de quienes usan el Sluice Box</p>  
       <div class="cards-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem; margin-top:2rem;">
-        
         <!-- Testimonio 1 -->
         <div class="card testimonial-card" style="background:#fff; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); overflow:hidden;">
           <img src="assets/persona2.webp" alt="María Gómez" style="width:100%; display:block;">
@@ -260,7 +264,6 @@
             <p style="font-weight:bold; margin:0;">– María Gómez</p>
           </div>
         </div>
-        
         <!-- Testimonio 2 -->
         <div class="card testimonial-card" style="background:#fff; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); overflow:hidden;">
           <img src="assets/persona1.webp" alt="Juan Rodríguez" style="width:100%; display:block;">
@@ -272,7 +275,6 @@
             <p style="font-weight:bold; margin:0;">– Juan Rodríguez</p>
           </div>
         </div>
-        
         <!-- Testimonio 3 -->
         <div class="card testimonial-card" style="background:#fff; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); overflow:hidden;">
           <img src="assets/persona3.webp" alt="Ana Torres" style="width:100%; display:block;">
@@ -292,7 +294,6 @@
       <h2>🚀 Reserva tu Kit Completo con <strong>30 % inicial</strong></h2>
       <h3>El 70 % restante lo pagas al recibirlo.</h3>
       <h3>Incluye <strong>120 días de asesoría gratuita</strong> y seguimiento personalizado.</h3>
-
       <form
         id="preorderForm"
         class="preorder-form"
@@ -319,7 +320,6 @@
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
         <button type="submit" aria-label="Apartar con 30 % inicial">Apartar con 30 %</button>
       </form>
-
       <div class="progress-wrap">
         <div class="progress-label">
           <span id="taken">0</span> / 100 reservas tomadas
@@ -329,7 +329,7 @@
         </div>
       </div>
       <div class="timer" id="timer"></div>
-      <p>Promoción válida para las primeras 100 reservas o hasta el 10&nbsp;de&nbsp;julio&nbsp;de&nbsp;2025, lo que ocurra primero.</p>
+      <p>Promoción válida para las primeras 100 reservas o hasta el 10 de julio de 2025, lo que ocurra primero.</p>
     </section>
 
     <!-- CTA FINAL -->
@@ -355,154 +355,128 @@
         <p>Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o con apoyo de ONGs.</p>
       </div>
     </section>
-
   </main>
 
-<!-- ÁREAS DE IMPACTO SLUICE BOX -->
-<section class="impact-section">
-  <div class="impact-wrapper">
-    <h2 class="impact-title">Cómo el Sluice&nbsp;Box Transforma la Amazonía</h2>
-    <p class="impact-sub">
-      Cinco pilares fundamentales para revolucionar la minería artesanal sin mercurio
-    </p>
-
-    <div class="impact-grid">
-      <!-- 1 -->
-      <article class="impact-card">
-        <span class="impact-icon icon-blue">⚙️</span>
-        <h3>Recuperación de Oro&nbsp;99 %</h3>
-        <p>Maximiza el rendimiento sin químicos, cuidando a los mineros y el río.</p>
-      </article>
-
-      <!-- 2 -->
-      <article class="impact-card">
-        <span class="impact-icon icon-green">🌱</span>
-        <h3>Ríos Libres de Mercurio</h3>
-        <p>Protege la biodiversidad acuática y mantiene la seguridad alimentaria local.</p>
-      </article>
-
-      <!-- 3 -->
-      <article class="impact-card">
-        <span class="impact-icon icon-yellow">💡</span>
-        <h3>Innovación Accesible</h3>
-        <p>Diseño portátil y asequible que cualquier cooperativa puede implementar.</p>
-      </article>
-
-      <!-- 4 -->
-      <article class="impact-card">
-        <span class="impact-icon icon-magenta">👷‍♂️</span>
-        <h3>Salud y Seguridad Laboral</h3>
-        <p>Elimina vapores tóxicos y reduce accidentes con procesos simples.</p>
-      </article>
-
-      <!-- 5 -->
-      <article class="impact-card">
-        <span class="impact-icon icon-orange">💰</span>
-        <h3>Ingreso Justo Comunitario</h3>
-        <p>Aumenta ganancias locales y fomenta proyectos de desarrollo sostenible.</p>
-      </article>
+  <!-- ÁREAS DE IMPACTO SLUICE BOX -->
+  <section class="impact-section">
+    <div class="impact-wrapper">
+      <h2 class="impact-title">Cómo el Sluice Box Transforma la Amazonía</h2>
+      <p class="impact-sub">
+        Cinco pilares fundamentales para revolucionar la minería artesanal sin mercurio
+      </p>
+      <div class="impact-grid">
+        <article class="impact-card">
+          <span class="impact-icon icon-blue">⚙️</span>
+          <h3>Recuperación de Oro 99 %</h3>
+          <p>Maximiza el rendimiento sin químicos, cuidando a los mineros y el río.</p>
+        </article>
+        <article class="impact-card">
+          <span class="impact-icon icon-green">🌱</span>
+          <h3>Ríos Libres de Mercurio</h3>
+          <p>Protege la biodiversidad acuática y mantiene la seguridad alimentaria local.</p>
+        </article>
+        <article class="impact-card">
+          <span class="impact-icon icon-yellow">💡</span>
+          <h3>Innovación Accesible</h3>
+          <p>Diseño portátil y asequible que cualquier cooperativa puede implementar.</p>
+        </article>
+        <article class="impact-card">
+          <span class="impact-icon icon-magenta">👷‍♂️</span>
+          <h3>Salud y Seguridad Laboral</h3>
+          <p>Elimina vapores tóxicos y reduce accidentes con procesos simples.</p>
+        </article>
+        <article class="impact-card">
+          <span class="impact-icon icon-orange">💰</span>
+          <h3>Ingreso Justo Comunitario</h3>
+          <p>Aumenta ganancias locales y fomenta proyectos de desarrollo sostenible.</p>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- ÚNETE A NUESTRA COMUNIDAD -->
-<section class="community-section">
-  <div class="community-wrapper">
-    <h2 class="community-title">Únete a Nuestra Comunidad</h2>
-    <p class="community-sub">
-      Sé parte del cambio hacia un Amazonas más sostenible y próspero
-    </p>
-
-    <div class="community-grid">
-      
-      <!-- TikTok -->
-      <div class="community-card">
-        <div class="icon-circle">
-          <img src="assets/Logo_tik_tok.webp" alt="TikTok" loading="lazy">
+  <section class="community-section">
+    <div class="community-wrapper">
+      <h2 class="community-title">Únete a Nuestra Comunidad</h2>
+      <p class="community-sub">
+        Sé parte del cambio hacia un Amazonas más sostenible y próspero
+      </p>
+      <div class="community-grid">
+        <!-- TikTok -->
+        <div class="community-card">
+          <div class="icon-circle">
+            <img src="assets/Logo_tik_tok.webp" alt="TikTok" loading="lazy">
+          </div>
+          <h3>Canal de TikTok</h3>
+          <p>Contenido semanal con casos de éxito,<br>tutoriales y entrevistas inspiradoras.</p>
+          <a href="https://www.tiktok.com/@impulsoverdelatam?lang=es" target="_blank" class="btn-cta tiktok-btn">Seguir</a>
         </div>
-        <h3>Canal de TikTok</h3>
-        <p>Contenido semanal con casos de éxito, <br>tutoriales y entrevistas inspiradoras.</p>
-        <a href="https://www.tiktok.com/@impulsoverdelatam?lang=es" target="_blank" class="btn-cta tiktok-btn">Seguir</a>
-      </div>
-
-      <!-- WhatsApp -->
-      <div class="community-card">
-        <div class="icon-circle">
-          <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy">
+        <!-- WhatsApp -->
+        <div class="community-card">
+          <div class="icon-circle">
+            <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy">
+          </div>
+          <h3>Grupo de WhatsApp</h3>
+          <p>Únete al chat oficial para soporte,<br>novedades y colaboración.</p>
+          <a href="https://chat.whatsapp.com/ISqVM8BvrFTCsPTmFbNydk?mode=ac_t" target="_blank" class="btn-cta whatsapp-btn">Unirme</a>
         </div>
-        <h3>Grupo de WhatsApp</h3>
-        <p>Únete al chat oficial para soporte, <br>novedades y colaboración.</p>
-        <a href="https://chat.whatsapp.com/ISqVM8BvrFTCsPTmFbNydk?mode=ac_t" target="_blank" class="btn-cta whatsapp-btn">Unirme</a>
-      </div>
-
-      <!-- PDF -->
-      <div class="community-card">
-        <div class="icon-circle">
-          <img src="assets/Logo PDF.webp" alt="PDF" loading="lazy">
+        <!-- PDF -->
+        <div class="community-card">
+          <div class="icon-circle">
+            <img src="assets/Logo PDF.webp" alt="PDF" loading="lazy">
+          </div>
+          <h3>PDF de Especificaciones</h3>
+          <p>Descarga el dossier técnico con todos<br>los detalles del Sluice Box.</p>
+          <a href="assets/Dossier Técnico – Sluice Box.pdf" download class="btn-cta pdf-btn">Descargar PDF</a>
         </div>
-        <h3>PDF de Especificaciones</h3>
-        <p>Descarga el dossier técnico con todos <br>los detalles del Sluice Box.</p>
-        <a href="assets/Dossier Técnico – Sluice Box.pdf" download class="btn-cta pdf-btn">Descargar PDF</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-
- <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-container">
-    <!-- Columna 1: Logo + Descripción -->
-    <div class="footer-col">
-      <img src="assets/logo-sb-200x200.webp" alt="Logo Sluice Box" class="footer-logo" />
-      <p>Impulsando un futuro próspero y limpio para la Amazonía a través de tecnología sostenible y energía renovable.</p>
-      <div class="social-icons">
-        <a href="https://youtube.com/tu-canal" target="_blank" rel="noopener" aria-label="YouTube">
-          <img src="assets/icon-youtube.svg" alt="YouTube" />
-        </a>
-        <a href="https://wa.me/51935140886" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <img src="assets/icon-whatsapp.svg" alt="WhatsApp" />
-        </a>
-        <a href="https://tusitio.com" target="_blank" rel="noopener" aria-label="Web">
-          <img src="assets/icon-globe.svg" alt="Web" />
-        </a>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <img src="assets/logo-sb-200x200.webp" alt="Logo Sluice Box" class="footer-logo" />
+        <p>Impulsando un futuro próspero y limpio para la Amazonía a través de tecnología sostenible y energía renovable.</p>
+        <div class="social-icons">
+          <a href="https://youtube.com/tu-canal" target="_blank" rel="noopener" aria-label="YouTube">
+            <img src="assets/icon-youtube.svg" alt="YouTube" />
+          </a>
+          <a href="https://wa.me/51935140886" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <img src="assets/icon-whatsapp.svg" alt="WhatsApp" />
+          </a>
+          <a href="https://tusitio.com" target="_blank" rel="noopener" aria-label="Web">
+            <img src="assets/icon-globe.svg" alt="Web" />
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Nuestras Áreas</h4>
+        <ul>
+          <li><a href="https://tu-sitio.com/tecnologia-limpia" target="_blank" rel="noopener">Tecnología Limpia</a></li>
+          <li><a href="https://tu-sitio.com/superalimentos" target="_blank" rel="noopener">Superalimentos</a></li>
+          <li><a href="https://tu-sitio.com/aceites-naturales" target="_blank" rel="noopener">Aceites Naturales</a></li>
+          <li><a href="https://tu-sitio.com/historias-de-impacto" target="_blank" rel="noopener">Historias de Impacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p><a href="https://wa.me/51935140886" target="_blank" rel="noopener">+51 935 140 886</a></p>
+        <p><a href="mailto:impulsoverde@gmail.com">impulsoverde@gmail.com</a></p>
+        <p>Amazonía Peruana</p>
       </div>
     </div>
-
-    <!-- Columna 2: Enlaces Rápidos -->
-    <div class="footer-col">
-      <h4>Nuestras Áreas</h4>
-      <ul>
-        <li><a href="https://tu-sitio.com/tecnologia-limpia" target="_blank" rel="noopener">Tecnología Limpia</a></li>
-        <li><a href="https://tu-sitio.com/superalimentos" target="_blank" rel="noopener">Superalimentos</a></li>
-        <li><a href="https://tu-sitio.com/aceites-naturales" target="_blank" rel="noopener">Aceites Naturales</a></li>
-        <li><a href="https://tu-sitio.com/historias-de-impacto" target="_blank" rel="noopener">Historias de Impacto</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <p>© 2024 Sluice Box Perú. Todos los derechos reservados.</p>
+      <p>Construyendo un futuro sostenible para la Amazonía 🌿</p>
     </div>
+  </footer>
 
-    <!-- Columna 3: Contacto -->
-    <div class="footer-col">
-      <h4>Contacto</h4>
-      <p><a href="https://wa.me/51935140886" target="_blank" rel="noopener">+51 935 140 886</a></p>
-      <p><a href="mailto:impulsoverde@gmail.com">impulsoverde@gmail.com</a></p>
-      <p>Amazonía Peruana</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2024 Sluice Box Perú. Todos los derechos reservados.</p>
-    <p>Construyendo un futuro sostenible para la Amazonía 🌿</p>
-  </div>
-</footer>
-
-  <!-- Boton WhatsApp -->
- <a href="https://wa.me/51935108877" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
-  <img src="assets/whatsapp.png" alt="" width="28" height="28">
-</a>
-
-
+  <!-- Botón WhatsApp flotante -->
+  <a href="https://wa.me/51935108877" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
+    <img src="assets/whatsapp.png" alt="" width="28" height="28">
+  </a>
 
   <!-- SCRIPTS -->
   <script src="form.js" defer></script>
