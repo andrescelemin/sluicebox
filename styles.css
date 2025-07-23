@@ -297,30 +297,24 @@ section ul li {
   margin-bottom: 2rem;
 }
 
-/* — Variables de marca adicionales — */
-:root {
-  --tiktok-btn: #e6007e;
-  --site-btn:   #4f46e5;
-  --icon-yellow: var(--amarillo);
-  --icon-green:  var(--verde);
-  --icon-blue:   #4f46e5;
-}
-
-/* ——— Comunidad ——— */
+/* ——— COMMUNITY SECTION ——— */
 .community-section {
-  background: linear-gradient(180deg, #2e9a56 0%, #176634 100%);
+  background: linear-gradient(180deg, #2e9a56 0%, #166533 100%);
   color: var(--blanco);
   padding: 3rem 1rem;
 }
-.community-section h2 {
-  font-size: 2rem;
+.community-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
+}
+.community-title {
+  font-size: 2rem;
   margin-bottom: .5rem;
 }
 .community-sub {
-  text-align: center;
-  margin-bottom: 2rem;
   font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 .community-grid {
   display: grid;
@@ -333,77 +327,82 @@ section ul li {
   }
 }
 .community-card {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
   border-radius: 12px;
-  padding: 2rem 1.5rem;
-  text-align: center;
+  padding: 2rem 1.5rem 2.5rem;
   backdrop-filter: blur(4px);
-  transition: background .2s;
+  transition: background .25s;
 }
 .community-card:hover {
-  background: rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.12);
+}
+.community-card h3 {
+  margin: 1rem 0 .5rem;
+  font-size: 1.1rem;
+}
+.community-card p {
+  font-size: .95rem;
+  line-height: 1.4;
 }
 
-/* — Iconos circulares — */
-.community-icon {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1rem;
+/* —— Icono circular —— */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--amarillo);      /* color base; se sobrescribe abajo */
 }
-.tiktok-icon {
-  background-color: var(--icon-yellow);
-  background-image: url('assets/icons/tiktok.svg');
-}
-.whatsapp-icon {
-  background-color: var(--icon-green);
-  background-image: url('assets/icons/whatsapp.svg');
-}
-.pdf-icon {
-  background-color: var(--icon-blue);
-  background-image: url('assets/icons/file-download.svg');
+.icon-circle img {
+  width: 28px;
+  height: 28px;
 }
 
-/* — Botones — */
-.btn-community {
+/* —— Botones —— */
+.btn-cta {
   display: inline-block;
-  margin-top: 1rem;
-  padding: .6rem 1.5rem;
+  margin-top: 1.2rem;
+  padding: .7rem 1.6rem;
   border-radius: 40px;
   font-weight: 700;
   text-decoration: none;
   color: var(--blanco);
-  transition: opacity .2s;
+  transition: opacity .2s, transform .2s;
 }
-.btn-community:hover {
+.btn-cta:hover {
   opacity: .9;
-}
-.tiktok-btn {
-  background: var(--tiktok-btn);
-}
-.whatsapp-btn {
-  background: var(--icon-green);
-}
-.pdf-btn {
-  background: var(--site-btn);
+  transform: translateY(-2px);
 }
 
-/* — Responsive ajustes íconos y botones — */
+/* Colores específicos */
+.tiktok-btn      { background: #e6007e; }
+.whatsapp-btn    { background: #25D366; }
+.pdf-btn         { background: #3b82f6; }
+
+.icon-circle:nth-child(1) { background: var(--amarillo); }   /* TikTok */
+.community-card:nth-child(2) .icon-circle { background: #25D366; } /* WhatsApp */
+.community-card:nth-child(3) .icon-circle { background: #3b82f6; } /* PDF */
+
+/* Responsive ajustes icono y botón en pantallas muy pequeñas */
 @media (max-width: 480px) {
-  .community-icon {
-    width: 40px;
-    height: 40px;
-    background-size: 50%;
+  .icon-circle {
+    width: 48px;
+    height: 48px;
   }
-  .btn-community {
-    padding: .5rem 1.2rem;
+  .icon-circle img {
+    width: 22px;
+    height: 22px;
+  }
+  .btn-cta {
+    padding: .6rem 1.3rem;
+    font-size: .9rem;
   }
 }
+
 
 
 /* ——— Footer: estilo “Amazonía” ——— */
