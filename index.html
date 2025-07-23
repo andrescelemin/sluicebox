@@ -87,15 +87,15 @@
 
 <body>
   <!-- HERO AMAZONAS -->
-  <header class="hero" id="top">
+  <section class="hero" id="top">
     <div class="hero__content">
       <h1>Kit Completo de Prospección de Oro</h1>
       <p>Recupera hasta 95 % del oro fino sin químicos.</p>
       <a href="#preorder" class="btn-primary">¡Compra ahora!</a>
     </div>
-  </header>
+  </section>
 
-  <!-- HEADER ORIGINAL -->
+  <!-- HEADER ORIGINAL (solo logo y texto) -->
   <header>
     <img class="logo-header"
          src="assets/logo-sb-200x200.webp"
@@ -106,18 +106,12 @@
     <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
   </header>
 
-  <!-- SECCIÓN DE VÍDEO RESPONSIVO -->
+  <!-- SECCIÓN DE VÍDEO SEMI-VERTICAL -->
   <section class="video-section">
     <div class="video-wrapper">
-      <video
-        class="video-embed"
-        autoplay
-        muted
-        playsinline
-        controls
-        aria-label="Demostración Kit Completo de Prospección de Oro"
-        width="100%"
-      >
+      <video class="video-embed"
+             autoplay muted playsinline controls
+             aria-label="Demostración Kit Completo de Prospección de Oro">
         <source src="assets/Copia de Video SluiceBox 15 seg (1).mp4" type="video/mp4">
         Tu navegador no soporta la reproducción de vídeo.
       </video>
@@ -127,27 +121,21 @@
     </div>
   </section>
 
-  <!-- HERO HORIZONTAL -->
-  <div class="hero">
-    <link rel="preload" as="image" href="assets/sluicebox-h-1024x640.webp">
+  <!-- KIT HORIZONTAL SOBRE FONDO BLANCO -->
+  <section class="hero hero-kit">
     <img class="hero-img"
-         src="assets/sluicebox-h-480x320.webp"
-         srcset="
-           assets/sluicebox-h-480x320.webp  480w,
-           assets/sluicebox-h-1024x640.webp 1024w,
-           assets/sluicebox-h-1920x1080.webp 1920w"
-         sizes="(max-width:768px) 480px, (max-width:1200px) 1024px, 1920px"
-         alt="Sluice Box Perú en acción"
+         src="assets/kit-h-clean.webp"
+         alt="Kit Completo Sluice Box - Vista Horizontal"
          loading="lazy"
-         width="1024" height="640" />
-  </div>
+         width="1024" height="640">
+  </section>
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="container">
     <!-- ¿QUÉ ES? -->
     <section>
       <h2>💡 ¿Qué incluye el Kit Completo?</h2>
-      <p>El <strong>Kit Completo de Prospección de Oro</strong> contiene todo lo que necesitas para iniciar o potenciar tu aventura minera de forma profesional, limpia y rentable. Combina un Sluice Box plegable de 50 ” con herramientas seleccionadas por expertos para garantizar la máxima recuperación de oro fino y pepitas, sin necesidad de mercurio ni combustibles.</p>
+      <p>El <strong>Kit Completo de Prospección de Oro</strong> contiene todo lo que necesitas para iniciar o potenciar tu aventura minera de forma profesional, limpia y rentable. Combina un Sluice Box plegable de 50” con herramientas seleccionadas por expertos para garantizar la máxima recuperación de oro fino y pepitas, sin necesidad de mercurio ni combustibles.</p>
     </section>
 
     <!-- BENEFICIOS -->
@@ -157,7 +145,7 @@
         <li>No necesitas <strong>mercurio</strong> ni motores</li>
         <li>Portátil: cabe en un balde de 5 gal</li>
         <li>Legal en zonas de amortiguamiento y REINFO</li>
-        <li>Recuperas tu inversión en 1 – 2 semanas</li>
+        <li>Recuperas tu inversión en 1–2 semanas</li>
         <li>Fabricado con tecnología moderna y experiencia real en campo</li>
       </ul>
       <p>Diseñado cerca de Keyesville, California, y ensamblado en EE.UU. con piezas de origen internacional.</p>
@@ -167,11 +155,11 @@
     <section>
       <h2>🎒 Contenido del Kit</h2>
       <ul>
-        <li>✔ Sluice Box plegable de 50 ” (aluminio + tapetes de colección de oro)</li>
-        <li>✔ 3 Bateas espiraladas (9 ”, 11 ”, 15 ”)</li>
+        <li>✔ Sluice Box plegable de 50” (aluminio + tapetes de colección de oro)</li>
+        <li>✔ 3 Bateas espiraladas (9”, 11”, 15”)</li>
         <li>✔ 2 Clasificadores de oro</li>
         <li>✔ Botella Snifter para oro fino</li>
-        <li>✔ Martillo Pico de Roca de 12 ”</li>
+        <li>✔ Martillo Pico de Roca de 12”</li>
         <li>✔ Imán separador de arena negra</li>
         <li>✔ Set de Herramientas para grietas + pala Pay Dirt</li>
         <li>✔ Pinzas con lupa de acero inoxidable</li>
@@ -194,180 +182,26 @@
         <li>Incluye manual en PDF y soporte técnico por WhatsApp</li>
       </ul>
     </section>
-
-    <!-- HERO VERTICAL -->
-    <div class="hero">
-      <img class="hero-img"
-           src="assets/sluicebox-v-640x1024.webp"
-           alt="Kit Completo de Prospección de Oro"
-           loading="lazy"
-           width="640" height="1024" />
-    </div>
-
-    <!-- IMPACTO EN NÚMEROS -->
-    <div class="impacto-numeros" style="text-align:center; margin:4rem 0;">
-      <h2>Nuestro Impacto en Números</h2>
-      <p class="subtitulo">Resultados reales que transforman vidas y protegen la Amazonía</p>
-      <div class="cards-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:2rem; margin-top:2rem;">
-        <!-- Recuperación -->
-        <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-          <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
-            <path d="M24 4C24 4 8 24 8 34a16 16 0 0032 0C40 24 24 4 24 4Z" fill="#00C851"/>
-          </svg>
-          <h3 style="font-size:2rem; color:#00C851; margin:0.5rem 0;">95%</h3>
-          <p>Recuperación de oro sin mercurio</p>
-        </div>
-        <!-- Familias -->
-        <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-          <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
-            <circle cx="14" cy="18" r="6" fill="#00C851"/>
-            <circle cx="34" cy="18" r="6" fill="#00C851"/>
-            <path d="M8 38c0-6 12-6 12-6s12 0 12 6v6H8v-6z" fill="#00C851"/>
-          </svg>
-          <h3 style="font-size:2rem; color:#00C851; margin:0.5rem 0;">500+</h3>
-          <p>Familias que ahora minan limpio</p>
-        </div>
-        <!-- Comunidades -->
-        <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-          <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
-            <polygon points="6,28 24,10 42,28" fill="#00C851"/>
-            <rect x="10" y="28" width="8" height="12" fill="#00C851"/>
-            <rect x="30" y="28" width="8" height="12" fill="#00C851"/>
-          </svg>
-          <h3 style="font-size:2rem; color:#00C851; margin:0.5rem 0;">50+</h3>
-          <p>Cooperativas que adoptaron el Sluice Box</p>
-        </div>
-        <!-- Clientes -->
-        <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-          <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
-            <path d="M24 4C16 12 8 20 12 32s12 12 12 12 12-4 16-16-8-20-16-12z" fill="#00C851"/>
-          </svg>
-          <h3 style="font-size:2rem; color:#00C851; margin:0.5rem 0;">100%</h3>
-          <p>Clientes satisfechos con su kit</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- HISTORIAS QUE INSPIRAN -->
-    <div class="historias-inspiran" style="text-align:center; margin:4rem 0;">
-      <h2>Historias que Inspiran</h2>
-      <p class="subtitulo">Testimonios reales de quienes usan el Sluice Box</p>  
-      <div class="cards-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem; margin-top:2rem;">
-        <!-- Testimonio 1 -->
-        <div class="card testimonial-card" style="background:#fff; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); overflow:hidden;">
-          <img src="assets/persona2.webp" alt="María Gómez" style="width:100%; display:block;">
-          <div style="padding:1.5rem;">
-            <div class="stars" style="color:#ffc107; margin-bottom:1rem;">★★★★★</div>
-            <p style="font-style:italic; margin-bottom:1rem;">
-              “Desde que uso el Sluice Box, recupero hasta 95 % del oro fino sin exponerme al mercurio. ¡Mi familia vive con mucha más tranquilidad!”
-            </p>
-            <p style="font-weight:bold; margin:0;">– María Gómez</p>
-          </div>
-        </div>
-        <!-- Testimonio 2 -->
-        <div class="card testimonial-card" style="background:#fff; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); overflow:hidden;">
-          <img src="assets/persona1.webp" alt="Juan Rodríguez" style="width:100%; display:block;">
-          <div style="padding:1.5rem;">
-            <div class="stars" style="color:#ffc107; margin-bottom:1rem;">★★★★★</div>
-            <p style="font-style:italic; margin-bottom:1rem;">
-              “La portabilidad del Sluice Box me permite explorar zonas remotas y recuperar más oro en menos tiempo. ¡Una herramienta imprescindible!”
-            </p>
-            <p style="font-weight:bold; margin:0;">– Juan Rodríguez</p>
-          </div>
-        </div>
-        <!-- Testimonio 3 -->
-        <div class="card testimonial-card" style="background:#fff; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); overflow:hidden;">
-          <img src="assets/persona3.webp" alt="Ana Torres" style="width:100%; display:block;">
-          <div style="padding:1.5rem;">
-            <div class="stars" style="color:#ffc107; margin-bottom:1rem;">★★★★★</div>
-            <p style="font-style:italic; margin-bottom:1rem;">
-              “Gracias a mi Sluice Box, tengo un negocio sostenible que cuida el río y mejora mi calidad de vida. ¡Mis clientes aman la pureza del oro!”
-            </p>
-            <p style="font-weight:bold; margin:0;">– Manuel Torres</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PRE-ORDER -->
-    <section class="preorder" id="preorder" data-total="100" data-current="38">
-      <h2>🚀 Reserva tu Kit Completo con <strong>30 % inicial</strong></h2>
-      <h3>El 70 % restante lo pagas al recibirlo.</h3>
-      <h3>Incluye <strong>120 días de asesoría gratuita</strong> y seguimiento personalizado.</h3>
-      <form
-        id="preorderForm"
-        class="preorder-form"
-        action="https://smartpromptsolutions.app.n8n.cloud/webhook/preorder"
-        method="POST"
-        accept-charset="UTF-8"
-        autocomplete="on"
-      >
-        <label>
-          Nombre completo
-          <input type="text" name="name" placeholder="Tu nombre completo" required autocomplete="name" />
-        </label>
-        <label>
-          Número de WhatsApp
-          <input type="tel" name="whatsapp" placeholder="+51 9XXXXXXXX" required autocomplete="tel" />
-        </label>
-        <label>
-          Correo electrónico
-          <input type="email" name="email" placeholder="correo@ejemplo.com" required autocomplete="email" />
-        </label>
-        <input type="hidden" name="kit" value="Kit Completo de Prospección de Oro" />
-        <input type="hidden" name="_subject" value="🌐 Nueva pre-orden – Kit Completo de Prospección de Oro" />
-        <input type="hidden" name="_next" value="https://andrescelemin.github.io/sluicebox/gracias.html" />
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-        <button type="submit" aria-label="Apartar con 30 % inicial">Apartar con 30 %</button>
-      </form>
-      <div class="progress-wrap">
-        <div class="progress-label">
-          <span id="taken">0</span> / 100 reservas tomadas
-        </div>
-        <div class="progress-bar">
-          <div id="progress-fill"></div>
-        </div>
-      </div>
-      <div class="timer" id="timer"></div>
-      <p>Promoción válida para las primeras 100 reservas o hasta el 10 de julio de 2025, lo que ocurra primero.</p>
-    </section>
-
-    <!-- CTA FINAL -->
-    <div class="cta">
-      <h2>🎯 Llévate tu Kit Completo Hoy</h2>
-      <p>Paga con Mercado Pago, transferencia BCP, Yape, Plin o PayPal. Stock limitado por lote.</p>
-      <a href="https://wa.me/51935108877" class="btn-primary" target="_blank" rel="noopener" aria-label="Cotizar en WhatsApp">¡Cotizar en WhatsApp!</a>
-    </div>
-
-    <!-- FAQ -->
-    <section class="faq">
-      <h2>❓ Preguntas Frecuentes</h2>
-      <div class="faq-item">
-        <h3>¿Envían a mi región?</h3>
-        <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucallpa, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo ver cómo funciona?</h3>
-        <p>Claro, te enviamos videos y también capacitamos por WhatsApp o presencial según disponibilidad.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Sirve para formalizarme?</h3>
-        <p>Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o con apoyo de ONGs.</p>
-      </div>
-    </section>
   </main>
+
+  <!-- KIT VERTICAL SOBRE FONDO BLANCO -->
+  <section class="hero hero-kit">
+    <img class="hero-img"
+         src="assets/kit-v-clean.webp"
+         alt="Kit Completo Sluice Box - Vista Vertical"
+         loading="lazy"
+         width="640" height="1024">
+  </section>
 
   <!-- ÁREAS DE IMPACTO SLUICE BOX -->
   <section class="impact-section">
     <div class="impact-wrapper">
       <h2 class="impact-title">Cómo el Sluice Box Transforma la Amazonía</h2>
-      <p class="impact-sub">
-        Cinco pilares fundamentales para revolucionar la minería artesanal sin mercurio
-      </p>
+      <p class="impact-sub">Cinco pilares fundamentales para revolucionar la minería artesanal sin mercurio</p>
       <div class="impact-grid">
         <article class="impact-card">
           <span class="impact-icon icon-blue">⚙️</span>
-          <h3>Recuperación de Oro 99 %</h3>
+          <h3>Recuperación de Oro 99%</h3>
           <p>Maximiza el rendimiento sin químicos, cuidando a los mineros y el río.</p>
         </article>
         <article class="impact-card">
@@ -398,38 +232,74 @@
   <section class="community-section">
     <div class="community-wrapper">
       <h2 class="community-title">Únete a Nuestra Comunidad</h2>
-      <p class="community-sub">
-        Sé parte del cambio hacia un Amazonas más sostenible y próspero
-      </p>
+      <p class="community-sub">Sé parte del cambio hacia un Amazonas más sostenible y próspero</p>
       <div class="community-grid">
-        <!-- TikTok -->
         <div class="community-card">
-          <div class="icon-circle">
-            <img src="assets/Logo_tik_tok.webp" alt="TikTok" loading="lazy">
-          </div>
+          <div class="icon-circle"><img src="assets/Logo_tik_tok.webp" alt="TikTok"></div>
           <h3>Canal de TikTok</h3>
           <p>Contenido semanal con casos de éxito,<br>tutoriales y entrevistas inspiradoras.</p>
-          <a href="https://www.tiktok.com/@impulsoverdelatam?lang=es" target="_blank" class="btn-cta tiktok-btn">Seguir</a>
+          <a href="https://www.tiktok.com/@impulsoverdelatam?lang=es" class="btn-cta tiktok-btn">Seguir</a>
         </div>
-        <!-- WhatsApp -->
         <div class="community-card">
-          <div class="icon-circle">
-            <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy">
-          </div>
+          <div class="icon-circle"><img src="assets/whatsapp.png" alt="WhatsApp"></div>
           <h3>Grupo de WhatsApp</h3>
           <p>Únete al chat oficial para soporte,<br>novedades y colaboración.</p>
-          <a href="https://chat.whatsapp.com/ISqVM8BvrFTCsPTmFbNydk?mode=ac_t" target="_blank" class="btn-cta whatsapp-btn">Unirme</a>
+          <a href="https://chat.whatsapp.com/ISqVM8BvrFTCsPTmFbNydk?mode=ac_t" class="btn-cta whatsapp-btn">Unirme</a>
         </div>
-        <!-- PDF -->
         <div class="community-card">
-          <div class="icon-circle">
-            <img src="assets/Logo PDF.webp" alt="PDF" loading="lazy">
-          </div>
+          <div class="icon-circle"><img src="assets/Logo PDF.webp" alt="PDF"></div>
           <h3>PDF de Especificaciones</h3>
           <p>Descarga el dossier técnico con todos<br>los detalles del Sluice Box.</p>
-          <a href="assets/Dossier Técnico – Sluice Box.pdf" download class="btn-cta pdf-btn">Descargar PDF</a>
+          <a href="assets/Dossier Técnico – Sluice Box.pdf" download class="btn-cta pdf-btn">Descargar PDF</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PRE-ORDER -->
+  <section class="preorder" id="preorder" data-total="100" data-current="38">
+    <h2>🚀 Reserva tu Kit Completo con <strong>30% inicial</strong></h2>
+    <h3>El 70% restante lo pagas al recibirlo.</h3>
+    <h3>Incluye <strong>120 días de asesoría gratuita</strong> y seguimiento personalizado.</h3>
+    <form id="preorderForm" class="preorder-form" action="https://smartpromptsolutions.app.n8n.cloud/webhook/preorder" method="POST" accept-charset="UTF-8" autocomplete="on">
+      <label>Nombre completo<input type="text" name="name" placeholder="Tu nombre completo" required autocomplete="name"></label>
+      <label>Número de WhatsApp<input type="tel" name="whatsapp" placeholder="+51 9XXXXXXXX" required autocomplete="tel"></label>
+      <label>Correo electrónico<input type="email" name="email" placeholder="correo@ejemplo.com" required autocomplete="email"></label>
+      <input type="hidden" name="kit" value="Kit Completo de Prospección de Oro">
+      <input type="hidden" name="_subject" value="🌐 Nueva pre-orden – Kit Completo de Prospección de Oro">
+      <input type="hidden" name="_next" value="https://andrescelemin.github.io/sluicebox/gracias.html">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit" aria-label="Apartar con 30% inicial">Apartar con 30%</button>
+    </form>
+    <div class="progress-wrap">
+      <div class="progress-label"><span id="taken">0</span> / 100 reservas tomadas</div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+    </div>
+    <div class="timer" id="timer"></div>
+    <p>Promoción válida para las primeras 100 reservas o hasta el 10 de julio de 2025, lo que ocurra primero.</p>
+  </section>
+
+  <!-- CTA FINAL -->
+  <div class="cta">
+    <h2>🎯 Llévate tu Kit Completo Hoy</h2>
+    <p>Paga con Mercado Pago, transferencia BCP, Yape, Plin o PayPal. Stock limitado por lote.</p>
+    <a href="https://wa.me/51935108877" class="btn-primary" target="_blank">¡Cotizar en WhatsApp!</a>
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>❓ Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Envían a mi región?</h3>
+      <p>Sí, entregamos desde Iquitos a todo Loreto, Amazonas, Pucallpa, Madre de Dios, Ucayali, San Martín, Huánuco y Cusco. Enviamos a todo el Perú por fluvial, terrestre o aéreo.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Puedo ver cómo funciona?</h3>
+      <p>Claro, te enviamos videos y también capacitamos por WhatsApp o presencial según disponibilidad.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Sirve para formalizarme?</h3>
+      <p>Sí. No usa químicos, así que puedes trabajar sin miedo y avanzar en tu proceso REINFO o con apoyo de ONGs.</p>
     </div>
   </section>
 
@@ -437,34 +307,22 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-col">
-        <img src="assets/logo-sb-200x200.webp" alt="Logo Sluice Box" class="footer-logo" />
+        <img src="assets/logo-sb-200x200.webp" alt="Logo Sluice Box" class="footer-logo">
         <p>Impulsando un futuro próspero y limpio para la Amazonía a través de tecnología sostenible y energía renovable.</p>
-        <div class="social-icons">
-          <a href="https://youtube.com/tu-canal" target="_blank" rel="noopener" aria-label="YouTube">
-            <img src="assets/icon-youtube.svg" alt="YouTube" />
-          </a>
-          <a href="https://wa.me/51935140886" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <img src="assets/icon-whatsapp.svg" alt="WhatsApp" />
-          </a>
-          <a href="https://tusitio.com" target="_blank" rel="noopener" aria-label="Web">
-            <img src="assets/icon-globe.svg" alt="Web" />
-          </a>
-        </div>
       </div>
       <div class="footer-col">
         <h4>Nuestras Áreas</h4>
         <ul>
-          <li><a href="https://tu-sitio.com/tecnologia-limpia" target="_blank" rel="noopener">Tecnología Limpia</a></li>
-          <li><a href="https://tu-sitio.com/superalimentos" target="_blank" rel="noopener">Superalimentos</a></li>
-          <li><a href="https://tu-sitio.com/aceites-naturales" target="_blank" rel="noopener">Aceites Naturales</a></li>
-          <li><a href="https://tu-sitio.com/historias-de-impacto" target="_blank" rel="noopener">Historias de Impacto</a></li>
+          <li><a href="#">Tecnología Limpia</a></li>
+          <li><a href="#">Superalimentos</a></li>
+          <li><a href="#">Aceites Naturales</a></li>
+          <li><a href="#">Historias de Impacto</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contacto</h4>
-        <p><a href="https://wa.me/51935140886" target="_blank" rel="noopener">+51 935 140 886</a></p>
+        <p><a href="https://wa.me/51935140886">+51 935 140 886</a></p>
         <p><a href="mailto:impulsoverde@gmail.com">impulsoverde@gmail.com</a></p>
-        <p>Amazonía Peruana</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -482,33 +340,29 @@
   <script src="form.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      /* PROGRESO */
+      // Progreso y cuenta atrás
       const preorder = document.getElementById('preorder');
       if (preorder) {
         const total   = +preorder.dataset.total   || 0;
         const current = +preorder.dataset.current || 0;
         const fill    = document.getElementById('progress-fill');
         const taken   = document.getElementById('taken');
-        if (fill && total) fill.style.width = (current / total * 100) + '%';
+        if (fill && total) fill.style.width = (current/total*100) + '%';
         if (taken) taken.textContent = current;
       }
-      /* COUNTDOWN */
       const endDate = new Date('2025-07-30T23:59:59-05:00');
       const timerEl = document.getElementById('timer');
       function updateTimer() {
         const diff = endDate - new Date();
-        if (diff <= 0) {
-          timerEl.textContent = '¡Promoción finalizada!';
-          return;
-        }
-        const d = Math.floor(diff / 864e5),
-              h = Math.floor(diff % 864e5 / 36e5),
-              m = Math.floor(diff % 36e5 / 6e4),
-              s = Math.floor(diff % 6e4 / 1e3);
+        if (diff <= 0) { timerEl.textContent = '¡Promoción finalizada!'; return; }
+        const d = Math.floor(diff/864e5),
+              h = Math.floor(diff%864e5/36e5),
+              m = Math.floor(diff%36e5/6e4),
+              s = Math.floor(diff%6e4/1e3);
         timerEl.textContent = `Termina en ${d}d ${h}h ${m}m ${s}s`;
       }
       updateTimer();
-      setInterval(updateTimer, 1000);
+      setInterval(updateTimer,1000);
     });
   </script>
 </body>
