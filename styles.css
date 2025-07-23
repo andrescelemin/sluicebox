@@ -1,3 +1,29 @@
+/* ——— Reset ligero y variables de color globales ——— */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --verde: #0b7243;
+  --amarillo: #ffd100;
+  --gris: #f4f4f4;
+  --negro: #222;
+  --blanco: #fff;
+  --gris-oscuro: #444;
+}
+
+/* ——— Base ——— */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--negro);
+  background: var(--gris);
+  line-height: 1.6;
+}
+
 /* ——— Centrados globales ——— */
 img {
   display: block;
@@ -10,77 +36,81 @@ img {
   display: inline-block;
 }
 
-/* — Variables de color — */
-:root {
-  --verde: #0b7243;
-  --amarillo: #ffd100;
-  --gris: #f4f4f4;
-  --negro: #222;
-  --blanco: #fff;
-  --gris-oscuro: #444;
-}
-
-/* — Reset ligero — */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* — Base — */
-body {
-  font-family: Arial, sans-serif;
-  color: var(--negro);
-  background: var(--gris);
-  line-height: 1.6;
-}
-
-/* — Logo en header — */
-.logo-header {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  width: 120px;
-  height: auto;
-  z-index: 1000;
-}
-
-/* — Encabezado — */
-header {
-  position: relative;
-  background: var(--verde);
-  color: var(--blanco);
-  text-align: center;
-  padding: 48px 20px;
-}
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 8px;
-}
-header p {
-  font-size: 1.25rem;
-}
-
-/* — Contenedor principal — */
+/* ——— Contenedor principal ——— */
 .container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 24px 20px;
 }
 
-/* — Hero sections — */
+/* ——— Hero Amazonas ——— */
 .hero {
-  margin: 24px 0;
-  text-align: center;
-}
-.hero-img {
+  position: relative;
   width: 100%;
-  height: auto;
-  max-width: 1920px;
+  height: 60vh;
+  min-height: 350px;
+  background: url("assets/amazonas-header.webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+.hero h1 {
+  font-size: clamp(1.8rem,4vw,3rem);
+  margin-bottom: .75rem;
+}
+.hero p {
+  font-size: clamp(1rem,2.4vw,1.25rem);
+  margin-bottom: 1.5rem;
 }
 
-/* — Secciones — */
+/* ——— Hero Kits sobre fondo blanco ——— */
+.hero-kit {
+  background: var(--blanco);
+  padding: 2rem 0;
+}
+.hero-kit .hero-img {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+}
+
+/* ——— Video semi-vertical responsive ——— */
+.video-section {
+  padding: 2rem 1rem;
+  background: var(--gris);
+  text-align: center;
+}
+.video-wrapper {
+  max-width: 430px;
+  margin: 0 auto 1.5rem;
+}
+.video-embed {
+  width: 100%;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.video-cta {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ——— Secciones de contenido ——— */
 section {
   margin-bottom: 32px;
 }
@@ -99,7 +129,7 @@ section ul li {
   text-indent: -1.2em;
 }
 
-/* — Kits comparativa — */
+/* ——— Kits comparativa ——— */
 .kits {
   display: grid;
   grid-template-columns: 1fr;
@@ -108,7 +138,7 @@ section ul li {
 }
 @media (min-width: 768px) {
   .kits {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
   }
 }
 .kit {
@@ -141,7 +171,7 @@ section ul li {
   color: var(--amarillo);
 }
 
-/* — Botones con relieve — */
+/* ——— Botones principales ——— */
 .btn-kit, .btn-primary {
   display: inline-block;
   margin-top: 14px;
@@ -151,26 +181,20 @@ section ul li {
   border-radius: 6px;
   text-decoration: none;
   font-weight: 700;
-  box-shadow:
-    inset 0 -4px 6px rgba(0,0,0,0.2),
-    0 4px 6px rgba(0,0,0,0.2);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: inset 0 -4px 6px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform .1s ease, box-shadow .1s ease;
 }
 .btn-kit:hover, .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow:
-    inset 0 -6px 8px rgba(0,0,0,0.3),
-    0 6px 8px rgba(0,0,0,0.3);
+  box-shadow: inset 0 -6px 8px rgba(0,0,0,0.3), 0 6px 8px rgba(0,0,0,0.3);
 }
 
-/* — CTA con relieve — */
+/* ——— CTA destacado ——— */
 .cta {
   background: var(--amarillo);
   padding: 32px 20px;
   border-radius: 12px;
-  box-shadow:
-    inset 0 -4px 6px rgba(0,0,0,0.2),
-    0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: inset 0 -4px 6px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
   margin: 32px 0;
 }
 .cta h2 {
@@ -182,13 +206,13 @@ section ul li {
   margin-bottom: 16px;
 }
 
-/* — FAQ — */
+/* ——— FAQ ——— */
 .faq h3 {
   margin-top: 20px;
   color: var(--verde);
 }
 
-/* — Pre-Order Styles — */
+/* ——— Pre-Order Styles ——— */
 .preorder {
   padding: 2rem 1rem;
   text-align: center;
@@ -219,22 +243,18 @@ section ul li {
   color: var(--negro);
   padding: 12px;
   font-weight: 700;
-  border: none;  
+  border: none;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow:
-    inset 0 -4px 6px rgba(0,0,0,0.2),
-    0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: inset 0 -4px 6px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
   transition: transform .1s ease, box-shadow .1s ease;
 }
 .preorder-form button:hover {
   transform: translateY(-2px);
-  box-shadow:
-    inset 0 -6px 8px rgba(0,0,0,0.3),
-    0 6px 8px rgba(0,0,0,0.3);
+  box-shadow: inset 0 -6px 8px rgba(0,0,0,0.3), 0 6px 8px rgba(0,0,0,0.3);
 }
 
-/* — Progress & Countdown — */
+/* ——— Progress & Countdown ——— */
 .progress-wrap {
   margin: 1.5rem auto;
   max-width: 480px;
@@ -263,43 +283,12 @@ section ul li {
   color: #dc2626;
 }
 @media (min-width: 768px) {
-  .timer {
-    font-size: 1.1rem;
-  }
+  .timer { font-size: 1.1rem; }
 }
 
-/* ——— Vídeo responsivo sin franjas negras ——— */
-.video-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1rem;
-  background: var(--gris);
-}
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 960px;
-  padding-top: 56.25%; /* 16:9 */
-  margin-bottom: 1.5rem;
-  overflow: hidden;
-}
-.video-embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.video-cta {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* ——— COMMUNITY SECTION ——— */
+/* ——— Community Section ——— */
 .community-section {
-  background: linear-gradient(180deg, #2e9a56 0%, #166533 100%);
+  background: linear-gradient(180deg,#2e9a56 0%,#166533 100%);
   color: var(--blanco);
   padding: 3rem 1rem;
 }
@@ -308,23 +297,11 @@ section ul li {
   margin: 0 auto;
   text-align: center;
 }
-.community-title {
-  font-size: 2rem;
-  margin-bottom: .5rem;
-}
-.community-sub {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-.community-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-@media (min-width: 768px) {
-  .community-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.community-title { font-size: 2rem; margin-bottom: .5rem; }
+.community-sub   { font-size: 1.1rem; margin-bottom: 2rem; }
+.community-grid { display: grid; grid-template-columns:1fr; gap:1.5rem; }
+@media (min-width:768px) {
+  .community-grid { grid-template-columns:repeat(3,1fr); }
 }
 .community-card {
   background: rgba(255,255,255,0.08);
@@ -334,17 +311,9 @@ section ul li {
   backdrop-filter: blur(4px);
   transition: background .25s;
 }
-.community-card:hover {
-  background: rgba(255,255,255,0.12);
-}
-.community-card h3 {
-  margin: 1rem 0 .5rem;
-  font-size: 1.1rem;
-}
-.community-card p {
-  font-size: .95rem;
-  line-height: 1.4;
-}
+.community-card:hover { background: rgba(255,255,255,0.12); }
+.community-card h3 { margin:1rem 0 .5rem; font-size:1.1rem; }
+.community-card p  { font-size:.95rem; line-height:1.4; }
 
 /* —— Icono circular —— */
 .icon-circle {
@@ -355,14 +324,10 @@ section ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--amarillo);      /* color base; se sobrescribe abajo */
 }
-.icon-circle img {
-  width: 28px;
-  height: 28px;
-}
+.icon-circle img { width: 28px; height: 28px; }
 
-/* —— Botones —— */
+/* —— Botones CTA —— */
 .btn-cta {
   display: inline-block;
   margin-top: 1.2rem;
@@ -373,45 +338,17 @@ section ul li {
   color: var(--blanco);
   transition: opacity .2s, transform .2s;
 }
-.btn-cta:hover {
-  opacity: .9;
-  transform: translateY(-2px);
-}
+.btn-cta:hover { opacity: .9; transform: translateY(-2px); }
+.tiktok-btn   { background: #e6007e; }
+.whatsapp-btn { background: #25D366; }
+.pdf-btn      { background: #3b82f6; }
 
-/* Colores específicos */
-.tiktok-btn      { background: #e6007e; }
-.whatsapp-btn    { background: #25D366; }
-.pdf-btn         { background: #3b82f6; }
-
-.icon-circle:nth-child(1) { background: var(--amarillo); }   /* TikTok */
-.community-card:nth-child(2) .icon-circle { background: #25D366; } /* WhatsApp */
-.community-card:nth-child(3) .icon-circle { background: #3b82f6; } /* PDF */
-
-/* Responsive ajustes icono y botón en pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .icon-circle {
-    width: 48px;
-    height: 48px;
-  }
-  .icon-circle img {
-    width: 22px;
-    height: 22px;
-  }
-  .btn-cta {
-    padding: .6rem 1.3rem;
-    font-size: .9rem;
-  }
-}
-
-
-
-/* ——— Footer: estilo “Amazonía” ——— */
+/* —— Footer “Amazonía” —— */
 .site-footer {
-  background: linear-gradient(135deg, var(--verde), #004d1a);
+  background: linear-gradient(135deg,var(--verde),#004d1a);
   color: var(--blanco);
   padding: 4rem 1rem 2rem;
 }
-
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -419,280 +356,27 @@ section ul li {
   max-width: 1200px;
   margin: 0 auto 2rem;
 }
-
-.footer-col {
-  flex: 1 1 200px;
-  text-align: left;
-}
-
-.footer-logo {
-  width: 80px;
-  margin-bottom: 1rem;
-}
-
-.footer-col h4 {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: var(--blanco);
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col ul li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-col ul li a,
-.footer-col a {
-  color: rgba(255,255,255,0.9);
-  text-decoration: none;
-}
-
-.footer-col ul li a:hover,
-.footer-col a:hover {
-  color: var(--amarillo);
-  text-decoration: underline;
-}
-
+.footer-col { flex:1 1 200px; text-align:left; }
+.footer-logo { width:80px; margin-bottom:1rem; }
+.footer-col h4 { margin-bottom:1rem; font-size:1.1rem; }
+.footer-col ul { list-style:none; padding:0; }
+.footer-col ul li { margin-bottom:.5rem; }
+.footer-col a { color: rgba(255,255,255,0.9); text-decoration:none; }
+.footer-col a:hover { color: var(--amarillo); text-decoration:underline; }
 .footer-bottom {
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  padding-top: 1rem;
-  font-size: 0.8rem;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.2);
+  padding-top:1rem;
+  font-size:.8rem;
   color: rgba(255,255,255,0.7);
 }
+.footer-bottom p { margin:.3rem 0; }
 
-.footer-bottom p {
-  margin: 0.3rem 0;
-}
-
-/* — Ocultar el footer duplicado (blanco) — */
-footer:not(.site-footer) {
-  display: none;
-}
-
-/* — Quitar íconos sociales del footer verde — */
-.site-footer .social-icons {
-  display: none;
-}
-
-/* ——— Botón flotante WhatsApp ——— */
+/* —— WhatsApp flotante —— */
 .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1200;
-  width: 56px;
-  height: 56px;
-  background: #25D366;
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-  line-height: 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,.25);
-  transition: transform .2s ease;
+  position:fixed; bottom:20px; right:20px; width:56px; height:56px;
+  background:#25D366; border-radius:50%; display:flex;
+  align-items:center; justify-content:center; box-shadow:0 4px 10px rgba(0,0,0,.25);
+  transition:transform .2s;
 }
-.whatsapp-float:hover {
-  transform: scale(1.05);
-}
-
-/* — Ajuste móvil para el botón de WhatsApp — */
-@media (max-width: 480px) {
-  .whatsapp-float {
-    width: 48px;
-    height: 48px;
-    bottom: 16px;
-    right: 16px;
-  }
-  .whatsapp-float img,
-  .whatsapp-float svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-/* ——— IMPACT SECTION ——— */
-.impact-section{
-  background:#f7fff5;
-  padding:3rem 1rem;
-}
-.impact-wrapper{
-  max-width:1100px;
-  margin:0 auto;
-  text-align:center;
-}
-.impact-title{
-  font-size:2rem;
-  margin-bottom:.5rem;
-  color:var(--negro);
-}
-.impact-sub{
-  font-size:1.05rem;
-  margin-bottom:2rem;
-  color:var(--gris-oscuro);
-}
-
-/* --- Grid --- */
-.impact-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:1.5rem;
-}
-@media(min-width:768px){
-  .impact-grid{
-    grid-template-columns:1fr 1fr;
-  }
-}
-@media(min-width:1024px){
-  .impact-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-}
-
-/* --- Card --- */
-.impact-card{
-  background:var(--blanco);
-  border:1px solid #e5e7eb;
-  border-radius:16px;
-  box-shadow:0 2px 8px rgba(0,0,0,.04);
-  padding:2rem 1.5rem 2.2rem;
-  text-align:left;
-  display:flex;
-  flex-direction:column;
-  gap:1rem;
-  transition:box-shadow .25s;
-}
-.impact-card:hover{
-  box-shadow:0 4px 14px rgba(0,0,0,.08);
-}
-.impact-card h3{
-  font-size:1.05rem;
-  color:var(--negro);
-}
-.impact-card p{
-  font-size:.95rem;
-  line-height:1.4;
-  color:var(--gris-oscuro);
-
-  /* garantiza el mismo alto (3 líneas máx.) */
-  display:-webkit-box;
-  -webkit-line-clamp:3;
-  -webkit-box-orient:vertical;
-  overflow:hidden;
-}
-
-/* --- Icono circular con emoji --- */
-.impact-icon{
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.25rem;
-  color:#fff;
-}
-.icon-blue   {background:#4f46e5;}
-.icon-green  {background:#16a34a;}
-.icon-yellow {background:#facc15;}
-.icon-magenta{background:#e11d48;}
-.icon-orange {background:#f97316;}
-
-/* ==================  RESET BÁSICO Y VARIABLES  ================== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --clr-primary: #006d4e;   /* verde Amazonas original */
-  --clr-secondary: #ffd100; /* amarillo oro */
-  --clr-dark: #1a1a1a;
-  --clr-light: #f8f8f8;
-  --radius: 0.5rem;
-  --transition: 0.3s ease-in-out;
-  --max-width: 1200px;
-  --font-main: "Inter", Arial, sans-serif;
-}
-
-body {
-  font-family: var(--font-main);
-  color: var(--clr-dark);
-  line-height: 1.5;
-  background-color: var(--clr-light);
-}
-
-/* ==================  BOTÓN GENÉRICO  ================== */
-.btn-primary {
-  display: inline-block;
-  padding: 0.75rem 1.75rem;
-  background: var(--clr-secondary);
-  color: var(--clr-dark);
-  font-weight: 600;
-  border-radius: var(--radius);
-  text-decoration: none;
-  transition: background var(--transition);
-}
-.btn-primary:hover {
-  background: #ffc000;
-}
-
-/* ==================  HERO CON IMAGEN  ================== */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 60vh;            /* se adapta bien en desktop y móvil */
-  min-height: 350px;
-  background: url("assets/amazonas-header.webp") center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #ffffff;
-}
-.hero::before {            /* capa semitransparente para mejorar contraste */
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-}
-.hero__content {
-  position: relative;
-  z-index: 1;
-  max-width: var(--max-width);
-  padding: 0 1rem;
-}
-.hero h1 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  margin-bottom: 0.75rem;
-}
-.hero p {
-  font-size: clamp(1rem, 2.4vw, 1.25rem);
-  margin-bottom: 1.5rem;
-}
-
-/* ==================  MEDIA QUERIES  ================== */
-@media (max-width: 600px) {
-  .hero {
-    height: 50vh;
-  }
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-
+.whatsapp-float:hover { transform:scale(1.05); }
