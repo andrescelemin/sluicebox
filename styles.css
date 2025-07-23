@@ -297,6 +297,115 @@ section ul li {
   margin-bottom: 2rem;
 }
 
+/* — Variables de marca adicionales — */
+:root {
+  --tiktok-btn: #e6007e;
+  --site-btn:   #4f46e5;
+  --icon-yellow: var(--amarillo);
+  --icon-green:  var(--verde);
+  --icon-blue:   #4f46e5;
+}
+
+/* ——— Comunidad ——— */
+.community-section {
+  background: linear-gradient(180deg, #2e9a56 0%, #176634 100%);
+  color: var(--blanco);
+  padding: 3rem 1rem;
+}
+.community-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+.community-sub {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+.community-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .community-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.community-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  transition: background .2s;
+}
+.community-card:hover {
+  background: rgba(255,255,255,0.10);
+}
+
+/* — Iconos circulares — */
+.community-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+.tiktok-icon {
+  background-color: var(--icon-yellow);
+  background-image: url('assets/icons/tiktok.svg');
+}
+.whatsapp-icon {
+  background-color: var(--icon-green);
+  background-image: url('assets/icons/whatsapp.svg');
+}
+.pdf-icon {
+  background-color: var(--icon-blue);
+  background-image: url('assets/icons/file-download.svg');
+}
+
+/* — Botones — */
+.btn-community {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .6rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--blanco);
+  transition: opacity .2s;
+}
+.btn-community:hover {
+  opacity: .9;
+}
+.tiktok-btn {
+  background: var(--tiktok-btn);
+}
+.whatsapp-btn {
+  background: var(--icon-green);
+}
+.pdf-btn {
+  background: var(--site-btn);
+}
+
+/* — Responsive ajustes íconos y botones — */
+@media (max-width: 480px) {
+  .community-icon {
+    width: 40px;
+    height: 40px;
+    background-size: 50%;
+  }
+  .btn-community {
+    padding: .5rem 1.2rem;
+  }
+}
+
+
 /* ——— Footer: estilo “Amazonía” ——— */
 .site-footer {
   background: linear-gradient(135deg, var(--verde), #004d1a);
