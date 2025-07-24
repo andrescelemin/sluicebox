@@ -27,7 +27,6 @@
     <img height="1" width="1" style="display:none"
          src="https://www.facebook.com/tr?id=837991474710202&ev=PageView&noscript=1" alt="Meta Pixel"/>
   </noscript>
-  
   <!-- /Meta Pixel -->
 
   <!-- Open Graph & Twitter -->
@@ -84,9 +83,49 @@
 
   <!-- Hoja de estilos principal -->
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+
+  <!-- Estilos adicionales para galería y héroes sin recuadro -->
+  <style>
+    /* Remover fondo o borde gris alrededor de las hero-img */
+    .hero img.hero-img {
+      background: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    /* Configuración de la galería deslizable */
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      margin: 2rem 0;
+    }
+    .gallery img {
+      flex: 0 0 100%;
+      max-width: 100%;
+      scroll-snap-align: start;
+      display: block;
+    }
+
+    /* En pantallas grandes: mostrar galería en cuadrícula de 4 */
+    @media (min-width: 768px) {
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow: visible;
+        scroll-snap-type: none;
+      }
+      .gallery img {
+        flex: none;
+        scroll-snap-align: none;
+      }
+    }
+  </style>
 </head>
 
-    <!-- HEADER ORIGINAL -->
+<body>
+  <!-- HEADER ORIGINAL -->
   <header>
     <img class="logo-header"
          src="assets/logo-sb-200x200.webp"
@@ -97,7 +136,6 @@
     <p>Recupera Oro Sin Mercurio – Cuida tu Salud y el Río</p>
   </header>
 
-<body>
   <!-- HERO AMAZONAS -->
   <header class="hero" id="top">
     <div class="hero__content">
@@ -128,7 +166,7 @@
     </div>
   </section>
 
-  <!-- HERO HORIZONTAL -->
+  <!-- HERO HORIZONTAL (sin recuadro gris) -->
   <div class="hero">
     <link rel="preload" as="image" href="assets/sluicebox-h-1024x640.webp">
     <img class="hero-img"
@@ -147,8 +185,8 @@
   <main class="container">
     <!-- ¿QUÉ ES? -->
     <section>
-      <h2>¿Qué Incluye el Kit Completo?</h2> 💡 
-      <p>El <strong>Kit Completo de Prospección de Oro</strong> contiene todo lo que necesitas para iniciar o potenciar tu aventura minera de forma profesional, limpia y rentable. Combina un Sluice Box plegable de 50 ” con herramientas seleccionadas por expertos para garantizar la máxima recuperación de oro fino y pepitas, sin necesidad de mercurio ni combustibles.</p>
+      <h2>¿Qué Incluye el Kit Completo?</h2> 💡
+      <p>El <strong>Kit Completo de Prospección de Oro</strong> contiene todo lo que necesitas para iniciar o potenciar tu aventura minera de forma profesional, limpia y rentable. Combina un Sluice Box plegable de 50” con herramientas seleccionadas por expertos para garantizar la máxima recuperación de oro fino y pepitas, sin necesidad de mercurio ni combustibles.</p>
     </section>
 
     <!-- BENEFICIOS -->
@@ -158,7 +196,7 @@
         <li>No necesitas <strong>mercurio</strong> ni motores</li>
         <li>Portátil: cabe en un balde de 5 gal</li>
         <li>Legal en zonas de amortiguamiento y REINFO</li>
-        <li>Recuperas tu inversión en 1 – 2 semanas</li>
+        <li>Recuperas tu inversión en 1–2 semanas</li>
         <li>Fabricado con tecnología moderna y experiencia real en campo</li>
       </ul>
       <p>Diseñado cerca de Keyesville, California, y ensamblado en EE.UU. con piezas de origen internacional.</p>
@@ -166,13 +204,13 @@
 
     <!-- CONTENIDO DEL KIT -->
     <section>
-      <h2>Contenido del Kit</h2> 🎒 
+      <h2>Contenido del Kit</h2> 🎒
       <ul>
-        <li>✔ Sluice Box plegable de 50 ” (aluminio + tapetes de colección de oro)</li>
-        <li>✔ 3 Bateas espiraladas (9 ”, 11 ”, 15 ”)</li>
+        <li>✔ Sluice Box plegable de 50” (aluminio + tapetes de colección de oro)</li>
+        <li>✔ 3 Bateas espiraladas (9”, 11”, 15”)</li>
         <li>✔ 2 Clasificadores de oro</li>
         <li>✔ Botella Snifter para oro fino</li>
-        <li>✔ Martillo Pico de Roca de 12 ”</li>
+        <li>✔ Martillo Pico de Roca de 12”</li>
         <li>✔ Imán separador de arena negra</li>
         <li>✔ Set de Herramientas para grietas + pala Pay Dirt</li>
         <li>✔ Pinzas con lupa de acero inoxidable</li>
@@ -183,12 +221,12 @@
 
     <!-- ESPECIFICACIONES TÉCNICAS -->
     <section>
-      <h2>Especificaciones Técnicas</h2> 🔧 
+      <h2>Especificaciones Técnicas</h2> 🔧
       <ul>
         <li>Construcción en aluminio y acero galvanizado anticorrosión</li>
         <li>Peso total del kit: 3.8 kg (8.5 lb)</li>
         <li>Dimensiones del paquete: 51 cm × 30 cm × 20 cm</li>
-        <li>Resistencia IP541 (protección frente a agua y polvo)</li>
+        <li>Resistencia IP54: protección frente a agua y polvo</li>
         <li>Tapetes tipo rifle + miners moss</li>
         <li>Armado rápido con una sola llave</li>
         <li>No requiere baterías (operación manual)</li>
@@ -196,7 +234,17 @@
       </ul>
     </section>
 
-    <!-- HERO VERTICAL -->
+    <!-- GALERÍA DE 4 IMÁGENES (deslizable en móviles) -->
+    <section class="gallery-section">
+      <div class="gallery">
+        <img src="assets/gallery1.jpg" alt="Galería 1" loading="lazy">
+        <img src="assets/gallery2.jpg" alt="Galería 2" loading="lazy">
+        <img src="assets/gallery3.jpg" alt="Galería 3" loading="lazy">
+        <img src="assets/gallery4.jpg" alt="Galería 4" loading="lazy">
+      </div>
+    </section>
+
+    <!-- HERO VERTICAL (sin recuadro gris) -->
     <div class="hero">
       <img class="hero-img"
            src="assets/sluicebox-v-640x1024.webp"
@@ -210,7 +258,6 @@
       <h2>Nuestro Impacto en Números</h2>
       <p class="subtitulo">Resultados reales que transforman vidas y protegen la Amazonía</p>
       <div class="cards-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:2rem; margin-top:2rem;">
-        <!-- Recuperación -->
         <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
           <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
             <path d="M24 4C24 4 8 24 8 34a16 16 0 0032 0C40 24 24 4 24 4Z" fill="#00C851"/>
@@ -218,7 +265,6 @@
           <h3 style="font-size:2rem; color:#00C851; margin:0.5rem 0;">95%</h3>
           <p>Recuperación de oro sin mercurio</p>
         </div>
-        <!-- Familias -->
         <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
           <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
             <circle cx="14" cy="18" r="6" fill="#00C851"/>
@@ -228,7 +274,6 @@
           <h3 style="font-size:2rem; color:#00C851; margin:0.5rem 0;">500+</h3>
           <p>Familias que ahora minan limpio</p>
         </div>
-        <!-- Comunidades -->
         <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
           <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
             <polygon points="6,28 24,10 42,28" fill="#00C851"/>
@@ -238,7 +283,6 @@
           <h3 style="font-size:2rem; color:#00C851; margin:0.5rem 0;">50+</h3>
           <p>Cooperativas que adoptaron el Sluice Box</p>
         </div>
-        <!-- Clientes -->
         <div class="card impact-card" style="padding:2rem; border-radius:1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
           <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
             <path d="M24 4C16 12 8 20 12 32s12 12 12 12 12-4 16-16-8-20-16-12z" fill="#00C851"/>
@@ -254,7 +298,6 @@
       <h2>Historias que Inspiran</h2>
       <p class="subtitulo">Testimonios reales de quienes usan el Sluice Box</p>  
       <div class="cards-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem; margin-top:2rem;">
-        <!-- Testimonio 1 -->
         <div class="card testimonial-card" style="background:#fff; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); overflow:hidden;">
           <img src="assets/persona2.webp" alt="María Gómez" style="width:100%; display:block;">
           <div style="padding:1.5rem;">
@@ -265,8 +308,6 @@
             <p style="font-weight:bold; margin:0;">– María Gómez</p>
           </div>
         </div>
-        
-        <!-- Testimonio 2 -->
         <div class="card testimonial-card" style="background:#fff; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); overflow:hidden;">
           <img src="assets/persona1.webp" alt="Juan Rodríguez" style="width:100%; display:block;">
           <div style="padding:1.5rem;">
@@ -277,8 +318,6 @@
             <p style="font-weight:bold; margin:0;">– Juan Rodríguez</p>
           </div>
         </div>
-        
-        <!-- Testimonio 3 -->
         <div class="card testimonial-card" style="background:#fff; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); overflow:hidden;">
           <img src="assets/persona3.webp" alt="Ana Torres" style="width:100%; display:block;">
           <div style="padding:1.5rem;">
@@ -286,7 +325,7 @@
             <p style="font-style:italic; margin-bottom:1rem;">
               “Gracias a mi Sluice Box, tengo un negocio sostenible que cuida el río y mejora mi calidad de vida. ¡Mis clientes aman la pureza del oro!”
             </p>
-            <p style="font-weight:bold; margin:0;">– Manuel Torres</p>
+            <p style="font-weight:bold; margin:0;">– Ana Torres</p>
           </div>
         </div>
       </div>
@@ -404,8 +443,7 @@
       <p class="community-sub">
         Sé parte del cambio hacia un Amazonas más sostenible y próspero
       </p>
-      <div class="community-grid">
-        <!-- TikTok -->
+      <div class="community-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;margin-top:2rem;">
         <div class="community-card">
           <div class="icon-circle">
             <img src="assets/Logo_tik_tok.webp" alt="TikTok" loading="lazy">
@@ -414,7 +452,6 @@
           <p>Contenido semanal con casos de éxito,<br>tutoriales y entrevistas inspiradoras.</p>
           <a href="https://www.tiktok.com/@impulsoverdelatam?lang=es" target="_blank" class="btn-cta tiktok-btn">Seguir</a>
         </div>
-        <!-- WhatsApp -->
         <div class="community-card">
           <div class="icon-circle">
             <img src="assets/whatsapp.png" alt="WhatsApp" loading="lazy">
@@ -423,7 +460,6 @@
           <p>Únete al chat oficial para soporte,<br>novedades y colaboración.</p>
           <a href="https://chat.whatsapp.com/ISqVM8BvrFTCsPTmFbNydk?mode=ac_t" target="_blank" class="btn-cta whatsapp-btn">Unirme</a>
         </div>
-        <!-- PDF -->
         <div class="community-card">
           <div class="icon-circle">
             <img src="assets/Logo PDF.webp" alt="PDF" loading="lazy">
@@ -478,7 +514,7 @@
 
   <!-- Botón WhatsApp flotante -->
   <a href="https://wa.me/51935108877" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
-    <img src="assets/whatsapp.png" alt="" width="28" height="28">
+    <img src="assets/whatsapp.png" alt="WhatsApp" width="28" height="28">
   </a>
 
   <!-- SCRIPTS -->
@@ -508,7 +544,7 @@
               h = Math.floor(diff % 864e5 / 36e5),
               m = Math.floor(diff % 36e5 / 6e4),
               s = Math.floor(diff % 6e4 / 1e3);
-        timerEl.textContent = Termina en ${d}d ${h}h ${m}m ${s}s;
+        timerEl.textContent = `Termina en ${d}d ${h}h ${m}m ${s}s`;
       }
       updateTimer();
       setInterval(updateTimer, 1000);
@@ -516,4 +552,3 @@
   </script>
 </body>
 </html>
-
