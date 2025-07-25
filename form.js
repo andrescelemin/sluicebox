@@ -4,22 +4,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(form));
+
+    // Recogemos todos los campos, incluidos los ocultos (_next, kit, etc.)
+    const formData = new FormData(form);
 
     try {
-      await fetch(
-        'https://smartpromptsolutions.app.n8n.cloud/webhook/ThVfomU8Uw97J4SN',
-        {
-          method: 'POST',
-          mode: 'no-cors', // quítalo cuando el webhook permita CORS
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        }
-      );
-      window.location.href = 'gracias.html';
+      const response = await fetch('https://formspree.io/f/mrbkwwrd', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      if (response.ok) {
+        // Si recibimos 200 OK, redirigimos al thanks page definido en _next
+        const nextUrl = form.querySelector('input[name="_next"]').value;
+        window.location.href = nextUrl;
+      } else {
+        // Si Formspree devuelve un error, lo mostramos en consola y al usuario
+        const errorData = await response.json();
+        console.error('Error Formspree:', errorData);
+        alert('⚠️ Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.');
+      }
     } catch (err) {
-      console.error('Error al enviar:', err);
-      alert('⚠️ Hubo un problema de conexión. Intenta de nuevo o contáctanos por WhatsApp.');
+      console.error('Error de conexión al enviar:', err);
+      alert('⚠️ No se pudo conectar. Intenta nuevamente o contáctanos por WhatsApp.');
     }
   });
 });
