@@ -239,35 +239,116 @@
     </section>
 
     <!-- Pre-Order -->
-    <section class="preorder section--spaced" id="preorder" role="region" aria-labelledby="preorder-title">
-      <div class="container text-center">
-        <h2 id="preorder-title">🚀 Reserva tu Kit Completo con <strong>30 % inicial</strong></h2>
-        <p>El 70 % restante lo pagas al recibirlo. Incluye <strong>120 días de asesoría gratuita</strong> y seguimiento personalizado.</p>
-        <form id="preorderForm" class="preorder-form"
-+       action="https://impulsoverde.app.n8n.cloud/webhook/preorder" method="POST" autocomplete="on" novalidate>
-          <label for="name">Nombre completo
-            <input type="text" id="name" name="name" placeholder="Tu nombre completo" required autocomplete="name">
-          </label>
-          <label for="whatsapp">Número de WhatsApp
-            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+51 9XXXXXXXX" required autocomplete="tel">
-          </label>
-          <label for="email">Correo electrónico
-            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required autocomplete="email">
-          </label>
-          <input type="hidden" name="kit" value="Kit Completo de Prospección de Oro">
-          <input type="hidden" name="_subject" value="🌐 Nueva pre-orden – Kit Completo de Prospección de Oro">
-          <input type="hidden" name="_next" value="https://andrescelemin.github.io/sluicebox/gracias.html">
-          <input type="text" name="_gotcha" style="position:absolute; left:-10000px;" tabindex="-1" autocomplete="off">
-          <button type="submit" class="btn-primary" aria-label="Apartar con 30 % inicial">Apartar con 30 %</button>
-        </form>
-        <div class="progress-wrap">
-          <div class="progress-label"><span id="taken">38</span> / 100 reservas tomadas</div>
-          <div class="progress-bar"><div id="progress-fill" style="width: 38%;"></div></div>
-        </div>
-        <div class="timer" id="timer" aria-live="polite"></div>
-        <p>Promoción válida para las primeras 100 reservas o hasta el 30 de julio de 2025.</p>
+<section
+  class="preorder section--spaced"
+  id="preorder"
+  role="region"
+  aria-labelledby="preorder-title"
+>
+  <div class="container text-center">
+    <h2 id="preorder-title">
+      🚀 Reserva tu Kit Completo con <strong>30 % inicial</strong>
+    </h2>
+    <p>
+      El 70 % restante lo pagas al recibirlo. Incluye
+      <strong>120 días de asesoría gratuita</strong> y seguimiento personalizado.
+    </p>
+
+    <form
+      id="preorderForm"
+      class="preorder-form"
+      action="https://impulsoverde.app.n8n.cloud/webhook/S4IhVlydwAiENx1r/preorder"
+      method="POST"
+      autocomplete="on"
+      novalidate
+    >
+      <label for="name">
+        Nombre completo
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Tu nombre completo"
+          required
+          autocomplete="name"
+        />
+      </label>
+
+      <label for="whatsapp">
+        Número de WhatsApp
+        <input
+          type="tel"
+          id="whatsapp"
+          name="whatsapp"
+          placeholder="+51 9XXXXXXXX"
+          required
+          autocomplete="tel"
+        />
+      </label>
+
+      <label for="email">
+        Correo electrónico
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="correo@ejemplo.com"
+          required
+          autocomplete="email"
+        />
+      </label>
+
+      <input
+        type="hidden"
+        name="kit"
+        value="Kit Completo de Prospección de Oro"
+      />
+      <input
+        type="hidden"
+        name="_subject"
+        value="🌐 Nueva pre-orden – Kit Completo de Prospección de Oro"
+      />
+      <input
+        type="hidden"
+        name="_next"
+        value="https://andrescelemin.github.io/sluicebox/gracias.html"
+      />
+
+      <!-- Campo anti-spam invisible -->
+      <input
+        type="text"
+        name="_gotcha"
+        style="position: absolute; left: -10000px;"
+        tabindex="-1"
+        autocomplete="off"
+      />
+
+      <button
+        type="submit"
+        class="btn-primary"
+        aria-label="Apartar con 30 % inicial"
+      >
+        Apartar con 30 %
+      </button>
+    </form>
+
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span id="taken">38</span> / 100 reservas tomadas
       </div>
-    </section>
+      <div class="progress-bar">
+        <div id="progress-fill" style="width: 38%;"></div>
+      </div>
+    </div>
+
+    <div class="timer" id="timer" aria-live="polite"></div>
+    <p>
+      Promoción válida para las primeras 100 reservas o hasta el
+      30 de julio de 2025.
+    </p>
+  </div>
+</section>
+
 
     <!-- CTA Final -->
     <section class="cta section--spaced" role="region" aria-label="Llévate tu kit">
