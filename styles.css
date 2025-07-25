@@ -485,3 +485,72 @@ section ul li {
   z-index: 1 !important;
   margin: 0 auto !important;
 }
+
+/* =================================================
+   ESTRUCTURA SPECS + GALLERY
+   ================================================= */
+.specs-gallery {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;        /* Centrar toda la sección */
+  padding: 2rem 1rem;    /* Espacio arriba y abajo */
+  box-sizing: border-box;
+}
+
+/* Fila principal: specs + foto */
+.specs-gallery__row--main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Columna specs */
+.specs-gallery__specs {
+  flex: 1 1 320px;       /* Crece, pero mínimo 320px */
+}
+
+/* Lista con íconos alineados */
+.specs-gallery__specs ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+.specs-gallery__specs ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Columna imagen principal */
+.specs-gallery__image {
+  flex: 1 1 360px;       /* Crece, pero mínimo 360px */
+  text-align: center;
+}
+
+.specs-gallery__image img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/* Fila de galería */
+.specs-gallery__row--gallery {
+  clear: both;           /* Para que empiece siempre debajo */
+}
+
+/* Grid responsivo de 4 columnas mín. 200px */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Ítems de galería */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
