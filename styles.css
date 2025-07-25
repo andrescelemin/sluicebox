@@ -408,3 +408,35 @@ section ul li {
   height: auto;
 }
 
+/* -------------------------------
+   Hero limpio: quita cualquier overlay 
+   o fondo gris que venga por defecto
+------------------------------- */
+#hero-clear {
+  position: relative !important;
+  background: none !important;
+  overflow: hidden !important;
+}
+
+/* Elimina pseudo-elementos (::before, ::after) que puedan pintar capas grises */
+#hero-clear::before,
+#hero-clear::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Asegura que la imagen esté por encima y ocupe todo */
+#hero-clear .hero-img {
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Si hubiera alguna clase adicional de overlay, la anulamos */
+#hero-clear .overlay,
+#hero-clear .hero-overlay {
+  display: none !important;
+}
+
