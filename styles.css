@@ -388,3 +388,23 @@ section ul li {
   transition:transform .2s;
 }
 .whatsapp-float:hover { transform:scale(1.05); }
+
+/* Anulamos cualquier fondo gris y la capa superpuesta */
+.hero--no-overlay {
+  position: relative;
+  background-color: transparent !important;
+}
+
+/* Si la franja gris venía de un ::before o ::after, la deshabilitamos */
+.hero--no-overlay::before,
+.hero--no-overlay::after {
+  content: none !important;
+}
+
+/* Asegurarnos de que la imagen ocupe todo el ancho del contenedor */
+.hero--no-overlay .hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
