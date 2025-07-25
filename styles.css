@@ -440,3 +440,48 @@ section ul li {
   display: none !important;
 }
 
+/* ================================
+   GALERÍA ORDENADA Y SIN OVERLAP
+   ================================ */
+#gallery-clear {
+  /* Evita superposiciones */
+  position: relative !important;
+  z-index: 0 !important;
+
+  /* Espacio arriba y abajo para que no toque el texto */
+  margin: 2rem 0 !important;
+  padding: 1rem 0 !important;
+
+  /* Quita fondo y overlays */
+  background: none !important;
+  overflow: visible !important;
+
+  /* Layout con Grid para 4 columnas adaptables */
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+/* Quita cualquier pseudo-elemento que siga generando capas */
+#gallery-clear::before,
+#gallery-clear::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Asegura que no haya overlays internos */
+#gallery-clear .overlay,
+#gallery-clear .gallery-overlay {
+  display: none !important;
+}
+
+/* Imagen limpia, ocupa su celda sin fondo ni superposición */
+#gallery-clear .gallery-item img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  background: transparent !important;
+  position: relative !important;
+  z-index: 1 !important;
+  margin: 0 auto !important;
+}
