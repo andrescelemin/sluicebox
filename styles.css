@@ -331,3 +331,54 @@ ul li {
   .video-wrapper { max-width: 600px; }
   .container { padding: 0; }
 }
+
+/* Base styles */
+.site-header {
+  background: #fff;
+  padding: 1rem 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.site-title {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #005a2b; /* verde oscuro, opcional */
+}
+.site-tagline {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Responsive: en móviles apilamos y ajustamos tamaños */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .brand {
+    /* logo y título siguen en fila */
+    flex-direction: row;
+  }
+  .site-title {
+    font-size: 1.5rem;
+  }
+  .site-tagline {
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+  }
+}
+
