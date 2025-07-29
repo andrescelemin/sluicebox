@@ -8,26 +8,21 @@
 }
 
 :root{
-  /* Colores base */
   --verde:#0b7243;
   --amarillo:#ffd100;
   --gris:#eef2f5;
   --blanco:#ffffff;
   --negro:#222222;
 
-  /* Sombras */
   --shadow-light:rgba(255,255,255,0.7);
   --shadow-dark: rgba(0,0,0,0.15);
   --elev-low: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
-  --elev-med: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
 
-  /* Escala tipográfica */
   --step-0:1rem;
   --step-1:1.25rem;
   --step-2:1.75rem;
   --step-3:2.5rem;
 
-  /* Espaciado vertical estándar */
   --spaced:4rem;
 }
 
@@ -62,18 +57,19 @@ body{
 
 .site-header .header-inner{
   display:flex;
-  flex-direction:column;      /* apila en todas las vistas */
+  flex-wrap:wrap;             /* permite que tagline salte de línea */
   align-items:center;
-  text-align:center;
-  gap:0.35rem;
+  justify-content:center;     /* centra horizontalmente en móvil */
+  gap:0.4rem 1rem;            /* fila × columna */
   padding:0.75rem 1rem;
 }
 
-/* logo + título (misma línea) */
+/* Logo + título en bloque */
 .site-header .brand{
   display:flex;
   align-items:center;
   gap:0.5rem;
+  flex:0 0 auto;              /* mantiene su ancho natural */
 }
 
 .site-header .logo-header{
@@ -83,24 +79,35 @@ body{
 
 .site-header .site-title{
   margin:0;
-  font-size:1.6rem;           /* responsivo base */
+  font-size:1.6rem;
   color:var(--verde);
-  line-height:1.1;
   white-space:nowrap;
 }
 
-/* tagline siempre debajo */
+/* Tagline: ocupa 100 % en móvil → cae debajo */
 .site-header .site-tagline{
-  margin:0;
+  flex:1 0 100%;
+  margin:0.25rem 0 0;
   font-size:0.95rem;
   color:var(--negro);
+  text-align:center;
   line-height:1.35;
-  max-width:320px;            /* previene desbordes en móviles angostos */
+  max-width:320px;
 }
 
+/* ——— Escritorio (≥ 992 px) ——— */
 @media (min-width:992px){
-  .site-header .site-title { font-size:var(--step-2); }
-  .site-header .site-tagline{ font-size:var(--step-0); max-width:none; }
+  .site-header .header-inner{
+    justify-content:space-between; /* logo+titulo izq | tagline der */
+  }
+  .site-header .site-title{font-size:var(--step-2);}
+  .site-header .site-tagline{
+    flex:0 0 auto;            /* vuelve a su ancho natural */
+    margin:0;
+    text-align:right;
+    max-width:none;
+    font-size:var(--step-0);
+  }
 }
 
 /* ————— HERO ————— */
@@ -251,8 +258,8 @@ ul li{margin-bottom:0.5rem;}
   color:var(--negro);
   padding:2rem 1rem;
   border-radius:12px;
-  box-shadow:inset 0 -4px 6px var(--shadow-dark),0 4px 6px var(--shadow-dark);
   text-align:center;
+  box-shadow:inset 0 -4px 6px var(--shadow-dark),0 4px 6px var(--shadow-dark);
 }
 
 /* ————— FAQ ————— */
@@ -291,7 +298,7 @@ ul li{margin-bottom:0.5rem;}
   font-size:0.8rem;
 }
 
-/* ————— WhatsApp flotante ————— */
+/* ————— WhatsApp flotante ————— */
 .whatsapp-float{
   position:fixed;
   bottom:20px;
@@ -307,28 +314,3 @@ ul li{margin-bottom:0.5rem;}
   transition:transform .2s;
 }
 .whatsapp-float:hover{transform:scale(1.05);}
-
-/* ——— Ajuste mobile: tagline debajo y centrada ——— */
-@media (max-width: 600px) {
-  /* forzamos encabezado vertical */
-  .site-header .header-inner{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* logo + nombre siguen en fila */
-  .site-header .brand{
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  /* tagline: ocupa todo el ancho y va abajo */
-  .site-header .site-tagline{
-    order: 2;            /* garantiza que quede bajo .brand */
-    width: 100%;
-    max-width: 320px;
-    margin-top: 0.25rem;
-  }
-}
-
