@@ -382,3 +382,64 @@ ul li {
   }
 }
 
+/* Header general */
+.site-header {
+  width: 100%;
+  background: #fff;
+  padding: 0.5rem 1rem;   /* menos alto */
+  box-sizing: border-box;
+}
+
+/* Contenedor interno más apaisado */
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;        /* ocupa todo el ancho */
+}
+
+/* Logo + título lado a lado */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;            /* pequeño espacio */
+}
+
+/* Título en verde junto al logo */
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #005a2b;         /* verde oscuro */
+  line-height: 1;         /* para alinear con el logo */
+}
+
+/* Tagline en negro justo debajo */
+.site-tagline {
+  margin: 0.25rem 0 0  (calc(60px + 0.5rem)); /* indent para alinearse bajo el título */
+  font-size: 1rem;
+  color: #000;
+  text-align: left;
+}
+
+/* Responsive móvil */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.5rem;
+  }
+  .brand {
+    gap: 0.3rem;
+  }
+  .site-title {
+    font-size: 1.25rem;
+  }
+  .site-tagline {
+    margin-left: 0;       /* en móvil, centramos todo */
+    text-align: center;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .header-inner {
+    align-items: center;
+  }
+}
+
