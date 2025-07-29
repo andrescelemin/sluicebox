@@ -54,7 +54,7 @@ body {
 .section--light  { background: var(--blanco); }
 
 
-/* ————— SITE HEADER (FIX DESKTOP) ————— */
+/* ————— SITE HEADER (FIX DESKTOP con posición absoluta) ————— */
 .site-header {
   width: 100%;
   background: var(--blanco);
@@ -63,18 +63,15 @@ body {
 }
 
 .site-header .header-inner {
+  position: relative;       /* contenedor padre para el título absolute */
   display: flex;
-  flex-direction: row;        /* fila en desktop */
-  align-items: center;        /* centra verticalmente */
-  justify-content: center;    /* centra horizontalmente */
-  gap: 1rem;                  /* espacio entre brand y tagline */
-  flex-wrap: wrap;            /* permite envolver si falta ancho */
+  align-items: center;
 }
 
 .site-header .brand {
+  flex: 0 0 auto;           /* logo a la izquierda */
   display: flex;
   align-items: center;
-  gap: 0.5rem;                /* espacio logo ↔ título */
 }
 
 .site-header .logo-header {
@@ -83,26 +80,38 @@ body {
 }
 
 .site-header .site-title {
+  position: absolute;       /* lo centramos dentro de header-inner */
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0;
   font-size: var(--step-2);
   color: var(--verde);
   line-height: 1;
+  white-space: nowrap;      /* evita que el texto salte */
 }
 
 .site-header .site-tagline {
-  margin: 0;
+  margin-left: auto;        /* empuja el tagline a la derecha */
   font-size: var(--step-0);
   color: var(--negro);
-  text-align: center;
+  white-space: nowrap;
 }
 
-/* Móvil: apila y centra todo */
+/* En móvil volvemos a flujo normal */
 @media (max-width: 768px) {
   .site-header .header-inner {
+    display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    text-align: center;
+  }
+  .site-header .site-title,
+  .site-header .site-tagline {
+    position: static;
+    transform: none;
+    margin: 0.25rem 0 0;
   }
 }
+
 
 
 
