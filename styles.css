@@ -21,13 +21,13 @@
   --elev-low:  4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
   --elev-med:  6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
 
-  /* Tipografía */
+  /* Escala tipográfica */
   --step-0: 1rem;
   --step-1: 1.25rem;
   --step-2: 1.75rem;
   --step-3: 2.5rem;
 
-  /* Espaciado */
+  /* Espaciado vertical estándar */
   --spaced: 4rem;
 }
 
@@ -47,30 +47,54 @@ body {
 
 /* ————— UTILIDADES ————— */
 .text-center { text-align: center; }
-.flex { display: flex; gap: 1rem; }
-.align-center { align-items: center; }
-.grid { display: grid; gap: 1.5rem; }
+.flex        { display: flex; gap: 1rem; }
+.align-center{ align-items: center; }
+.grid        { display: grid; gap: 1.5rem; }
 .section--spaced { padding: var(--spaced) 0; }
-.section--light { background: var(--blanco); }
+.section--light  { background: var(--blanco); }
 
 /* ————— SITE HEADER ————— */
 .site-header {
+  width: 100%;
   background: var(--blanco);
   box-shadow: var(--elev-low);
+  padding: 0.5rem 1rem;
 }
-.site-header .container {
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.brand {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 0.5rem;
 }
+
 .site-title {
+  margin: 0;
   font-size: var(--step-2);
   color: var(--verde);
+  line-height: 1;
 }
+
 .site-tagline {
+  margin-top: 0.25rem;
+  margin-left: calc(60px + 0.5rem); /* alinea bajo el título y al costado del logo */
   font-size: var(--step-0);
   color: var(--negro);
+}
+
+@media (max-width: 768px) {
+  .header-inner { align-items: center; }
+  .site-tagline {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .site-title { font-size: 1.5rem; }
 }
 
 /* ————— HERO ————— */
@@ -87,27 +111,31 @@ body {
   text-align: center;
   color: var(--blanco);
 }
+
 .hero__content h1 {
   font-size: clamp(var(--step-2), 5vw, var(--step-3));
   margin-bottom: 1rem;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
+
 .hero__content p {
   font-size: var(--step-1);
   margin-bottom: 1.5rem;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
+
 .scroll-cue {
   position: absolute;
   bottom: 1.5rem;
   left: 50%;
-  transform: translateX(-50%);
+  translate: -50% 0;
   font-size: 2rem;
   animation: bounce 2s infinite;
 }
+
 @keyframes bounce {
-  0%,100% { transform: translate(-50%, 0); }
-  50%     { transform: translate(-50%, 10px); }
+  0%,100% { translate: -50% 0; }
+  50%     { translate: -50% 10px; }
 }
 
 /* ————— BOTONES ————— */
@@ -122,37 +150,34 @@ body {
   box-shadow: inset 0 -3px 5px var(--shadow-dark), 0 3px 5px var(--shadow-dark);
   transition: transform .2s, box-shadow .2s;
 }
+
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: inset 0 -5px 7px var(--shadow-dark), 0 5px 7px var(--shadow-dark);
 }
 
-/* ————— SECCIONES GENERALES ————— */
+/* ————— TIPOGRAFÍA GENERAL ————— */
 h2 {
   font-size: var(--step-2);
   color: var(--verde);
   margin-bottom: 1rem;
 }
+
 h3 {
   font-size: var(--step-1);
   margin-bottom: 0.75rem;
 }
-p {
-  margin-bottom: 1rem;
-}
-ul {
-  list-style: disc inside;
-  margin-bottom: 1rem;
-}
-ul li {
-  margin-bottom: 0.5rem;
-}
+
+p      { margin-bottom: 1rem; }
+ul     { list-style: disc inside; margin-bottom: 1rem; }
+ul li  { margin-bottom: 0.5rem; }
 
 /* ————— VIDEO ————— */
 .video-wrapper {
   max-width: 430px;
   margin: 0 auto 1rem;
 }
+
 .video-embed {
   width: 100%;
   aspect-ratio: 9/16;
@@ -161,12 +186,17 @@ ul li {
   box-shadow: var(--elev-low);
 }
 
+@media (min-width: 768px) {
+  .video-wrapper { max-width: 600px; }
+}
+
 /* ————— GALERÍA ————— */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
   gap: 1rem;
 }
+
 .gallery-grid img {
   width: 100%;
   height: auto;
@@ -174,13 +204,14 @@ ul li {
   display: block;
 }
 
-/* ————— CARDS & GRID ————— */
+/* ————— CARDS ————— */
 .cards-grid {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
   margin-top: 2rem;
 }
+
 .card {
   background: var(--blanco);
   border-radius: 12px;
@@ -188,58 +219,53 @@ ul li {
   padding: 1.5rem;
   text-align: center;
 }
-.impact-card svg {
-  margin-bottom: 1rem;
-}
-.testimonial-card img {
-  width: 100%;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-.testimonial-content {
-  padding: 1rem;
-}
-.stars {
-  color: #ffc107;
-  margin-bottom: 0.5rem;
-}
-.italic { font-style: italic; }
-.bold  { font-weight: bold; }
 
-/* ————— PREORDER ————— */
+.impact-card svg   { margin-bottom: 1rem; }
+.testimonial-content { padding: 1rem; }
+.stars   { color: #ffc107; margin-bottom: 0.5rem; }
+.italic  { font-style: italic; }
+.bold    { font-weight: bold; }
+
+/* ————— PRE‑ORDER FORM ————— */
 .preorder-form {
   max-width: 480px;
   margin: 1.5rem auto;
   display: grid;
   gap: 1rem;
 }
+
 .preorder-form label {
   display: flex;
   flex-direction: column;
   font-size: var(--step-0);
   text-align: left;
 }
+
 .preorder-form input {
   padding: 0.75rem;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
 }
+
 .progress-wrap {
   max-width: 480px;
   margin: 1.5rem auto;
   text-align: center;
 }
+
 .progress-bar {
   background: #e2e8f0;
   border-radius: 6px;
   overflow: hidden;
   height: 12px;
 }
+
 #progress-fill {
   background: #16a34a;
   height: 100%;
   width: 0;
 }
+
 .timer {
   margin-top: 0.75rem;
   font-size: var(--step-0);
@@ -258,10 +284,7 @@ ul li {
 }
 
 /* ————— FAQ ————— */
-.faq h3 {
-  margin-top: 1rem;
-  color: var(--verde);
-}
+.faq h3 { margin-top: 1rem; color: var(--verde); }
 
 /* ————— FOOTER ————— */
 .site-footer {
@@ -269,6 +292,7 @@ ul li {
   color: var(--blanco);
   padding: 3rem 1rem 2rem;
 }
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -276,30 +300,28 @@ ul li {
   max-width: 1200px;
   margin: 0 auto 2rem;
 }
+
 .footer-col {
   flex: 1 1 200px;
 }
-.footer-logo {
-  width: 80px;
-  margin-bottom: 1rem;
-}
+
+.footer-logo { width: 80px; margin-bottom: 1rem; }
+
 .footer-col h4 {
   margin-bottom: 1rem;
   font-size: var(--step-1);
 }
-.footer-col ul {
-  list-style: none;
-}
-.footer-col ul li {
-  margin-bottom: 0.5rem;
-}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.5rem; }
+
 .footer-col a {
   color: rgba(255,255,255,0.9);
   text-decoration: none;
 }
-.footer-col a:hover {
-  color: var(--amarillo);
-}
+
+.footer-col a:hover { color: var(--amarillo); }
+
 .footer-bottom {
   text-align: center;
   border-top: 1px solid rgba(255,255,255,0.2);
@@ -307,7 +329,7 @@ ul li {
   font-size: 0.8rem;
 }
 
-/* ————— WhatsApp flotante ————— */
+/* ————— WhatsApp flotante ————— */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -322,124 +344,5 @@ ul li {
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   transition: transform .2s;
 }
-.whatsapp-float:hover {
-  transform: scale(1.05);
-}
 
-/* ————— RESPONSIVE ————— */
-@media (min-width: 768px) {
-  .video-wrapper { max-width: 600px; }
-  .container { padding: 0; }
-}
-
-/* Base styles */
-.site-header {
-  background: #fff;
-  padding: 1rem 0;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.site-title {
-  margin: 0;
-  font-size: 1.75rem;
-  color: #005a2b; /* verde oscuro, opcional */
-}
-.site-tagline {
-  margin: 0.5rem 0 0;
-  font-size: 1rem;
-  color: #000;
-}
-
-/* Responsive: en móviles apilamos y ajustamos tamaños */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .brand {
-    /* logo y título siguen en fila */
-    flex-direction: row;
-  }
-  .site-title {
-    font-size: 1.5rem;
-  }
-  .site-tagline {
-    font-size: 0.9rem;
-    margin-top: 0.75rem;
-  }
-}
-
-/* Header general */
-.site-header {
-  width: 100%;
-  background: #fff;
-  padding: 0.5rem 1rem;   /* menos alto */
-  box-sizing: border-box;
-}
-
-/* Contenedor interno más apaisado */
-.header-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 100%;        /* ocupa todo el ancho */
-}
-
-/* Logo + título lado a lado */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;            /* pequeño espacio */
-}
-
-/* Título en verde junto al logo */
-.site-title {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #005a2b;         /* verde oscuro */
-  line-height: 1;         /* para alinear con el logo */
-}
-
-/* Tagline en negro justo debajo */
-.site-tagline {
-  margin: 0.25rem 0 0  (calc(60px + 0.5rem)); /* indent para alinearse bajo el título */
-  font-size: 1rem;
-  color: #000;
-  text-align: left;
-}
-
-/* Responsive móvil */
-@media (max-width: 768px) {
-  .site-header {
-    padding: 0.5rem;
-  }
-  .brand {
-    gap: 0.3rem;
-  }
-  .site-title {
-    font-size: 1.25rem;
-  }
-  .site-tagline {
-    margin-left: 0;       /* en móvil, centramos todo */
-    text-align: center;
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-  .header-inner {
-    align-items: center;
-  }
-}
-
+.whatsapp-float:hover { transform: scale(1.05); }
