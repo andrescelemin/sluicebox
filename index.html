@@ -477,26 +477,45 @@
 
   
     <!-- Agente IA -->
-  <!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+  <meta charset="UTF-8" />
+  <title>Mi página con Chat en Español</title>
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+  <h1>Bienvenido a SluiceBox Perú</h1>
+  <p>Recupera hasta el 95 % del oro fino sin químicos.</p>
 
-<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-<script type="module">
-	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  <!-- Estilos del widget -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+    rel="stylesheet"
+  />
 
-	createChat({
-		webhookUrl: 'https://impulsoverde.app.n8n.cloud/webhook/ed66a622-2374-46fa-86a0-bcd8eed6083c/chat'
-	});
-</script>
+  <!-- Script del widget -->
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+      // Tu webhook URL de n8n
+      webhookUrl: 'https://impulsoverde.app.n8n.cloud/webhook/ed66a622-2374-46fa-86a0-bcd8eed6083c/chat',
+
+      // ---- Configuración de idioma y textos UI ----
+      language: 'es',                        // fuerza el widget a Español
+      chatTitle: '¡Hola! 👋',                // título del header
+      chatSubtitle: 'Inicia un chat. Estamos disponibles 24/7.', 
+      openButtonLabel: 'Abrir chat',         // texto del botón para abrir
+      closeButtonLabel: 'Cerrar chat',       // texto del botón para cerrar
+      inputPlaceholder: 'Escribe tu pregunta…',  // placeholder del input
+      // --------------------------------------------
+    });
+  </script>
+
 </body>
 </html>
+
 
     <!-- WhatsApp Flotante -->
     <a href="https://wa.me/51935108877" class="whatsapp-float" aria-label="Chat por WhatsApp">
