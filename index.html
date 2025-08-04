@@ -482,36 +482,37 @@
 <head>
   <meta charset="UTF-8" />
   <title>Mi página con Chat en Español</title>
+  <!-- Usa la última versión para asegurarte de que "language" esté soportado -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/@n8n/chat@latest/dist/style.css"
+    rel="stylesheet"
+  />
 </head>
 <body>
 
   <h1>Bienvenido a SluiceBox Perú</h1>
   <p>Recupera hasta el 95 % del oro fino sin químicos.</p>
 
-  <!-- Estilos del widget -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
-    rel="stylesheet"
-  />
-
-  <!-- Script del widget -->
   <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat@latest/dist/chat.bundle.es.js';
 
     createChat({
-      // Tu webhook URL de n8n
       webhookUrl: 'https://impulsoverde.app.n8n.cloud/webhook/ed66a622-2374-46fa-86a0-bcd8eed6083c/chat',
 
-      // ---- Configuración de idioma y textos UI ----
-      language: 'es',                        // fuerza el widget a Español
-      chatTitle: '¡Hola! 👋',                // título del header
-      chatSubtitle: 'Inicia un chat. Estamos disponibles 24/7.', 
-      openButtonLabel: 'Abrir chat',         // texto del botón para abrir
-      closeButtonLabel: 'Cerrar chat',       // texto del botón para cerrar
-      inputPlaceholder: 'Escribe tu pregunta…',  // placeholder del input
-      // --------------------------------------------
+      // ——— Localización UI ———
+      language:      'es',                         // fuerza español
+      title:         '¡Hola! 👋',                  // header
+      subtitle:      'Inicia un chat. Estamos disponibles 24/7.',
+      openLabel:     'Abrir chat',                 // botón abrir
+      closeLabel:    'Cerrar chat',                // botón cerrar
+      placeholder:   'Escribe tu pregunta…',       // input
+      // ——————————————
     });
   </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
