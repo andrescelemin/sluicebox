@@ -477,45 +477,48 @@
 
   
     <!-- Agente IA -->
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Mi página con Chat en Español</title>
-  <!-- Usa la última versión para asegurarte de que "language" esté soportado -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/@n8n/chat@latest/dist/style.css"
-    rel="stylesheet"
-  />
+  <title>SluiceBox Perú – Chat</title>
+
+  <!-- Última versión + cache-busting para evitar versiones antiguas -->
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat@latest/dist/style.css?v=1" rel="stylesheet" />
 </head>
 <body>
 
-  <h1>Bienvenido a SluiceBox Perú</h1>
-  <p>Recupera hasta el 95 % del oro fino sin químicos.</p>
+  <h1>Reserva tu Kit Completo</h1>
 
   <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat@latest/dist/chat.bundle.es.js';
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat@latest/dist/chat.bundle.es.js?v=1';
 
     createChat({
       webhookUrl: 'https://impulsoverde.app.n8n.cloud/webhook/ed66a622-2374-46fa-86a0-bcd8eed6083c/chat',
 
-      // ——— Localización UI ———
-      language:      'es',                         // fuerza español
-      title:         '¡Hola! 👋',                  // header
-      subtitle:      'Inicia un chat. Estamos disponibles 24/7.',
-      openLabel:     'Abrir chat',                 // botón abrir
-      closeLabel:    'Cerrar chat',                // botón cerrar
-      placeholder:   'Escribe tu pregunta…',       // input
-      // ——————————————
+      /* —— Cambios de idioma —— */
+      i18n: {
+        en: {                    // la clave sigue siendo "en"
+          title: '¡Hola! 👋',
+          subtitle: 'Inicia un chat. Estamos disponibles 24/7.',
+          getStarted: 'Abrir chat',
+          inputPlaceholder: 'Escribe tu pregunta…',
+          footer: '',
+        },
+      },
+
+      /* Mensajes que aparecen dentro del chat al abrirlo */
+      initialMessages: [
+        '¡Hola! Soy Nathan, tu asistente de SluiceBox. ¿En qué puedo ayudarte hoy?'
+      ],
+
+      /* Opcional: muestra la pantalla de bienvenida antes de escribir */
+      showWelcomeScreen: true,
     });
   </script>
-
 </body>
 </html>
 
-
-</body>
-</html>
 
 
     <!-- WhatsApp Flotante -->
